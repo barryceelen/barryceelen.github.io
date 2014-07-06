@@ -1,0 +1,109 @@
+.project {
+	border-bottom: 1px solid $border_color;
+	margin-bottom: 0em;
+	overflow-x: hidden;
+	.entry-title {
+		font-size: 2em;
+		font-weight: bold;
+	}
+}
+
+.project-iphone {
+	padding: 2em;
+	.project-details {
+		float: left;
+		width: 300px;
+	}
+}
+
+.project-web {
+	padding: 2em 2em 0;
+}
+
+.project-details {
+	margin-bottom: 2em;
+}
+
+.project-gallery {
+	white-space: nowrap;
+	figure {
+		margin-right: 1em;
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+}
+
+.project-iphone figure {
+	border: 3px solid $grey_light;
+	border-radius: 55px;
+	display: inline-block;
+	padding: 106px 26px;
+	position: relative;
+	picture {
+		background: $grey_light;
+	}
+	img {
+		display: block;
+		width: 320px;
+	}
+	&:before, &:after {
+		content: '';
+		display: block;
+		position: absolute;
+	}
+	&:before { // Speaker
+		background: $grey_light;
+		border-radius: 8px;
+		width: 60px;
+		height: 8px;
+		top: 52px;
+		left: 50%;
+		margin-left: -30px;
+	}
+	&:after { // Home button
+		border: 3px solid $grey_light;
+		border-radius: 100px;
+		bottom: 24px;
+		left: 50%;
+		margin-left: -31px;
+		width: 62px;
+		height: 62px;
+	}
+}
+
+.project-web figure {
+	border: 3px solid $grey_light;
+	border-bottom: 0 none;
+	border-radius: 12px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	display: inline-block;
+	padding: 48px 0 0;
+	position: relative;
+	width: 100%;
+	max-height: 480px;
+	overflow-y: hidden;
+	picture {
+		background: $grey_light;
+	}
+	img {
+		display: block;
+		width: 100%;
+	}
+	&:before, &:after {
+		content: '';
+		display: block;
+		position: absolute;
+	}
+	&:before { // Traffic Lights
+		background: $grey_light;
+		border-radius: 8px;
+		box-shadow: 24px 0 0 $grey_light, 48px 0 0 $grey_light;
+		width: 16px;
+		height: 16px;
+		top: 10px;
+		left: 40px;
+		margin-left: -30px;
+	}
+}

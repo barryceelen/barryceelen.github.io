@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 					sourcemap: true
 				},
 				files: {
-					'css/app.css':'source/sass/app.scss'
+					'css/app.css':'dev/sass/app.scss'
 				}
 			},
 			dist: {
@@ -18,20 +18,12 @@ module.exports = function(grunt) {
 					style: 'compressed'
 				},
 				files: {
-					'css/app.css':'source/sass/app.scss'
+					'css/app.css':'dev/sass/app.scss'
 				}
 			}
 		},
 		autoprefixer: {
-			dev: {
-				options: {
-				  browsers: ['last 2 version', 'ie 9', 'BlackBerry 10', 'Android 4']
-				},
-				no_dest: {
-					src: 'css/app.css'
-				}
-			},
-			dist: {
+			main: {
 				options: {
 				  browsers: ['last 2 version', 'ie 9', 'BlackBerry 10', 'Android 4']
 				},
@@ -40,8 +32,30 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		imagemin: {
+		jade: {
+			dev: {
+				options: {
+					data: {
+						debug: true
+					}
+				},
+				files: {
+					"index.html": "dev/jade/index.jade"
+				}
+			},
 			dist: {
+				options: {
+					data: {
+						debug: false
+					}
+				},
+				files: {
+					"index.html": "dev/jade/index.jade"
+				}
+			}
+		},
+		imagemin: {
+			main: {
 				files: [{
 					expand: true,
 					cwd: 'img/',
@@ -50,59 +64,39 @@ module.exports = function(grunt) {
 				}]
 			}
 		},
-		bake: {
-			dev: {
-				files: {
-					"index.html": "source/index.html"
-				}
-			},
-			dist: {
-				files: {
-					"index.html": "source/index.html"
-				}
-			}
-		},
 		clean: {
 			main: {
-				src: ['img/**/*.{png,jpg,gif}']
+				src: ['**/*.map','img/**/*.{png,jpg,gif}']
 			}
 		},
 		copy: {
+			dev: {
+				files: [
+				{
+					expand: true,
+					cwd: 'dev/img/',
+					src: ['**'],
+					dest: 'img/',
+					filter: 'isFile'
+				}]
+			},
 			dist: {
 				files: [
 				{
-					src: 'source/favicon.ico',
-					dest: 'favicon.ico',
-					filter: 'isFile'
-				},
-				{
-					src: 'source/apple-touch-icon.png',
-					dest: 'apple-touch-icon.png',
-					filter: 'isFile'
-				},
-				{
-					src: 'source/apple-touch-icon-precomposed.png',
-					dest: 'apple-touch-icon-precomposed.png',
+					expand: true,
+					cwd: 'dev/app-icons/',
+					src: ['**'],
+					dest: '',
 					filter: 'isFile'
 				},
 				{
 					expand: true,
-					cwd: 'source/img/',
+					cwd: 'dev/img/',
 					src: ['**'],
 					dest: 'img/',
 					filter: 'isFile'
 				}]
 
-			},
-			dev: {
-				files: [
-				{
-					expand: true,
-					cwd: 'source/img/',
-					src: ['**'],
-					dest: 'img/',
-					filter: 'isFile'
-				}]
 			}
 		},
 		watch: {
@@ -110,7 +104,7 @@ module.exports = function(grunt) {
 				livereload: true,
 			},
 			sass: {
-				files: ['source/sass/*.scss'],
+				files: ['dev/sass/*.scss'],
 				tasks: ['sass:dev'],
 				options: {
 					spawn: false,
@@ -118,13 +112,20 @@ module.exports = function(grunt) {
 			},
 			styles: {
 				files: ['css/app.css'],
-				tasks: ['autoprefixer:dev'],
+				tasks: ['autoprefixer'],
+				options: {
+					spawn: false,
+				}
+			},
+			jade: {
+				files: ['dev/jade/**/*.jade'],
+				tasks: ['jade:dev'],
 				options: {
 					spawn: false,
 				}
 			},
 			copy_images: {
-				files: ['source/img/**'],
+				files: ['dev/img/**'],
 				tasks: ['copy:dev'],
 				options: {
 					spawn: false,
@@ -132,17 +133,10 @@ module.exports = function(grunt) {
 				}
 			},
 			remove_images: {
-				files: ['source/img/**'],
-				tasks: ['clean','copy:dev'],
+				files: ['dev/img/**'],
+				tasks: ['clean:dev','copy:dev'],
 				options: {
 					event: ['deleted'],
-					spawn: false,
-				}
-			},
-			bake: {
-				files: ['source/*.html'],
-				tasks: ['bake:dev'],
-				options: {
 					spawn: false,
 				}
 			}
@@ -151,11 +145,11 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-autoprefixer');
-	grunt.loadNpmTasks('grunt-contrib-imagemin');
+	grunt.loadNpmTasks('grunt-contrib-jade');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-bake');
+	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default', ['sass:dist','autoprefixer:dist','clean','copy:dist','imagemin']);
+	grunt.registerTask('default', ['sass:dist','autoprefixer','clean','copy:dist','imagemin']);
 };

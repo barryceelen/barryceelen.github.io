@@ -1,0 +1,194 @@
+/*!
+Foodpanda Rebrush Demo
+Author: Barry Ceelen
+Author URI: https://github.com/barryceelen/
+(C) 2013 Barry Ceelen
+*/
+/**
+ * Note: Media query variables defined in _main.scss
+ */
+/**
+ * Type
+ */
+/**
+ * Colors
+ */
+/**
+ * Convert pixels to ems
+ */
+/*
+ * Background image for retina screens
+ * via: http://37signals.com/svn/posts/3271-easy-retina-ready-images-using-scss
+ */
+/**
+ * Cross-browser inline-block
+ */
+/**
+ * Clearfix
+ */
+/**
+ * Text image replacement
+ */
+/**
+ * Kerning
+ *
+ * Via: http://blog.typekit.com/2014/02/05/kerning-on-the-web/
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+html {
+  font-size: 100%;
+  /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+  overflow-y: scroll;
+  /* Keeps page centered in all browsers regardless of content height */
+  -webkit-text-size-adjust: 100%;
+  /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+  -ms-text-size-adjust: 100%;
+  /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+
+*,
+*:before,
+*:after {
+  /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+  -webkit-box-sizing: border-box;
+  /* Not needed for modern webkit but still used by Blackberry Browser 7.0; see http://caniuse.com/#search=box-sizing */
+  -moz-box-sizing: border-box;
+  /* Still needed for Firefox 28; see http://caniuse.com/#search=box-sizing */
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  /* tables still need 'cellspacing="0"' in the markup */
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  font-weight: normal;
+  text-align: left;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+
+blockquote, q {
+  quotes: "" "";
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:hover,
+a:active {
+  outline: 0;
+}
+
+a img {
+  border: 0;
+}
+
+/**
+ * Variables defined here because we need the pem mixin
+ */
+.hidden {
+  display: none;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fafafa;
+  color: #222222;
+  font-family: "Helvetica", serif;
+  font-size: 100%;
+}
+
+#content {
+  background: white;
+}
+
+#masthead {
+  display: none;
+  background: white;
+  position: relative;
+}
+
+.site-branding h1 {
+  margin: 0;
+}
+
+.project {
+  border-top: 1px solid #e6e6e6;
+}
+
+picture img {
+  display: block;
+}
+
+figure.iphone {
+  border: 3px solid #e6e6e6;
+  border-radius: 55px;
+  display: inline-block;
+  padding: 106px 26px;
+  position: relative;
+}
+figure.iphone img {
+  display: block;
+  width: 320px;
+}
+figure.iphone:after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 62px;
+  height: 62px;
+  border: 3px solid #e6e6e6;
+  border-radius: 100px;
+}
+
+/*# sourceMappingURL=app.css.map */

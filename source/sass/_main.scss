@@ -1,0 +1,25 @@
+/**
+ * Variables defined here because we need the pem mixin
+ */
+$narrow_width: pem(480);
+$medium_width: pem(768);
+
+.hidden {
+	display: none;
+}
+
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: $background_color_footer;
+	color: $black;
+	font-family: $font_family;
+	font-size: 100%;
+}
+
+#content {
+	background: $background_color_content;
+}

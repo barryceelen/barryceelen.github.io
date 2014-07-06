@@ -1,0 +1,19 @@
+/**
+ * Note: Media query variables defined in _main.scss
+ */
+
+/**
+ * Type
+ */
+$base_font_size: 16; // Set font size to 100% on body
+$font_family: "Helvetica", serif;
+
+/**
+ * Colors
+ */
+$grey_light: #E6E6E6;
+$black: #222;
+
+$background_color_content: #FFF;
+$background_color_footer: lighten($grey_light,8);
+$border_color: $grey_light;

@@ -1,0 +1,30 @@
+.project {
+	border-top: 1px solid $border_color;
+}
+
+picture {
+	img {
+		display: block;
+	}
+}
+
+figure.iphone {
+	border: 3px solid $grey_light;
+	border-radius: 55px;
+	display: inline-block;
+	padding: 106px 26px;
+	position: relative;
+	img {
+		display: block;
+		width: 320px;
+	}
+	&:after {
+		content: '';
+		display: block;
+		position: absolute;
+		width: 62px;
+		height: 62px;
+		border: 3px solid $grey_light;
+		border-radius: 100px;
+	}
+}

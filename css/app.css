@@ -111,6 +111,20 @@ body {
   background: white;
 }
 
+#colophon {
+  padding: 6em 2em 2em;
+}
+
+.site-title {
+  font-size: 1em;
+  font-weight: 400;
+}
+.site-title a {
+  color: #222222;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 #masthead {
   display: none;
   background: white;

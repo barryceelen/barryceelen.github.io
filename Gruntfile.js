@@ -35,6 +35,7 @@ module.exports = function(grunt) {
 		jade: {
 			dev: {
 				options: {
+					pretty: true,
 					data: {
 						debug: true
 					}

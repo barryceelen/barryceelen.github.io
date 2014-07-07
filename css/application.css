@@ -12,6 +12,9 @@ Author URI: http://barryceelen.com
  * Colors
  */
 /**
+ * Structure
+ */
+/**
  * Convert pixels to ems
  */
 /*
@@ -32,6 +35,104 @@ Author URI: http://barryceelen.com
  *
  * Via: http://blog.typekit.com/2014/02/05/kerning-on-the-web/
  */
+/**
+ * Try to prevent user selection
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+html {
+  font-size: 100%;
+  /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+  overflow-y: scroll;
+  /* Keeps page centered in all browsers regardless of content height */
+  -webkit-text-size-adjust: 100%;
+  /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+  -ms-text-size-adjust: 100%;
+  /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+
+*,
+*:before,
+*:after {
+  /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+  -webkit-box-sizing: border-box;
+  /* Not needed for modern webkit but still used by Blackberry Browser 7.0; see http://caniuse.com/#search=box-sizing */
+  -moz-box-sizing: border-box;
+  /* Still needed for Firefox 28; see http://caniuse.com/#search=box-sizing */
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  /* tables still need 'cellspacing="0"' in the markup */
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  font-weight: normal;
+  text-align: left;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+
+blockquote, q {
+  quotes: "" "";
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:hover,
+a:active {
+  outline: 0;
+}
+
+a img {
+  border: 0;
+}
+
 @font-face {
   font-family: 'Roboto Condensed';
   font-style: normal;
@@ -114,9 +215,6 @@ body {
 .site-footer {
   margin: 0 auto;
   max-width: 1100px;
-}
-
-#colophon {
   padding: 6em 2em 2em;
 }
 
@@ -155,7 +253,11 @@ body {
 }
 .project-iphone .project-details {
   float: left;
-  width: 300px;
+  width: 340px;
+}
+.project-iphone .project-gallery {
+  float: right;
+  width: 760px;
 }
 
 .project-web {
@@ -167,37 +269,49 @@ body {
   padding-right: 1em;
 }
 .project-details .entry-title {
-  font-size: 2.8em;
+  font-size: 2.75em;
   font-weight: bold;
   line-height: 1;
-  margin-bottom: 0;
+  margin-bottom: 0.13636em;
   text-transform: uppercase;
 }
 .project-details .entry-content {
+  font-size: 1.125em;
+  line-height: 1;
   text-transform: uppercase;
   word-spacing: .1em;
 }
 
 .project-gallery {
   white-space: nowrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
 .project-gallery figure {
   background: white;
-  margin-right: 1em;
+  margin-right: 1.5em;
 }
 .project-gallery figure:last-of-type {
   margin-right: 0;
 }
 
+/**
+ * iPhone wireframe
+ */
 .project-iphone figure {
+  display: none;
   border: 3px solid #e6e6e6;
   border-radius: 55px;
   display: inline-block;
-  padding: 106px 26px;
+  padding: 106px 24px;
   position: relative;
 }
 .project-iphone figure picture {
   background: #e6e6e6;
+  height: 568px;
 }
 .project-iphone figure img {
   display: block;
@@ -211,11 +325,11 @@ body {
 .project-iphone figure:before {
   background: #e6e6e6;
   border-radius: 8px;
-  width: 60px;
-  height: 8px;
-  top: 52px;
+  width: 68px;
+  height: 14px;
+  top: 56px;
   left: 50%;
-  margin-left: -30px;
+  margin-left: -34px;
 }
 .project-iphone figure:after {
   border: 3px solid #e6e6e6;
@@ -227,6 +341,9 @@ body {
   height: 62px;
 }
 
+/**
+ * Browser wireframe
+ */
 .project-web figure {
   border: 3px solid #e6e6e6;
   border-bottom: 0 none;
@@ -264,4 +381,4 @@ body {
   margin-left: -30px;
 }
 
-/*# sourceMappingURL=app.css.map */
+/*# sourceMappingURL=application.css.map */

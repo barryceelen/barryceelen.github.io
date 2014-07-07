@@ -7,14 +7,18 @@
 
 .project-inner {
 	margin: 0 auto;
-	max-width: 1100px;
+	max-width: $content_max_width;
 }
 
 .project-iphone {
 	padding: 2em;
 	.project-details {
 		float: left;
-		width: 300px;
+		width: 340px;
+	}
+	.project-gallery {
+		float: right;
+		width: $content_max_width - 340px;
 	}
 }
 
@@ -26,13 +30,15 @@
 	margin-bottom: 2em;
 	padding-right: 1em;
 	.entry-title {
-		font-size: 2.8em;
+		font-size: pem(44);
 		font-weight: bold;
 		line-height: 1;
-		margin-bottom: 0;
+		margin-bottom: pem(6,44);
 		text-transform: uppercase;
 	}
 	.entry-content {
+		font-size: pem(18);
+		line-height: 1;
 		text-transform: uppercase;
 		word-spacing: .1em;
 	}
@@ -40,23 +46,29 @@
 
 .project-gallery {
 	white-space: nowrap;
+	@include userselect;
 	figure {
 		background: white;
-		margin-right: 1em;
+		margin-right: 1.5em;
 		&:last-of-type {
 			margin-right: 0;
 		}
 	}
 }
 
+/**
+ * iPhone wireframe
+ */
 .project-iphone figure {
+	display: none;
 	border: 3px solid $grey_light;
 	border-radius: 55px;
 	display: inline-block;
-	padding: 106px 26px;
+	padding: 106px 24px;
 	position: relative;
 	picture {
 		background: $grey_light;
+		height: 568px;
 	}
 	img {
 		display: block;
@@ -70,11 +82,11 @@
 	&:before { // Speaker
 		background: $grey_light;
 		border-radius: 8px;
-		width: 60px;
-		height: 8px;
-		top: 52px;
+		width: 68px;
+		height: 14px;
+		top: 56px;
 		left: 50%;
-		margin-left: -30px;
+		margin-left: -34px;
 	}
 	&:after { // Home button
 		border: 3px solid $grey_light;
@@ -87,6 +99,9 @@
 	}
 }
 
+/**
+ * Browser wireframe
+ */
 .project-web figure {
 	border: 3px solid $grey_light;
 	border-bottom: 0 none;

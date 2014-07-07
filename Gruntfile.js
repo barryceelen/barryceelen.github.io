@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 					sourcemap: true
 				},
 				files: {
-					'css/app.css':'dev/sass/app.scss'
+					'css/application.css':'dev/sass/application.scss'
 				}
 			},
 			dist: {
@@ -18,7 +18,7 @@ module.exports = function(grunt) {
 					style: 'compressed'
 				},
 				files: {
-					'css/app.css':'dev/sass/app.scss'
+					'css/application.css':'dev/sass/application.scss'
 				}
 			}
 		},
@@ -28,7 +28,7 @@ module.exports = function(grunt) {
 				  browsers: ['last 2 version', 'ie 9', 'BlackBerry 10', 'Android 4']
 				},
 				no_dest: {
-					src: 'css/app.css'
+					src: 'css/application.css'
 				}
 			}
 		},
@@ -112,7 +112,7 @@ module.exports = function(grunt) {
 				}
 			},
 			styles: {
-				files: ['css/app.css'],
+				files: ['css/application.css'],
 				tasks: ['autoprefixer'],
 				options: {
 					spawn: false,

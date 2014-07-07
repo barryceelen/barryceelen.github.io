@@ -2,13 +2,7 @@
 	border-bottom: 1px solid $border_color;
 	margin-bottom: 0em;
 	overflow-x: hidden;
-	.entry-title {
-		font-size: 2em;
-		font-weight: bold;
-		line-height: 1;
-		margin-bottom: .25em;
-		text-transform: uppercase;
-	}
+	@include kern;
 }
 
 .project-iphone {
@@ -26,6 +20,17 @@
 .project-details {
 	margin-bottom: 2em;
 	padding-right: 1em;
+	.entry-title {
+		font-size: 2.8em;
+		font-weight: bold;
+		line-height: 1;
+		margin-bottom: 0;
+		text-transform: uppercase;
+	}
+	.entry-content {
+		text-transform: uppercase;
+		word-spacing: .1em;
+	}
 }
 
 .project-gallery {

@@ -139,13 +139,11 @@ body {
   border-bottom: 1px solid #e6e6e6;
   margin-bottom: 0em;
   overflow-x: hidden;
-}
-.project .entry-title {
-  font-size: 2em;
-  font-weight: bold;
-  line-height: 1;
-  margin-bottom: .25em;
-  text-transform: uppercase;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
+  -webkit-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern=1";
 }
 
 .project-iphone {
@@ -163,6 +161,17 @@ body {
 .project-details {
   margin-bottom: 2em;
   padding-right: 1em;
+}
+.project-details .entry-title {
+  font-size: 2.8em;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+.project-details .entry-content {
+  text-transform: uppercase;
+  word-spacing: .1em;
 }
 
 .project-gallery {

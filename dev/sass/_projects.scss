@@ -49,18 +49,45 @@
 	}
 }
 
-.project-iphone figure {
-	border: 3px solid $grey_light;
-	border-radius: 55px;
+.project-iphone .device-iphone {
 	display: inline-block;
-	padding: 106px 26px;
+}
+
+.device-iphone-5 {
+	background: #fff;
+	border: 3px solid $grey_light;
+	border-top-left-radius: (55/378)*100*1% (55/786)*100*1%; // 55px
+	border-top-right-radius: (55/378)*100*1% (55/786)*100*1%; // 55px
+	border-bottom-left-radius: (55/378)*100*1% (55/786)*100*1%; // 55px
+	border-bottom-right-radius: (55/378)*100*1% (55/786)*100*1%; // 55px
+	box-sizing: border-box;
+	margin: 0;
 	position: relative;
+//	width: 378px;
+	width: 32vw;
+	//height: 786px;
+	figure {
+		background: yellow;
+		height: 0;
+		// padding: 106px 26px;
+		padding-bottom: (568/320)*100*1%;
+		position: relative;
+		width: 100%;
+	}
+	.device-screen {
+		padding: 110/378*100*1% 26/378*100*1%;
+	}
 	picture {
 		background: $grey_light;
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		width: 100%;
 	}
 	img {
 		display: block;
-		width: 320px;
+		width: 100%;
 	}
 	&:before, &:after {
 		content: '';
@@ -69,22 +96,31 @@
 	}
 	&:before { // Speaker
 		background: $grey_light;
-		border-radius: 8px;
-		width: 60px;
-		height: 8px;
-		top: 52px;
+		border-radius: 999px;
+		width: 60/378*100*1%; // 60px;
+		height: 8/786*100*1%; // 8px;
+		top: 52/786*100*1%;
 		left: 50%;
-		margin-left: -30px;
+		margin-left: -30/378*100*1%;
 	}
 	&:after { // Home button
 		border: 3px solid $grey_light;
-		border-radius: 100px;
-		bottom: 24px;
+		border-radius: 999px;
+		bottom: 24/786*100*1%; // 24px;
 		left: 50%;
-		margin-left: -31px;
-		width: 62px;
-		height: 62px;
+		margin-left: -31/378*100*1%; // -31px;
+		width: 62/378*100*1%; // 62px
+		height: 62/786*100*1%; // 62px
 	}
+}
+
+
+
+@media all and (min-width: 1164px) {
+	.device-iphone-5 {
+		width: 378px;
+	}
+
 }
 
 .project-web figure {

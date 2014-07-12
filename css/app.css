@@ -189,44 +189,72 @@ body {
   margin-right: 0;
 }
 
-.project-iphone figure {
-  border: 3px solid #e6e6e6;
-  border-radius: 55px;
+.project-iphone .device-iphone {
   display: inline-block;
-  padding: 106px 26px;
+}
+
+.device-iphone-5 {
+  border: 3px solid #e6e6e6;
+  border-top-left-radius: 14.55026% 6.99746%;
+  border-top-right-radius: 14.55026% 6.99746%;
+  border-bottom-left-radius: 14.55026% 6.99746%;
+  border-bottom-right-radius: 14.55026% 6.99746%;
+  box-sizing: border-box;
+  margin: 0;
   position: relative;
+  width: 32vw;
 }
-.project-iphone figure picture {
+.device-iphone-5 figure {
+  background: yellow;
+  height: 0;
+  padding-bottom: 177.5%;
+  position: relative;
+  width: 100%;
+}
+.device-iphone-5 .device-screen {
+  padding: 29.10053% 6.87831%;
+}
+.device-iphone-5 picture {
   background: #e6e6e6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
 }
-.project-iphone figure img {
+.device-iphone-5 img {
   display: block;
-  width: 320px;
+  width: 100%;
 }
-.project-iphone figure:before, .project-iphone figure:after {
+.device-iphone-5:before, .device-iphone-5:after {
   content: '';
   display: block;
   position: absolute;
 }
-.project-iphone figure:before {
+.device-iphone-5:before {
   background: #e6e6e6;
-  border-radius: 8px;
-  width: 60px;
-  height: 8px;
-  top: 52px;
+  border-radius: 999px;
+  width: 15.87302%;
+  height: 1.01781%;
+  top: 6.61578%;
   left: 50%;
-  margin-left: -30px;
+  margin-left: -7.93651%;
 }
-.project-iphone figure:after {
+.device-iphone-5:after {
   border: 3px solid #e6e6e6;
-  border-radius: 100px;
-  bottom: 24px;
+  border-radius: 999px;
+  bottom: 3.05344%;
   left: 50%;
-  margin-left: -31px;
-  width: 62px;
-  height: 62px;
+  margin-left: -8.20106%;
+  width: 16.40212%;
+  height: 7.88804%;
 }
 
+@media all and (min-width: 1164px) {
+  .device-iphone-5 {
+    width: 378px;
+  }
+}
 .project-web figure {
   border: 3px solid #e6e6e6;
   border-bottom: 0 none;

@@ -7,134 +7,77 @@
 
 .project-inner {
 	margin: 0 auto;
-	max-width: $content_max_width;
+	padding: 0;
+	max-width: pem($content_max_width);
 }
 
-.project-iphone {
-	padding: 2em;
-	.project-details {
-		float: left;
-		width: 340px;
-	}
-	.project-gallery {
-		float: right;
-		width: $content_max_width - 340px;
-	}
+.project-split {
+	padding: pem(16);
 }
 
 .project-web {
-	padding: 2em 2em 0;
+	padding: pem(16) pem(16) 0;
 }
 
 .project-details {
-	margin-bottom: 2em;
-	padding-right: 1em;
+	margin-bottom: pem(32);
+	padding-right: pem(16);
 	.entry-title {
-		font-size: pem(44);
+		@include vw-min-max(22,42,$content_max_width);
 		font-weight: bold;
 		line-height: 1;
-		margin-bottom: pem(6,44);
+		margin-bottom: 0;
 		text-transform: uppercase;
 	}
 	.entry-content {
-		font-size: pem(18);
-		line-height: 1;
 		text-transform: uppercase;
 		word-spacing: .1em;
+		@include vw-min-max(12,16,$content_max_width);
+	}
+}
+
+@media all and (min-width: pem($content_max_width)) {
+	.project-details {
+		margin-bottom: pem(32);
+		padding-right: pem(16);
+		.entry-title {
+			font-size: pem(42);
+		}
+	}
+}
+
+.project-split {
+	.project-details {
+		float: left;
+		width: floor(percentage(312/1100));
+	}
+	.project-gallery {
+		float: right;
 	}
 }
 
 .project-gallery {
 	white-space: nowrap;
-	@include userselect;
-	figure {
-		background: white;
-		margin-right: 1.5em;
+	@include clearfix;
+	.device {
+		text-align: right;
+		margin-right: pem(16); margin-right: pvw(16,1100);
+		@include inline-block;
 		&:last-of-type {
 			margin-right: 0;
 		}
 	}
 }
 
-/**
- * iPhone wireframe
- */
-.project-iphone figure {
-	display: none;
-	border: 3px solid $grey_light;
-	border-radius: 55px;
-	display: inline-block;
-	padding: 106px 24px;
-	position: relative;
-	picture {
-		background: $grey_light;
-		height: 568px;
-	}
-	img {
-		display: block;
-		width: 320px;
-	}
-	&:before, &:after {
-		content: '';
-		display: block;
-		position: absolute;
-	}
-	&:before { // Speaker
-		background: $grey_light;
-		border-radius: 8px;
-		width: 68px;
-		height: 14px;
-		top: 56px;
-		left: 50%;
-		margin-left: -34px;
-	}
-	&:after { // Home button
-		border: 3px solid $grey_light;
-		border-radius: 100px;
-		bottom: 24px;
-		left: 50%;
-		margin-left: -31px;
-		width: 62px;
-		height: 62px;
+@media all and (min-width: pem($content_max_width)) {
+	.project-gallery .device {
+		margin-right: pem(16);
 	}
 }
 
-/**
- * Browser wireframe
- */
-.project-web figure {
-	border: 3px solid $grey_light;
-	border-bottom: 0 none;
-	border-radius: 12px;
-	border-bottom-right-radius: 0;
-	border-bottom-left-radius: 0;
-	display: block;
-	padding: 48px 0 0;
-	position: relative;
-	width: 100%;
-	max-height: 480px;
-	max-width: 1088px;
-	overflow-y: hidden;
-	picture {
-		background: $grey_light;
-	}
-	img {
-		display: block;
-		width: 100%;
-	}
-	&:before, &:after {
-		content: '';
-		display: block;
-		position: absolute;
-	}
-	&:before { // Traffic Lights
-		background: $grey_light;
-		border-radius: 8px;
-		box-shadow: 24px 0 0 $grey_light, 48px 0 0 $grey_light;
-		width: 16px;
-		height: 16px;
-		top: 16px;
-		left: 46px;
-		margin-left: -30px;
+@media all and (min-width: pem($content_max_width)) {
+	.device {
+		border-width: 3px;
 	}
 }
+

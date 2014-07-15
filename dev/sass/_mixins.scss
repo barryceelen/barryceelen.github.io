@@ -5,6 +5,29 @@
 	@return #{$px / $context}em;
 }
 
+/**
+ * Convert pixels to vw
+ */
+@function pvw($px, $viewport_width) {
+	@return #{($px / $viewport_width) * 100}vw;
+}
+
+@mixin vw-min-max($font_size_min, $font_size_max, $viewport_width_max) {
+
+	$vw: ($font_size_max / $viewport_width_max) * 100;
+	$min_width: ($font_size_min/$vw)*100;
+	$mq_min: #{$min_width}px;
+	$mq_max: #{$viewport_width_max}px;
+
+	font-size: #{$font_size_min}px;
+	@media all and (min-width: $mq_min) {
+		font-size: #{$vw}vw;
+	}
+	@media all and (min-width: $mq_max) {
+		font-size: #{$font_size_max}px;
+	}
+}
+
 /*
  * Background image for retina screens
  * via: http://37signals.com/svn/posts/3271-easy-retina-ready-images-using-scss

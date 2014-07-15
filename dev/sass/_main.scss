@@ -1,4 +1,8 @@
 /**
+ * TODO Print stylesheet, see: http://www.smashingmagazine.com/2013/03/08/tips-and-tricks-for-print-style-sheets/
+ */
+
+/**
  * Variables defined here because we need the pem mixin
  */
 $narrow_width: pem(480);
@@ -15,6 +19,17 @@ img {
 figure {
 	margin: 0;
 	padding: 0;
+}
+
+@media all {
+	.page-break	{ display: none; }
+}
+
+@media print {
+	// .page-break	{ display: block; page-break-before: always; }
+	.projects article {
+		page-break-before: always;
+	}
 }
 
 picture {

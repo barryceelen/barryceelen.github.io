@@ -71,7 +71,7 @@ module.exports = function(grunt) {
 			}
 		},
 		copy: {
-			dev: {
+			images: {
 				files: [
 				{
 					expand: true,
@@ -81,7 +81,7 @@ module.exports = function(grunt) {
 					filter: 'isFile'
 				}]
 			},
-			dist: {
+			icons: {
 				files: [
 				{
 					expand: true,
@@ -89,15 +89,7 @@ module.exports = function(grunt) {
 					src: ['**'],
 					dest: '',
 					filter: 'isFile'
-				},
-				{
-					expand: true,
-					cwd: 'dev/img/',
-					src: ['**'],
-					dest: 'img/',
-					filter: 'isFile'
 				}]
-
 			}
 		},
 		watch: {
@@ -127,7 +119,15 @@ module.exports = function(grunt) {
 			},
 			copy_images: {
 				files: ['dev/img/**'],
-				tasks: ['copy:dev'],
+				tasks: ['copy:images'],
+				options: {
+					spawn: false,
+					event: ['added', 'changed'],
+				}
+			},
+			copy_icons: {
+				files: ['dev/app-icons/**'],
+				tasks: ['copy:icons'],
 				options: {
 					spawn: false,
 					event: ['added', 'changed'],
@@ -135,7 +135,7 @@ module.exports = function(grunt) {
 			},
 			remove_images: {
 				files: ['dev/img/**'],
-				tasks: ['clean:dev','copy:dev'],
+				tasks: ['clean:dev','copy:images'],
 				options: {
 					event: ['deleted'],
 					spawn: false,

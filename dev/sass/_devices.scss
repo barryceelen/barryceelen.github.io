@@ -1,0 +1,112 @@
+.device-iphone-5 {
+	background: #fff;
+	border-color: $grey_light;
+	border-style: solid;
+	border-width: 3px;
+	border-width: pvw(3,1100);
+	border-top-left-radius: percentage(55/378) percentage(55/786); // 55px
+	border-top-right-radius: percentage(55/378) percentage(55/786); // 55px
+	border-bottom-left-radius: percentage(55/378) percentage(55/786); // 55px
+	border-bottom-right-radius: percentage(55/378) percentage(55/786); // 55px
+	box-sizing: border-box;
+	margin: 0;
+	position: relative;
+//	width: 378px;
+	width: 32vw;
+	max-width: 378px;
+	//height: 786px;
+	figure {
+		height: 0;
+		// padding: 106px 26px;
+		padding-bottom: percentage(568/320);
+		position: relative;
+		width: 100%;
+	}
+	.device-screen {
+		padding: percentage(110/378)percentage( 26/378);
+	}
+	picture {
+		background: $grey_light;
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+	}
+	img {
+		display: block;
+		width: 100%;
+	}
+	&:before, &:after {
+		content: '';
+		display: block;
+		position: absolute;
+	}
+	&:before { // Speaker
+		background: $grey_light;
+		border-radius: 999px;
+		width: percentage(60/378); // 60px;
+		height: percentage(8/786); // 8px;
+		top: percentage(52/786);
+		left: 50%;
+		margin-left: percentage(-30/378);
+	}
+	&:after { // Home button
+		border-color: $grey_light;
+		border-style: solid;
+		border-width: 3px;
+		border-width: pvw(3,1100);
+		border-radius: 999px;
+		bottom: percentage(24/786); // 24px;
+		left: 50%;
+		margin-left: percentage(-31/378); // -31px;
+		width: percentage(62/378); // 62px
+		height: percentage(62/786); // 62px
+	}
+}
+
+
+
+@media all and (min-width: 1164px) {
+	.device-iphone-5 {
+		// width: 378px;
+	}
+
+}
+
+.project-web figure {
+	border: 3px solid $grey_light;
+	border-bottom: 0 none;
+	border-radius: 12px;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	display: block;
+	padding: 48px 0 0;
+	position: relative;
+	width: 100%;
+	max-height: 480px;
+	max-width: 1088px;
+	overflow-y: hidden;
+	picture {
+		background: $grey_light;
+	}
+	img {
+		display: block;
+		width: 100%;
+	}
+	&:before, &:after {
+		content: '';
+		display: block;
+		position: absolute;
+	}
+	&:before { // Traffic Lights
+		background: $grey_light;
+		border-radius: 8px;
+		box-shadow: 24px 0 0 $grey_light, 48px 0 0 $grey_light;
+		width: 16px;
+		height: 16px;
+		top: 16px;
+		left: 46px;
+		margin-left: -30px;
+	}
+}

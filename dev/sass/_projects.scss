@@ -7,26 +7,23 @@
 
 .project-inner {
 	margin: 0 auto;
-	max-width: 1100px;
+	padding: 0;
+	max-width: pem($content_max_width);
 }
 
-.project-iphone {
-	padding: 2em;
-	.project-details {
-		float: left;
-		width: 300px;
-	}
+.project-split {
+	padding: pem(16);
 }
 
 .project-web {
-	padding: 2em 2em 0;
+	padding: pem(16) pem(16) 0;
 }
 
 .project-details {
-	margin-bottom: 2em;
-	padding-right: 1em;
+	margin-bottom: pem(32);
+	padding-right: pem(16);
 	.entry-title {
-		font-size: 2.8em;
+		@include vw-min-max(22,42,$content_max_width);
 		font-weight: bold;
 		line-height: 1;
 		margin-bottom: 0;
@@ -35,127 +32,52 @@
 	.entry-content {
 		text-transform: uppercase;
 		word-spacing: .1em;
+		@include vw-min-max(12,16,$content_max_width);
+	}
+}
+
+@media all and (min-width: pem($content_max_width)) {
+	.project-details {
+		margin-bottom: pem(32);
+		padding-right: pem(16);
+		.entry-title {
+			font-size: pem(42);
+		}
+	}
+}
+
+.project-split {
+	.project-details {
+		float: left;
+		width: floor(percentage(312/1100));
+	}
+	.project-gallery {
+		float: right;
 	}
 }
 
 .project-gallery {
 	white-space: nowrap;
-	figure {
-		background: white;
-		margin-right: 1em;
+	@include clearfix;
+	.device {
+		text-align: right;
+		margin-right: pem(16); margin-right: pvw(16,1100);
+		@include inline-block;
 		&:last-of-type {
 			margin-right: 0;
 		}
 	}
 }
 
-.project-iphone .device-iphone {
-	display: inline-block;
-}
-
-.device-iphone-5 {
-	background: #fff;
-	border: 3px solid $grey_light;
-	border-top-left-radius: (55/378)*100*1% (55/786)*100*1%; // 55px
-	border-top-right-radius: (55/378)*100*1% (55/786)*100*1%; // 55px
-	border-bottom-left-radius: (55/378)*100*1% (55/786)*100*1%; // 55px
-	border-bottom-right-radius: (55/378)*100*1% (55/786)*100*1%; // 55px
-	box-sizing: border-box;
-	margin: 0;
-	position: relative;
-//	width: 378px;
-	width: 32vw;
-	//height: 786px;
-	figure {
-		background: yellow;
-		height: 0;
-		// padding: 106px 26px;
-		padding-bottom: (568/320)*100*1%;
-		position: relative;
-		width: 100%;
-	}
-	.device-screen {
-		padding: 110/378*100*1% 26/378*100*1%;
-	}
-	picture {
-		background: $grey_light;
-		position: absolute;
-		left: 0;
-		top: 0;
-		bottom: 0;
-		width: 100%;
-	}
-	img {
-		display: block;
-		width: 100%;
-	}
-	&:before, &:after {
-		content: '';
-		display: block;
-		position: absolute;
-	}
-	&:before { // Speaker
-		background: $grey_light;
-		border-radius: 999px;
-		width: 60/378*100*1%; // 60px;
-		height: 8/786*100*1%; // 8px;
-		top: 52/786*100*1%;
-		left: 50%;
-		margin-left: -30/378*100*1%;
-	}
-	&:after { // Home button
-		border: 3px solid $grey_light;
-		border-radius: 999px;
-		bottom: 24/786*100*1%; // 24px;
-		left: 50%;
-		margin-left: -31/378*100*1%; // -31px;
-		width: 62/378*100*1%; // 62px
-		height: 62/786*100*1%; // 62px
+@media all and (min-width: pem($content_max_width)) {
+	.project-gallery .device {
+		margin-right: pem(16);
 	}
 }
 
-
-
-@media all and (min-width: 1164px) {
-	.device-iphone-5 {
-		width: 378px;
-	}
-
-}
-
-.project-web figure {
-	border: 3px solid $grey_light;
-	border-bottom: 0 none;
-	border-radius: 12px;
-	border-bottom-right-radius: 0;
-	border-bottom-left-radius: 0;
-	display: block;
-	padding: 48px 0 0;
-	position: relative;
-	width: 100%;
-	max-height: 480px;
-	max-width: 1088px;
-	overflow-y: hidden;
-	picture {
-		background: $grey_light;
-	}
-	img {
-		display: block;
-		width: 100%;
-	}
-	&:before, &:after {
-		content: '';
-		display: block;
-		position: absolute;
-	}
-	&:before { // Traffic Lights
-		background: $grey_light;
-		border-radius: 8px;
-		box-shadow: 24px 0 0 $grey_light, 48px 0 0 $grey_light;
-		width: 16px;
-		height: 16px;
-		top: 16px;
-		left: 46px;
-		margin-left: -30px;
+@media all and (min-width: pem($content_max_width)) {
+	.device {
+		border-width: 3px;
 	}
 }
+

@@ -46,10 +46,7 @@ body {
 
 .site-footer {
 	margin: 0 auto;
-	max-width: 1100px;
-}
-
-#colophon {
+	max-width: $content_max_width;
 	padding: 6em 2em 2em;
 }
 

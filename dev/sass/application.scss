@@ -4,8 +4,9 @@ Author URI: http://barryceelen.com
 */
 @import 'variables';
 @import 'mixins';
-// @import 'reset';
-@import 'font_face';
+@import 'reset';
+@import 'fontface';
 @import 'main';
 @import 'header';
+@import 'devices';
 @import 'projects';

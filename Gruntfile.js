@@ -152,5 +152,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('default', ['sass:dist','autoprefixer','clean','copy:dist','imagemin']);
+	grunt.registerTask('default', ['sass:dist','autoprefixer','jade','clean','copy','imagemin']);
 };

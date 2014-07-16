@@ -1,5 +1,496 @@
 /*!
 Author: Barry Ceelen
 Author URI: http://barryceelen.com
-*/html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,font,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td{border:0;font-family:inherit;font-size:100%;font-style:inherit;font-weight:inherit;margin:0;outline:0;padding:0;vertical-align:baseline}html{font-size:100%;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}*,*:before,*:after{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}body{background:#fff}article,aside,details,figcaption,figure,footer,header,main,nav,section{display:block}ol,ul{list-style:none}table{border-collapse:separate;border-spacing:0}caption,th,td{font-weight:normal;text-align:left}blockquote:before,blockquote:after,q:before,q:after{content:""}blockquote,q{quotes:"" ""}a:focus{outline:thin dotted}a:hover,a:active{outline:0}a img{border:0}@font-face{font-family:'Roboto Condensed';font-style:normal;font-weight:300;src:local("Roboto Condensed Light"),local("RobotoCondensed-Light"),url("//brick.a.ssl.fastly.net/fonts/robotocondensed/300.woff") format("woff")}@font-face{font-family:'Roboto Condensed';font-style:italic;font-weight:300;src:local("Roboto Condensed Light Italic"),local("RobotoCondensed-LightItalic"),url("//brick.a.ssl.fastly.net/fonts/robotocondensed/300i.woff") format("woff")}@font-face{font-family:'Roboto Condensed';font-style:normal;font-weight:400;src:local("Roboto Condensed Regular"),local("RobotoCondensed-Regular"),url("//brick.a.ssl.fastly.net/fonts/robotocondensed/400.woff") format("woff")}@font-face{font-family:'Roboto Condensed';font-style:normal;font-weight:700;src:local("Roboto Condensed Bold"),local("RobotoCondensed-Bold"),url("//brick.a.ssl.fastly.net/fonts/robotocondensed/700.woff") format("woff")}@font-face{font-family:'Roboto Condensed';font-style:italic;font-weight:400;src:local("Roboto Condensed Italic"),local("RobotoCondensed-Italic"),url("//brick.a.ssl.fastly.net/fonts/robotocondensed/400i.woff") format("woff")}@font-face{font-family:'Roboto Condensed';font-style:italic;font-weight:700;src:local("Roboto Condensed Bold Italic"),local("RobotoCondensed-BoldItalic"),url("//brick.a.ssl.fastly.net/fonts/robotocondensed/700i.woff") format("woff")}.hidden{display:none}img{display:block}figure{margin:0;padding:0}@media all{.page-break{display:none}}@media print{.projects article{page-break-before:always}}picture{display:block;margin:0;padding:0}h1,p{margin:0;padding:0}html,body{margin:0;padding:0}body{background:#fff;color:#222;font-family:"Roboto Condensed",sans-serif;font-size:100%}#content{background:#fff}.site-footer{margin:0 auto;max-width:1100;padding:6em 2em 2em}.site-title{font-size:1em;font-weight:400}.site-title a{color:#222;text-decoration:none;text-transform:uppercase}.site-branding h1{margin:0}.device-iphone-5{background:#fff;border-color:#e6e6e6;border-style:solid;border-width:3px;border-width:0.27273vw;border-top-left-radius:14.55026% 6.99746%;border-top-right-radius:14.55026% 6.99746%;border-bottom-left-radius:14.55026% 6.99746%;border-bottom-right-radius:14.55026% 6.99746%;box-sizing:border-box;margin:0;position:relative;width:32vw;max-width:378px}.device-iphone-5 figure{height:0;padding-bottom:177.5%;position:relative;width:100%}.device-iphone-5 .device-screen{padding:29.10053% 6.87831%}.device-iphone-5 picture{background:#e6e6e6;position:absolute;left:0;top:0;bottom:0;width:100%}.device-iphone-5 img{display:block;width:100%}.device-iphone-5:before,.device-iphone-5:after{content:'';display:block;position:absolute}.device-iphone-5:before{background:#e6e6e6;border-radius:999px;width:15.87302%;height:1.01781%;top:6.61578%;left:50%;margin-left:-7.93651%}.device-iphone-5:after{border-color:#e6e6e6;border-style:solid;border-width:3px;border-width:0.27273vw;border-radius:999px;bottom:3.05344%;left:50%;margin-left:-8.20106%;width:16.40212%;height:7.88804%}.project-web figure{border:3px solid #e6e6e6;border-bottom:0 none;border-radius:12px;border-bottom-right-radius:0;border-bottom-left-radius:0;display:block;padding:48px 0 0;position:relative;width:100%;max-height:480px;max-width:1088px;overflow-y:hidden}.project-web figure picture{background:#e6e6e6}.project-web figure img{display:block;width:100%}.project-web figure:before,.project-web figure:after{content:'';display:block;position:absolute}.project-web figure:before{background:#e6e6e6;border-radius:8px;box-shadow:24px 0 0 #e6e6e6,48px 0 0 #e6e6e6;width:16px;height:16px;top:16px;left:46px;margin-left:-30px}.project{border-bottom:1px solid #e6e6e6;margin:0;overflow-x:hidden;text-rendering:optimizeLegibility;font-feature-settings:"kern";-webkit-font-feature-settings:"kern";-moz-font-feature-settings:"kern";-moz-font-feature-settings:"kern=1"}.project-inner{margin:0 auto;padding:0;max-width:68.75em}.project-split{padding:1em}.project-web{padding:1em 1em 0}.project-details{margin-bottom:2em;padding-right:1em}.project-details .entry-title{font-size:22px;font-weight:bold;line-height:1;margin-bottom:0;text-transform:uppercase}@media all and (min-width: 576.19048px){.project-details .entry-title{font-size:3.81818vw}}@media all and (min-width: 1100px){.project-details .entry-title{font-size:42px}}.project-details .entry-content{text-transform:uppercase;word-spacing:.1em;font-size:12px}@media all and (min-width: 825px){.project-details .entry-content{font-size:1.45455vw}}@media all and (min-width: 1100px){.project-details .entry-content{font-size:16px}}
-@media all and (min-width: 68.75em){.project-details{margin-bottom:2em;padding-right:1em}.project-details .entry-title{font-size:2.625em}}.project-split .project-details{float:left;width:28%}.project-split .project-gallery{float:right}.project-gallery{white-space:nowrap}.project-gallery:before,.project-gallery:after{content:"\0020";display:block;height:0;overflow:hidden}.project-gallery:after{clear:both}.project-gallery .device{text-align:right;margin-right:1em;margin-right:1.45455vw;display:-moz-inline-stack;display:inline-block;vertical-align:top;*vertical-align:auto;zoom:1;*display:inline}.project-gallery .device:last-of-type{margin-right:0}@media all and (min-width: 68.75em){.project-gallery .device{margin-right:1em}}@media all and (min-width: 68.75em){.device{border-width:3px}}
+*/
+/**
+ * Convert pixels to ems
+ */
+/**
+ * Convert pixels to vw
+ */
+/*
+ * Background image for retina screens
+ * via: http://37signals.com/svn/posts/3271-easy-retina-ready-images-using-scss
+ */
+/**
+ * Cross-browser inline-block
+ */
+/**
+ * Clearfix
+ */
+/**
+ * Text image replacement
+ */
+/**
+ * Kerning
+ *
+ * Via: http://blog.typekit.com/2014/02/05/kerning-on-the-web/
+ */
+/**
+ * Try to prevent user selection
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  border: 0;
+  font-family: inherit;
+  font-size: 100%;
+  font-style: inherit;
+  font-weight: inherit;
+  margin: 0;
+  outline: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+html {
+  font-size: 100%;
+  /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
+  overflow-y: scroll;
+  /* Keeps page centered in all browsers regardless of content height */
+  -webkit-text-size-adjust: 100%;
+  /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
+  -ms-text-size-adjust: 100%;
+  /* www.456bereastreet.com/archive/201012/controlling_text_size_in_safari_for_ios_without_disabling_user_zoom/ */
+}
+
+*,
+*:before,
+*:after {
+  /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
+  -webkit-box-sizing: border-box;
+  /* Not needed for modern webkit but still used by Blackberry Browser 7.0; see http://caniuse.com/#search=box-sizing */
+  -moz-box-sizing: border-box;
+  /* Still needed for Firefox 28; see http://caniuse.com/#search=box-sizing */
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+main,
+nav,
+section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+table {
+  /* tables still need 'cellspacing="0"' in the markup */
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+caption, th, td {
+  font-weight: normal;
+  text-align: left;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+}
+
+blockquote, q {
+  quotes: "" "";
+}
+
+a:focus {
+  outline: thin dotted;
+}
+
+a:hover,
+a:active {
+  outline: 0;
+}
+
+a img {
+  border: 0;
+}
+
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 300;
+  src: local("Roboto Condensed Light"), local("RobotoCondensed-Light"), url("//brick.a.ssl.fastly.net/fonts/robotocondensed/300.woff") format("woff");
+}
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: italic;
+  font-weight: 300;
+  src: local("Roboto Condensed Light Italic"), local("RobotoCondensed-LightItalic"), url("//brick.a.ssl.fastly.net/fonts/robotocondensed/300i.woff") format("woff");
+}
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Roboto Condensed Regular"), local("RobotoCondensed-Regular"), url("//brick.a.ssl.fastly.net/fonts/robotocondensed/400.woff") format("woff");
+}
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Roboto Condensed Bold"), local("RobotoCondensed-Bold"), url("//brick.a.ssl.fastly.net/fonts/robotocondensed/700.woff") format("woff");
+}
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: italic;
+  font-weight: 400;
+  src: local("Roboto Condensed Italic"), local("RobotoCondensed-Italic"), url("//brick.a.ssl.fastly.net/fonts/robotocondensed/400i.woff") format("woff");
+}
+@font-face {
+  font-family: 'Roboto Condensed';
+  font-style: italic;
+  font-weight: 700;
+  src: local("Roboto Condensed Bold Italic"), local("RobotoCondensed-BoldItalic"), url("//brick.a.ssl.fastly.net/fonts/robotocondensed/700i.woff") format("woff");
+}
+/**
+ * TODO Print stylesheet, see: http://www.smashingmagazine.com/2013/03/08/tips-and-tricks-for-print-style-sheets/
+ */
+.hidden {
+  display: none;
+}
+
+i, b {
+  font-style: normal;
+  font-weight: 400;
+}
+
+img {
+  display: block;
+}
+
+figure {
+  margin: 0;
+  padding: 0;
+}
+
+@media all {
+  .page-break {
+    display: none;
+  }
+}
+@media print {
+  .projects article {
+    page-break-before: always;
+  }
+}
+picture {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: white;
+  color: #222222;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 100%;
+}
+
+#content {
+  background: white;
+}
+
+.site-footer {
+  margin: 0 auto;
+  max-width: 1100;
+  padding: 6em 2em 2em;
+}
+
+#colophon {
+  padding: 8.25em 1em 1em;
+}
+
+.footer-inner {
+  font-size: 1em;
+  font-weight: 400;
+  margin: 0 auto;
+  text-transform: uppercase;
+  width: 100%;
+  max-width: 68.75em;
+}
+.footer-inner a {
+  color: #222222;
+  text-transform: uppercase;
+}
+.footer-inner .impressum {
+  color: #d4d4d4;
+  float: right;
+}
+.footer-inner .impressum i {
+  display: none;
+}
+
+.site-branding h1 {
+  margin: 0;
+}
+
+.device-iphone-5 {
+  background: #fff;
+  border-color: #e6e6e6;
+  border-style: solid;
+  border-width: 3px;
+  border-width: 0.27273vw;
+  border-top-left-radius: 14.55026% 6.99746%;
+  border-top-right-radius: 14.55026% 6.99746%;
+  border-bottom-left-radius: 14.55026% 6.99746%;
+  border-bottom-right-radius: 14.55026% 6.99746%;
+  box-sizing: border-box;
+  margin: 0;
+  position: relative;
+  width: 32vw;
+  max-width: 378px;
+}
+.device-iphone-5 figure {
+  height: 0;
+  padding-bottom: 177.5%;
+  position: relative;
+  width: 100%;
+}
+.device-iphone-5 .device-screen {
+  padding: 29.10053% 6.87831%;
+}
+.device-iphone-5 picture {
+  background: #e6e6e6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.device-iphone-5 img {
+  display: block;
+  width: 100%;
+}
+.device-iphone-5:before, .device-iphone-5:after {
+  content: '';
+  display: block;
+  position: absolute;
+}
+.device-iphone-5:before {
+  background: #e6e6e6;
+  border-radius: 999px;
+  width: 15.87302%;
+  height: 1.01781%;
+  top: 6.61578%;
+  left: 50%;
+  margin-left: -7.93651%;
+}
+.device-iphone-5:after {
+  border-color: #e6e6e6;
+  border-style: solid;
+  border-width: 3px;
+  border-width: 0.27273vw;
+  border-radius: 999px;
+  bottom: 3.05344%;
+  left: 50%;
+  margin-left: -8.20106%;
+  width: 16.40212%;
+  height: 7.88804%;
+}
+
+.device-web {
+  border-color: #e6e6e6;
+  border-style: solid;
+  border-width: 3px;
+  border-width: 0.27273vw;
+  border-bottom: 0 none;
+  border-top-right-radius: 1.27273% 2.91667%;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 1.27273% 2.91667%;
+  box-sizing: border-box;
+  position: relative;
+  margin: 0;
+  width: 100%;
+}
+.device-web figure {
+  height: 0;
+  padding-bottom: 39.27273%;
+  position: relative;
+  width: 100%;
+}
+.device-web .device-screen {
+  padding: 4.36364% 0 0 0;
+  overflow-y: hidden;
+}
+.device-web picture {
+  background: #e6e6e6;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+.device-web img {
+  display: block;
+  width: 100%;
+}
+.device-web:before, .device-web:after {
+  content: '';
+  display: block;
+  position: absolute;
+}
+.device-web:before {
+  background: #e6e6e6;
+  border-radius: 8px;
+  box-shadow: 24px 0 0 #e6e6e6, 48px 0 0 #e6e6e6;
+  width: 1.45455%;
+  height: 3.33333%;
+  top: 16px;
+  left: 46px;
+  margin-left: -30px;
+}
+
+.project {
+  border-bottom: 1px solid #e6e6e6;
+  margin: 0;
+  padding: 2em 1em 1em;
+  overflow-x: hidden;
+  text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
+  -webkit-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern";
+  -moz-font-feature-settings: "kern=1";
+}
+
+.project-web {
+  padding-bottom: 0;
+}
+
+.project-inner {
+  margin: 0 auto;
+  padding: 0;
+  max-width: 68.75em;
+  width: 100%;
+}
+.project-inner:before, .project-inner:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.project-inner:after {
+  clear: both;
+}
+
+.project-details {
+  margin-bottom: 2em;
+}
+.project-details .entry-title {
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 0;
+  text-transform: uppercase;
+}
+@media all and (min-width: 576.19048px) {
+  .project-details .entry-title {
+    font-size: 3.81818vw;
+  }
+}
+@media all and (min-width: 1100px) {
+  .project-details .entry-title {
+    font-size: 42px;
+  }
+}
+.project-details .entry-content {
+  text-transform: uppercase;
+  word-spacing: .1em;
+  font-size: 12px;
+}
+@media all and (min-width: 825px) {
+  .project-details .entry-content {
+    font-size: 1.45455vw;
+  }
+}
+@media all and (min-width: 1100px) {
+  .project-details .entry-content {
+    font-size: 16px;
+  }
+}
+
+@media all and (min-width: 68.75em) {
+  .project-details {
+    margin-bottom: 2em;
+    padding-right: 1em;
+  }
+  .project-details .entry-title {
+    font-size: 2.625em;
+  }
+}
+.project-split .project-details {
+  float: left;
+  padding-right: 1em;
+  width: 28%;
+}
+.project-split .project-gallery {
+  float: right;
+  white-space: nowrap;
+}
+.project-split .project-gallery:before, .project-split .project-gallery:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.project-split .project-gallery:after {
+  clear: both;
+}
+.project-split .project-gallery .device {
+  text-align: right;
+  margin-right: 1em;
+  margin-right: 1.45455vw;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: top;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+.project-split .project-gallery .device:last-of-type {
+  margin-right: 0;
+}
+
+@media all and (min-width: 68.75em) {
+  .project-split .project-gallery .device {
+    margin-right: 1em;
+  }
+  .project-split .project-gallery .device:last-of-type {
+    margin-right: 0;
+  }
+}
+@media all and (min-width: 68.75em) {
+  .device {
+    border-width: 3px;
+  }
+}
+
+/*# sourceMappingURL=application.css.map */

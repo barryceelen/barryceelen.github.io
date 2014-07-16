@@ -23,7 +23,7 @@
 		width: 100%;
 	}
 	.device-screen {
-		padding: percentage(110/378)percentage( 26/378);
+		padding: percentage(110/378) percentage(26/378);
 	}
 	picture {
 		background: $grey_light;
@@ -66,29 +66,39 @@
 }
 
 
-
-@media all and (min-width: 1164px) {
-	.device-iphone-5 {
-		// width: 378px;
-	}
-
-}
-
-.project-web figure {
-	border: 3px solid $grey_light;
+.device-web {
+	border-color: $grey_light;
+	border-style: solid;
+	border-width: 3px;
+	border-width: pvw(3,1100);
 	border-bottom: 0 none;
-	border-radius: 12px;
+	border-top-right-radius: percentage(14/1100) percentage(14/480); // 14px
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
-	display: block;
-	padding: 48px 0 0;
+	border-top-left-radius: percentage(14/1100) percentage(14/480); // 14px
+	box-sizing: border-box;
 	position: relative;
+	margin: 0;
 	width: 100%;
-	max-height: 480px;
-	max-width: 1088px;
-	overflow-y: hidden;
+	// max-width: $content_max_width*1px;
+	// height: 480px;
+	figure {
+		height: 0;
+		padding-bottom: percentage(432/1100); // 480 - 48 = 423
+		position: relative;
+		width: 100%;
+	}
+	.device-screen {
+		padding: percentage(48/1100) 0 0 0;
+		overflow-y: hidden;
+	}
 	picture {
 		background: $grey_light;
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		width: 100%;
 	}
 	img {
 		display: block;
@@ -103,8 +113,8 @@
 		background: $grey_light;
 		border-radius: 8px;
 		box-shadow: 24px 0 0 $grey_light, 48px 0 0 $grey_light;
-		width: 16px;
-		height: 16px;
+		width: percentage(16/1100);
+		height: percentage(16/480);
 		top: 16px;
 		left: 46px;
 		margin-left: -30px;

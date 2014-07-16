@@ -2,14 +2,13 @@
  * TODO Print stylesheet, see: http://www.smashingmagazine.com/2013/03/08/tips-and-tricks-for-print-style-sheets/
  */
 
-/**
- * Variables defined here because we need the pem mixin
- */
-$narrow_width: pem(480);
-$medium_width: pem(768);
-
 .hidden {
 	display: none;
+}
+
+i, b {
+	font-style: normal;
+	font-weight: 400;
 }
 
 img {
@@ -65,12 +64,27 @@ body {
 	padding: 6em 2em 2em;
 }
 
-.site-title {
+#colophon {
+	padding: pem(132) pem(16) pem(16);
+}
+
+.footer-inner {
 	font-size: pem(16);
 	font-weight: 400;
+	margin: 0 auto;
+	text-transform: uppercase;
+	width: 100%;
+	max-width: pem($content_max_width);
 	a {
 		color: $black;
-		text-decoration: none;
+		// text-decoration: none;
 		text-transform: uppercase;
+	}
+	.impressum {
+		color: lighten($black,70);
+		float: right;
+		i {
+			display: none;
+		}
 	}
 }

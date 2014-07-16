@@ -2,8 +2,29 @@
 Author: Barry Ceelen
 Author URI: http://barryceelen.com
 */
-@import 'variables';
+
+
+
+// Typography
+$base_font_size: 16; // Set font size to 100% on body
+$font_family: "Roboto Condensed", sans-serif;
+
+// Colors
+$grey_light: #E6E6E6;
+$black: #222;
+
+$background_color_content: #FFF;
+$background_color_footer: #FFF;
+$border_color: $grey_light;
+
+// Layout
+$content_max_width: 1100;
+
 @import 'mixins';
+
+$narrow_width: pem(480);
+$medium_width: pem(768);
+
 @import 'reset';
 @import 'fontface';
 @import 'main';

@@ -67,7 +67,7 @@ module.exports = function(grunt) {
 		},
 		clean: {
 			main: {
-				src: ['**/*.map','img/**/*.{png,jpg,gif}']
+				src: ['.sass-cache/','**/*.map','img/**/*.{png,jpg,gif}']
 			}
 		},
 		copy: {

@@ -1,27 +1,25 @@
 .project {
 	border-bottom: 1px solid $border_color;
 	margin: 0;
+	padding: pem(4*16) pem(16) pem(16);
 	overflow-x: hidden;
 	@include kern;
+}
+
+.project-web {
+	padding-bottom: 0;
 }
 
 .project-inner {
 	margin: 0 auto;
 	padding: 0;
 	max-width: pem($content_max_width);
-}
-
-.project-split {
-	padding: pem(16);
-}
-
-.project-web {
-	padding: pem(16) pem(16) 0;
+	width: 100%;
+	@include clearfix;
 }
 
 .project-details {
 	margin-bottom: pem(32);
-	padding-right: pem(16);
 	.entry-title {
 		@include vw-min-max(22,42,$content_max_width);
 		font-weight: bold;
@@ -49,34 +47,40 @@
 .project-split {
 	.project-details {
 		float: left;
+		padding-right: pem(16);
 		width: floor(percentage(312/1100));
 	}
 	.project-gallery {
 		float: right;
-	}
-}
-
-.project-gallery {
-	white-space: nowrap;
-	@include clearfix;
-	.device {
-		text-align: right;
-		margin-right: pem(16); margin-right: pvw(16,1100);
-		@include inline-block;
-		&:last-of-type {
-			margin-right: 0;
+		white-space: nowrap;
+		@include clearfix;
+		.device {
+			text-align: right;
+			margin-right: pem(16); margin-right: pvw(16,1100);
+			@include inline-block;
+			&:last-of-type {
+				margin-right: 0;
+			}
 		}
 	}
 }
 
 @media all and (min-width: pem($content_max_width)) {
-	.project-gallery .device {
-		margin-right: pem(16);
+	.project-split {
+		.project-gallery .device {
+			margin-right: pem(16);
+			&:last-of-type {
+				margin-right: 0;
+			}
+		}
 	}
 }
 
 @media all and (min-width: pem($content_max_width)) {
 	.device {
+		border-width: 3px;
+	}
+	.device-iphone-5:after { // Home button
 		border-width: 3px;
 	}
 }

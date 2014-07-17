@@ -2,8 +2,52 @@
 Author: Barry Ceelen
 Author URI: http://barryceelen.com
 */
-@import 'variables';
+
+
+
+// Typography
+$base_font_size: 16; // Set font size to 100% on body
+$font_family: "Roboto Condensed", sans-serif;
+
+// Colors
+$grey_light: #E6E6E6;
+$black: #222;
+// Colors II
+// https://github.com/mrmrs/colors
+// Cool
+$aqua:  #7FDBFF;
+$blue:  #0074D9;
+$navy:  #001F3F;
+$teal:  #39CCCC;
+$green: #2ECC40;
+$olive: #3D9970;
+$lime:  #01FF70;
+// Warm
+$yellow:  #FFDC00;
+$orange:  #FF851B;
+$red:     #FF4136;
+$fuchsia: #F012BE;
+$purple:  #B10DC9;
+$maroon:  #85144B;
+// Gray Scale
+$white:  #fff;
+$silver: #ddd;
+$gray:   #aaa;
+$grey:   #aaa;
+$black:  #222;
+
+$background_color_content: #FFF;
+$background_color_footer: #FFF;
+$border_color: $grey_light;
+
+// Layout
+$content_max_width: 1100;
+
 @import 'mixins';
+
+$narrow_width: pem(480);
+$medium_width: pem(768);
+
 @import 'reset';
 @import 'fontface';
 @import 'main';

@@ -229,12 +229,22 @@ body {
 }
 
 .footer-inner {
-  font-size: 1em;
   font-weight: 400;
   margin: 0 auto;
   text-transform: uppercase;
   width: 100%;
   max-width: 68.75em;
+  font-size: 12px;
+}
+@media all and (min-width: 825px) {
+  .footer-inner {
+    font-size: 1.45455vw;
+  }
+}
+@media all and (min-width: 1100px) {
+  .footer-inner {
+    font-size: 16px;
+  }
 }
 .footer-inner a {
   color: #222222;
@@ -264,8 +274,6 @@ body {
   background: #fff;
   border-color: #e6e6e6;
   border-style: solid;
-  border-width: 3px;
-  border-width: 0.27273vw;
   border-top-left-radius: 14.55026% 6.99746%;
   border-top-right-radius: 14.55026% 6.99746%;
   border-bottom-left-radius: 14.55026% 6.99746%;
@@ -275,6 +283,17 @@ body {
   position: relative;
   width: 32vw;
   max-width: 378px;
+  border-width: 1px;
+}
+@media all and (min-width: 366.66667px) {
+  .device-iphone-5 {
+    border-width: 0.27273vw;
+  }
+}
+@media all and (min-width: 1100px) {
+  .device-iphone-5 {
+    border-width: 3px;
+  }
 }
 .device-iphone-5 figure {
   height: 0;
@@ -315,20 +334,29 @@ body {
   border-color: #e6e6e6;
   border-style: solid;
   border-width: 3px;
-  border-width: 0.27273vw;
   border-radius: 999px;
   bottom: 3.05344%;
   left: 50%;
   margin-left: -8.20106%;
   width: 16.40212%;
   height: 7.88804%;
+  border-width: 1px;
+}
+@media all and (min-width: 366.66667px) {
+  .device-iphone-5:after {
+    border-width: 0.27273vw;
+  }
+}
+@media all and (min-width: 1100px) {
+  .device-iphone-5:after {
+    border-width: 3px;
+  }
 }
 
 .device-web {
   border-color: #e6e6e6;
   border-style: solid;
   border-width: 3px;
-  border-width: 0.27273vw;
   border-bottom: 0 none;
   border-top-right-radius: 1.27273% 2.91667%;
   border-bottom-right-radius: 0;
@@ -338,6 +366,17 @@ body {
   position: relative;
   margin: 0;
   width: 100%;
+  border-width: 1px;
+}
+@media all and (min-width: 366.66667px) {
+  .device-web {
+    border-width: 0.27273vw;
+  }
+}
+@media all and (min-width: 1100px) {
+  .device-web {
+    border-width: 3px;
+  }
 }
 .device-web figure {
   height: 0;
@@ -350,7 +389,7 @@ body {
   overflow-y: hidden;
 }
 .device-web picture {
-  background: #e6e6e6;
+  background-color: #e6e6e6;
   position: absolute;
   left: 0;
   top: 0;
@@ -367,20 +406,45 @@ body {
   position: absolute;
 }
 .device-web:before {
-  background: #e6e6e6;
+  background-color: #e6e6e6;
   border-radius: 8px;
-  box-shadow: 24px 0 0 #e6e6e6, 48px 0 0 #e6e6e6;
+  box-shadow: 2.18182vw 0 0 #e6e6e6, 4.36364vw 0 0 #e6e6e6;
   width: 1.45455%;
   height: 3.33333%;
-  top: 16px;
-  left: 46px;
-  margin-left: -30px;
+  top: 0px;
+  left: 0px;
+}
+@media all and (min-width: 0px) {
+  .device-web:before {
+    top: 1.45455vw;
+  }
+}
+@media all and (min-width: 1100px) {
+  .device-web:before {
+    top: 16px;
+  }
+}
+@media all and (min-width: 0px) {
+  .device-web:before {
+    left: 1.45455vw;
+  }
+}
+@media all and (min-width: 1100px) {
+  .device-web:before {
+    left: 16px;
+  }
 }
 
+@media all and (min-width: 68.75em) {
+  .device-web:before {
+    box-shadow: 1.5em 0 0 #e6e6e6, 3em 0 0 #e6e6e6;
+  }
+}
 .project {
   border-bottom: 1px solid #e6e6e6;
   margin: 0;
-  padding: 4em 1em 1em;
+  padding: 2.90909vw 1.45455vw 2.90909vw;
+  page-break-before: always;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern";
@@ -390,6 +454,7 @@ body {
 }
 
 .project-web {
+  margin-bottom: 2.90909vw;
   padding-bottom: 0;
 }
 
@@ -410,14 +475,14 @@ body {
 }
 
 .project-details {
-  margin-bottom: 2em;
+  margin-bottom: 2.90909vw;
 }
 .project-details .entry-title {
-  font-size: 22px;
   font-weight: bold;
   line-height: 1;
   margin-bottom: 0;
   text-transform: uppercase;
+  font-size: 22px;
 }
 @media all and (min-width: 576.19048px) {
   .project-details .entry-title {
@@ -454,13 +519,7 @@ body {
     font-size: 2.625em;
   }
 }
-.project-split .project-details {
-  float: left;
-  padding-right: 1em;
-  width: 28%;
-}
 .project-split .project-gallery {
-  float: right;
   white-space: nowrap;
 }
 .project-split .project-gallery:before, .project-split .project-gallery:after {
@@ -474,7 +533,6 @@ body {
 }
 .project-split .project-gallery .device {
   text-align: right;
-  margin-right: 1em;
   margin-right: 1.45455vw;
   display: -moz-inline-stack;
   display: inline-block;
@@ -487,21 +545,24 @@ body {
   margin-right: 0;
 }
 
-@media all and (min-width: 68.75em) {
-  .project-split .project-gallery .device {
-    margin-right: 1em;
+@media all and (min-width: 38.75em) {
+  .project-split .project-details {
+    float: left;
+    padding-right: 1em;
+    width: 28%;
   }
-  .project-split .project-gallery .device:last-of-type {
-    margin-right: 0;
+  .project-split .project-gallery {
+    float: right;
+    white-space: nowrap;
   }
-}
-@media all and (min-width: 68.75em) {
-  .device {
-    border-width: 3px;
+  .project-split .project-gallery:before, .project-split .project-gallery:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
   }
-
-  .device-iphone-5:after {
-    border-width: 3px;
+  .project-split .project-gallery:after {
+    clear: both;
   }
 }
 

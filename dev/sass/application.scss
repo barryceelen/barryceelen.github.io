@@ -44,13 +44,9 @@ $border_color: $grey_light;
 $content_max_width: 1100;
 
 @import 'mixins';
-
-$narrow_width: pem(480);
-$medium_width: pem(768);
-
 @import 'reset';
 @import 'fontface';
-@import 'main';
+@import 'global';
 @import 'header';
 @import 'devices';
 @import 'projects';

@@ -69,12 +69,12 @@ body {
 }
 
 .footer-inner {
-	font-size: pem(16);
 	font-weight: 400;
 	margin: 0 auto;
 	text-transform: uppercase;
 	width: 100%;
 	max-width: pem($content_max_width);
+	@include vw-min-max('font-size',12,16,$content_max_width);
 	a {
 		color: $black;
 		text-decoration: none;

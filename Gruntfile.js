@@ -3,6 +3,14 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+		connect: {
+			server: {
+				options: {
+					livereload: true,
+					port: 8000
+				}
+			}
+		},
 		sass: {
 			dev: {
 				options: {
@@ -37,7 +45,7 @@ module.exports = function(grunt) {
 				options: {
 					pretty: true,
 					data: {
-						debug: true
+						data: grunt.file.readJSON("dev/json/data.json")
 					}
 				},
 				files: {
@@ -151,6 +159,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.loadNpmTasks('grunt-notify');
+	grunt.loadNpmTasks('grunt-contrib-connect');
 
 	grunt.registerTask('default', ['sass:dist','autoprefixer','jade','clean','copy','imagemin']);
+	grunt.registerTask('s', ['connect:server','watch','notify:server']);
 };

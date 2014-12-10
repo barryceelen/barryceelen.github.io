@@ -3,11 +3,9 @@ Author: Barry Ceelen
 Author URI: http://barryceelen.com
 */
 
-
-
 // Typography
 $base_font_size: 16; // Set font size to 100% on body
-$font_family: "Roboto Condensed", sans-serif;
+$font_family: "boogaloo", sans-serif;
 
 // Colors
 $grey_light: #E6E6E6;
@@ -48,5 +46,6 @@ $content_max_width: 1100;
 @import 'fontface';
 @import 'global';
 @import 'header';
+@import 'site_header';
 @import 'devices';
-@import 'projects';
+@import 'featured_projects';

@@ -1,0 +1,45 @@
+.site-header {
+	margin-bottom: pem(60);
+	padding-top: pem(60);
+	text-align: center;
+	.site-branding {
+		display: inline-block;
+		font-size: pem(82);
+		position: relative;
+		text-shadow: 0 1px 0 lighten($yellow,40);
+		&:before  {
+			background: $yellow;
+			content: '';
+			height: 50px;
+			position: absolute;
+			right: 52px;
+			bottom: 0;
+			left: 24px;
+			transform: rotate(-1.6deg);
+			z-index: 1;
+		}
+		b {
+			font-weight: inherit;
+			display: inline-block;
+			position: relative;
+			z-index: 2;
+		}
+		b:first-of-type { // Digital
+			transform: rotate(-3.6deg);
+		}
+		b:nth-of-type(2) { // with
+			font-size: pem(77,82);
+			transform: rotate(-3.3deg);
+		}
+		b:nth-of-type(3) { // a
+			transform: rotate(0deg);
+		}
+		b:nth-of-type(4) { // capital
+			transform: rotate(-2deg);
+		}
+		b:last-of-type { // "B"
+			font-size: pem(112,82);
+			transform: rotate(3deg);
+		}
+	}
+}

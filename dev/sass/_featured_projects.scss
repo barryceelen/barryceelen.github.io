@@ -1,0 +1,29 @@
+.featured-projects {
+	text-align: center;
+	margin: 0 auto;
+	max-width: pem($content_max_width + 201);
+	h1 {
+		color: $red;
+		font-size: pem(36);
+		text-align: center;
+		text-transform: uppercase;
+		transform: rotate(-.6deg);
+		&:before {
+			content: '\2013\2009'; // en-dash, thin-space
+		}
+		&:after {
+			content: '\2009\2013';
+		}
+	}
+	li {
+		font-family: "boogaloo", sans-serif;
+		font-size: pem(50);
+		line-height: 1.48em;
+		padding-left: 1.48em;
+		white-space: nowrap;
+		@include inline-block;
+		a {
+			display: block;
+		}
+	}
+}

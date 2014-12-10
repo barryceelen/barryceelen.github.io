@@ -31,13 +31,12 @@ module.exports = function(grunt) {
 			}
 		},
 		autoprefixer: {
-			main: {
+			dist: {
 				options: {
-				  browsers: ['last 2 version', 'ie 9', 'BlackBerry 10', 'Android 4']
+				  browsers: ['last 2 versions', 'ie 9', 'BlackBerry 10', 'Android 4'],
 				},
-				no_dest: {
-					src: 'css/application.css'
-				}
+				src: 'css/application.css',
+				dest: 'css/application.css'
 			}
 		},
 		jade: {

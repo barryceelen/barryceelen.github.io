@@ -51,8 +51,6 @@ table, caption, tbody, tfoot, thead, tr, th, td {
 html {
   font-size: 100%;
   /* Corrects text resizing oddly in IE6/7 when body font-size is set using em units http://clagnut.com/blog/348/#c790 */
-  overflow-y: scroll;
-  /* Keeps page centered in all browsers regardless of content height */
   -webkit-text-size-adjust: 100%;
   /* Prevents iOS text size adjust after orientation change, without disabling user zoom */
   -ms-text-size-adjust: 100%;
@@ -63,9 +61,7 @@ html {
 *:before,
 *:after {
   /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
-  -webkit-box-sizing: border-box;
   /* Not needed for modern webkit but still used by Blackberry Browser 7.0; see http://caniuse.com/#search=box-sizing */
-  -moz-box-sizing: border-box;
   /* Still needed for Firefox 28; see http://caniuse.com/#search=box-sizing */
   box-sizing: border-box;
 }
@@ -125,40 +121,12 @@ a img {
 }
 
 @font-face {
-  font-family: 'Roboto Condensed';
-  font-style: normal;
-  font-weight: 300;
-  src: local("Roboto Condensed Light"), local("RobotoCondensed-Light"), url("//brick.a.ssl.fastly.net/fonts/robotocondensed/300.woff") format("woff");
-}
-@font-face {
-  font-family: 'Roboto Condensed';
-  font-style: italic;
-  font-weight: 300;
-  src: local("Roboto Condensed Light Italic"), local("RobotoCondensed-LightItalic"), url("//brick.a.ssl.fastly.net/fonts/robotocondensed/300i.woff") format("woff");
-}
-@font-face {
-  font-family: 'Roboto Condensed';
+  font-family: 'boogaloo';
   font-style: normal;
   font-weight: 400;
-  src: local("Roboto Condensed Regular"), local("RobotoCondensed-Regular"), url("//brick.a.ssl.fastly.net/fonts/robotocondensed/400.woff") format("woff");
-}
-@font-face {
-  font-family: 'Roboto Condensed';
-  font-style: normal;
-  font-weight: 700;
-  src: local("Roboto Condensed Bold"), local("RobotoCondensed-Bold"), url("//brick.a.ssl.fastly.net/fonts/robotocondensed/700.woff") format("woff");
-}
-@font-face {
-  font-family: 'Roboto Condensed';
-  font-style: italic;
-  font-weight: 400;
-  src: local("Roboto Condensed Italic"), local("RobotoCondensed-Italic"), url("//brick.a.ssl.fastly.net/fonts/robotocondensed/400i.woff") format("woff");
-}
-@font-face {
-  font-family: 'Roboto Condensed';
-  font-style: italic;
-  font-weight: 700;
-  src: local("Roboto Condensed Bold Italic"), local("RobotoCondensed-BoldItalic"), url("//brick.a.ssl.fastly.net/fonts/robotocondensed/700i.woff") format("woff");
+  src: local("Boogaloo"), local("Boogaloo-Regular");
+  src: url("../fonts/boogaloo-regular-webfont.eot");
+  src: url("../fonts/boogaloo-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/boogaloo-regular-webfont.woff2") format("woff2"), url("../fonts/boogaloo-regular-webfont.woff") format("woff"), url("../fonts/boogaloo-regular-webfont.ttf") format("truetype"), url("../fonts/boogaloo-regular-webfont.svg#boogalooregular") format("svg");
 }
 /**
  * TODO Print stylesheet, see: http://www.smashingmagazine.com/2013/03/08/tips-and-tricks-for-print-style-sheets/
@@ -208,14 +176,11 @@ html, body {
 }
 
 body {
-  background: url("../img/bg-grid-balsamiq.png") left top;
+  background: url("../img/bg-grid-balsamiq.png") center top;
   color: #222222;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "boogaloo", sans-serif;
   font-size: 100%;
-}
-
-#content {
-  background: white;
+  box-shadow: inset 0 200px 200px #fff;
 }
 
 .site-footer {
@@ -268,6 +233,64 @@ body {
 
 .site-branding h1 {
   margin: 0;
+}
+
+.site-header {
+  margin-bottom: 3.75em;
+  padding-top: 3.75em;
+  text-align: center;
+}
+.site-header .site-branding {
+  display: inline-block;
+  font-size: 5.125em;
+  position: relative;
+  text-shadow: 0 1px 0 #fff8cc;
+}
+.site-header .site-branding:before {
+  background: #ffdc00;
+  content: '';
+  height: 50px;
+  position: absolute;
+  right: 52px;
+  bottom: 0;
+  left: 24px;
+  -webkit-transform: rotate(-1.6deg);
+      -ms-transform: rotate(-1.6deg);
+          transform: rotate(-1.6deg);
+  z-index: 1;
+}
+.site-header .site-branding b {
+  font-weight: inherit;
+  display: inline-block;
+  position: relative;
+  z-index: 2;
+}
+.site-header .site-branding b:first-of-type {
+  -webkit-transform: rotate(-3.6deg);
+      -ms-transform: rotate(-3.6deg);
+          transform: rotate(-3.6deg);
+}
+.site-header .site-branding b:nth-of-type(2) {
+  font-size: 0.93902em;
+  -webkit-transform: rotate(-3.3deg);
+      -ms-transform: rotate(-3.3deg);
+          transform: rotate(-3.3deg);
+}
+.site-header .site-branding b:nth-of-type(3) {
+  -webkit-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+.site-header .site-branding b:nth-of-type(4) {
+  -webkit-transform: rotate(-2deg);
+      -ms-transform: rotate(-2deg);
+          transform: rotate(-2deg);
+}
+.site-header .site-branding b:last-of-type {
+  font-size: 1.36585em;
+  -webkit-transform: rotate(3deg);
+      -ms-transform: rotate(3deg);
+          transform: rotate(3deg);
 }
 
 .device-iphone-5 {
@@ -440,110 +463,32 @@ body {
     box-shadow: 1.5em 0 0 #e6e6e6, 3em 0 0 #e6e6e6;
   }
 }
-.projects-overview {
-  padding: 1em;
-  -moz-column-count: 3;
-  -moz-column-gap: 20px;
-  -webkit-column-count: 3;
-  -webkit-column-gap: 20px;
+.featured-projects {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 81.3125em;
 }
-.projects-overview li {
-  break-inside: avoid-column;
-  -webkit-column-break-inside: avoid;
-}
-
-.project {
-  margin: 0;
-  padding: 1em;
-  page-break-before: always;
-  overflow-x: hidden;
-  text-rendering: optimizeLegibility;
-  font-feature-settings: "kern";
-  -webkit-font-feature-settings: "kern";
-  -moz-font-feature-settings: "kern";
-  -moz-font-feature-settings: "kern=1";
-}
-
-.project-web {
-  margin-bottom: 2.90909vw;
-  padding-bottom: 0;
-}
-
-.project-inner {
-  padding: 0;
-  max-width: 68.75em;
-  width: 100%;
-}
-.project-inner:before, .project-inner:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-.project-inner:after {
-  clear: both;
-}
-
-.project-details {
-  margin-bottom: 2.90909vw;
-}
-.project-details .entry-title {
-  font-weight: bold;
-  line-height: 1;
-  margin-bottom: 0;
+.featured-projects h1 {
+  color: #ff4136;
+  font-size: 2.25em;
+  text-align: center;
   text-transform: uppercase;
-  font-size: 22px;
+  -webkit-transform: rotate(-0.6deg);
+      -ms-transform: rotate(-0.6deg);
+          transform: rotate(-0.6deg);
 }
-@media all and (min-width: 576.19048px) {
-  .project-details .entry-title {
-    font-size: 3.81818vw;
-  }
+.featured-projects h1:before {
+  content: '\2013\2009';
 }
-@media all and (min-width: 1100px) {
-  .project-details .entry-title {
-    font-size: 42px;
-  }
+.featured-projects h1:after {
+  content: '\2009\2013';
 }
-.project-details .entry-content {
-  text-transform: uppercase;
-  word-spacing: .1em;
-  font-size: 12px;
-}
-@media all and (min-width: 825px) {
-  .project-details .entry-content {
-    font-size: 1.45455vw;
-  }
-}
-@media all and (min-width: 1100px) {
-  .project-details .entry-content {
-    font-size: 16px;
-  }
-}
-
-@media all and (min-width: 68.75em) {
-  .project-details {
-    margin-bottom: 2em;
-    padding-right: 1em;
-  }
-  .project-details .entry-title {
-    font-size: 2.625em;
-  }
-}
-.project-split .project-gallery {
+.featured-projects li {
+  font-family: "boogaloo", sans-serif;
+  font-size: 3.125em;
+  line-height: 1.48em;
+  padding-left: 1.48em;
   white-space: nowrap;
-}
-.project-split .project-gallery:before, .project-split .project-gallery:after {
-  content: "\0020";
-  display: block;
-  height: 0;
-  overflow: hidden;
-}
-.project-split .project-gallery:after {
-  clear: both;
-}
-.project-split .project-gallery .device {
-  text-align: right;
-  margin-right: 1.45455vw;
   display: -moz-inline-stack;
   display: inline-block;
   vertical-align: top;
@@ -551,28 +496,6 @@ body {
   zoom: 1;
   *display: inline;
 }
-.project-split .project-gallery .device:last-of-type {
-  margin-right: 0;
+.featured-projects li a {
+  display: block;
 }
-
-@media all and (min-width: 38.75em) {
-  .project-split .project-details {
-    float: left;
-    padding-right: 1em;
-    width: 28%;
-  }
-  .project-split .project-gallery {
-    white-space: nowrap;
-  }
-  .project-split .project-gallery:before, .project-split .project-gallery:after {
-    content: "\0020";
-    display: block;
-    height: 0;
-    overflow: hidden;
-  }
-  .project-split .project-gallery:after {
-    clear: both;
-  }
-}
-
-/*# sourceMappingURL=application.css.map */

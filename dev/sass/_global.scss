@@ -48,7 +48,8 @@ html, body {
 }
 
 body {
-	background: $background_color_footer;
+	// background: $background_color_footer url('../img/bg-grid-balsamiq.png');
+	background: url('../img/bg-grid-balsamiq.png') left top;
 	color: $black;
 	font-family: $font_family;
 	font-size: 100%;

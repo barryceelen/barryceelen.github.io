@@ -1,7 +1,19 @@
+.projects-overview {
+	padding: pem(16);
+	-moz-column-count: 3;
+	 -moz-column-gap: 20px;
+	 -webkit-column-count: 3;
+	 -webkit-column-gap: 20px;
+	li {
+		break-inside: avoid-column;
+		-webkit-column-break-inside: avoid;
+	}
+}
+
 .project {
-	border-bottom: 1px solid $border_color;
+	// border-bottom: 1px solid $border_color;
 	margin: 0;
-	padding: pvw(2*16,$content_max_width) pvw(16,$content_max_width) pvw(2*16,$content_max_width);
+	padding: pem(16);
 	page-break-before: always;
 	overflow-x: hidden;
 	@include kern;
@@ -13,7 +25,7 @@
 }
 
 .project-inner {
-	margin: 0 auto;
+	// margin: 0 auto;
 	padding: 0;
 	max-width: pem($content_max_width);
 	width: 100%;
@@ -69,7 +81,7 @@
 			width: floor(percentage(312/1100));
 		}
 		.project-gallery {
-			float: right;
+			// float: right;
 			white-space: nowrap;
 			@include clearfix;
 		}

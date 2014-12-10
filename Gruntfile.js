@@ -163,5 +163,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-connect');
 
 	grunt.registerTask('default', ['sass:dist','autoprefixer','jade','clean','copy','imagemin']);
-	grunt.registerTask('s', ['connect:server','watch','notify:server']);
+	grunt.registerTask('serve', ['connect:server','watch','notify:server']);
 };

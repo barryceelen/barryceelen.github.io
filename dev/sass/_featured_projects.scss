@@ -18,12 +18,26 @@
 	li {
 		font-family: "boogaloo", sans-serif;
 		font-size: pem(50);
-		line-height: 1.48em;
+		line-height: 2em;
 		padding-left: 1.48em;
+		margin-right: .5em;
+		position: relative;
 		white-space: nowrap;
 		@include inline-block;
 		a {
 			display: block;
+		}
+		&:before {
+			background: #fff;
+			background: rgba(255,255,255,.4);
+			border-radius: 12%;
+			box-shadow: -1px 1px 3px rgba(0,0,0,.3);
+			content: '';
+			position: absolute;
+			left: 0;
+			top: pem(18,50);
+			width: pem(64,50);
+			height: pem(64,50);
 		}
 	}
 }

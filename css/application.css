@@ -60,8 +60,8 @@ html {
 *,
 *:before,
 *:after {
-  /* apply a natural box layout model to all elements; see http://www.paulirish.com/2012/box-sizing-border-box-ftw/ */
   /* Not needed for modern webkit but still used by Blackberry Browser 7.0; see http://caniuse.com/#search=box-sizing */
+  -moz-box-sizing: border-box;
   /* Still needed for Firefox 28; see http://caniuse.com/#search=box-sizing */
   box-sizing: border-box;
 }
@@ -177,7 +177,7 @@ html, body {
 
 body {
   background: url("../img/bg-grid-balsamiq.png") center top;
-  color: #222222;
+  color: #222;
   font-family: "boogaloo", sans-serif;
   font-size: 100%;
   box-shadow: inset 0 200px 200px #fff;
@@ -212,12 +212,12 @@ body {
   }
 }
 .footer-inner a {
-  color: #222222;
+  color: #222;
   text-decoration: none;
   text-transform: uppercase;
 }
 .footer-inner a:hover, .footer-inner a:focus {
-  color: #0074d9;
+  color: #0074D9;
   text-decoration: underline;
 }
 .footer-inner .impressum {
@@ -228,7 +228,7 @@ body {
   display: none;
 }
 .footer-inner .love {
-  color: #ff4136;
+  color: #FF4136;
 }
 
 .site-branding h1 {
@@ -247,7 +247,7 @@ body {
   text-shadow: 0 1px 0 #fff8cc;
 }
 .site-header .site-branding:before {
-  background: #ffdc00;
+  background: #FFDC00;
   content: '';
   height: 50px;
   position: absolute;
@@ -255,8 +255,8 @@ body {
   bottom: 0;
   left: 24px;
   -webkit-transform: rotate(-1.6deg);
-      -ms-transform: rotate(-1.6deg);
-          transform: rotate(-1.6deg);
+  -ms-transform: rotate(-1.6deg);
+  transform: rotate(-1.6deg);
   z-index: 1;
 }
 .site-header .site-branding b {
@@ -267,40 +267,41 @@ body {
 }
 .site-header .site-branding b:first-of-type {
   -webkit-transform: rotate(-3.6deg);
-      -ms-transform: rotate(-3.6deg);
-          transform: rotate(-3.6deg);
+  -ms-transform: rotate(-3.6deg);
+  transform: rotate(-3.6deg);
 }
 .site-header .site-branding b:nth-of-type(2) {
   font-size: 0.93902em;
   -webkit-transform: rotate(-3.3deg);
-      -ms-transform: rotate(-3.3deg);
-          transform: rotate(-3.3deg);
+  -ms-transform: rotate(-3.3deg);
+  transform: rotate(-3.3deg);
 }
 .site-header .site-branding b:nth-of-type(3) {
   -webkit-transform: rotate(0deg);
-      -ms-transform: rotate(0deg);
-          transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
 }
 .site-header .site-branding b:nth-of-type(4) {
   -webkit-transform: rotate(-2deg);
-      -ms-transform: rotate(-2deg);
-          transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  transform: rotate(-2deg);
 }
 .site-header .site-branding b:last-of-type {
   font-size: 1.36585em;
   -webkit-transform: rotate(3deg);
-      -ms-transform: rotate(3deg);
-          transform: rotate(3deg);
+  -ms-transform: rotate(3deg);
+  transform: rotate(3deg);
 }
 
 .device-iphone-5 {
   background: #fff;
-  border-color: #e6e6e6;
+  border-color: #E6E6E6;
   border-style: solid;
   border-top-left-radius: 14.55026% 6.99746%;
   border-top-right-radius: 14.55026% 6.99746%;
   border-bottom-left-radius: 14.55026% 6.99746%;
   border-bottom-right-radius: 14.55026% 6.99746%;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   position: relative;
@@ -328,7 +329,7 @@ body {
   padding: 29.10053% 6.87831%;
 }
 .device-iphone-5 picture {
-  background: #e6e6e6;
+  background: #E6E6E6;
   position: absolute;
   left: 0;
   top: 0;
@@ -345,7 +346,7 @@ body {
   position: absolute;
 }
 .device-iphone-5:before {
-  background: #e6e6e6;
+  background: #E6E6E6;
   border-radius: 999px;
   width: 15.87302%;
   height: 1.01781%;
@@ -354,7 +355,7 @@ body {
   margin-left: -7.93651%;
 }
 .device-iphone-5:after {
-  border-color: #e6e6e6;
+  border-color: #E6E6E6;
   border-style: solid;
   border-width: 3px;
   border-radius: 999px;
@@ -377,7 +378,7 @@ body {
 }
 
 .device-web {
-  border-color: #e6e6e6;
+  border-color: #E6E6E6;
   border-style: solid;
   border-width: 3px;
   border-bottom: 0 none;
@@ -385,6 +386,7 @@ body {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
   border-top-left-radius: 1.27273% 2.91667%;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   position: relative;
   margin: 0;
@@ -412,7 +414,7 @@ body {
   overflow-y: hidden;
 }
 .device-web picture {
-  background-color: #e6e6e6;
+  background-color: #E6E6E6;
   position: absolute;
   left: 0;
   top: 0;
@@ -429,9 +431,9 @@ body {
   position: absolute;
 }
 .device-web:before {
-  background-color: #e6e6e6;
+  background-color: #E6E6E6;
   border-radius: 8px;
-  box-shadow: 2.18182vw 0 0 #e6e6e6, 4.36364vw 0 0 #e6e6e6;
+  box-shadow: 2.18182vw 0 0 #E6E6E6, 4.36364vw 0 0 #E6E6E6;
   width: 1.45455%;
   height: 3.33333%;
   top: 0px;
@@ -460,7 +462,7 @@ body {
 
 @media all and (min-width: 68.75em) {
   .device-web:before {
-    box-shadow: 1.5em 0 0 #e6e6e6, 3em 0 0 #e6e6e6;
+    box-shadow: 1.5em 0 0 #E6E6E6, 3em 0 0 #E6E6E6;
   }
 }
 .featured-projects {
@@ -469,13 +471,14 @@ body {
   max-width: 81.3125em;
 }
 .featured-projects h1 {
-  color: #ff4136;
+  color: #FF4136;
   font-size: 2.25em;
+  margin-bottom: 0.66667em;
   text-align: center;
   text-transform: uppercase;
   -webkit-transform: rotate(-0.6deg);
-      -ms-transform: rotate(-0.6deg);
-          transform: rotate(-0.6deg);
+  -ms-transform: rotate(-0.6deg);
+  transform: rotate(-0.6deg);
 }
 .featured-projects h1:before {
   content: '\2013\2009';
@@ -486,7 +489,7 @@ body {
 .featured-projects li {
   font-family: "boogaloo", sans-serif;
   font-size: 3.125em;
-  line-height: 2em;
+  line-height: 1.8em;
   padding-left: 1.48em;
   margin-right: .5em;
   position: relative;
@@ -504,12 +507,63 @@ body {
 .featured-projects li:before {
   background: #fff;
   background: rgba(255, 255, 255, 0.4);
+  background-size: cover;
   border-radius: 12%;
   box-shadow: -1px 1px 3px rgba(0, 0, 0, 0.3);
   content: '';
   position: absolute;
   left: 0;
-  top: 0.36em;
+  top: .25em;
   width: 1.28em;
   height: 1.28em;
 }
+.featured-projects li.foodpanda:before {
+  background: url("../img/icon-foodpanda-64.png") left top no-repeat;
+}
+.featured-projects li.double-standards:before {
+  background: url("../img/icon-double-standards-64.png") left top no-repeat;
+}
+.featured-projects li.neumeister-bar-am:before {
+  background: url("../img/icon-neumeister-bar-am-64.png") left top no-repeat;
+}
+.featured-projects li.zalando:before {
+  background: url("../img/icon-zalando-64.png") left top no-repeat;
+}
+.featured-projects li.man-iaa-2010:before {
+  background: url("../img/icon-man-iaa-2010-64.png") left top no-repeat;
+}
+.featured-projects li.die-welt-mobil:before {
+  background: url("../img/icon-die-welt-mobil-64.png") left top no-repeat;
+}
+.featured-projects li.supreme-new-york:before {
+  background: url("../img/icon-supreme-new-york-64.png") left top no-repeat;
+}
+.featured-projects li.kadewe:before {
+  background: url("../img/icon-kadewe-64.png") left top no-repeat;
+}
+.featured-projects li.stylebop:before {
+  background: url("../img/icon-stylebop-64.png") left top no-repeat;
+}
+.featured-projects li.sankyu:before {
+  background: url("../img/icon-sankyu-64.png") left top no-repeat;
+}
+.featured-projects li.raceunion:before {
+  background: url("../img/icon-raceunion-64.png") left top no-repeat;
+}
+.featured-projects li.pictrip:before {
+  background: url("../img/icon-pictrip-64.png") left top no-repeat;
+}
+.featured-projects li.cool-cities:before {
+  background: url("../img/icon-cool-cities-64.png") left top no-repeat;
+}
+.featured-projects li.cool-cities:before {
+  background: url("../img/icon-cool-cities-64.png") left top no-repeat;
+}
+.featured-projects li.dmy-berlin:before {
+  background: url("../img/icon-dmy-berlin-64.png") left top no-repeat;
+}
+.featured-projects li.simfy:before {
+  background: url("../img/icon-simfy-64.png") left top no-repeat;
+}
+
+/*# sourceMappingURL=application.css.map */

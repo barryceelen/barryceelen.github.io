@@ -5,6 +5,7 @@
 	h1 {
 		color: $red;
 		font-size: pem(36);
+		margin-bottom: pem(24,36);
 		text-align: center;
 		text-transform: uppercase;
 		transform: rotate(-.6deg);
@@ -18,7 +19,7 @@
 	li {
 		font-family: "boogaloo", sans-serif;
 		font-size: pem(50);
-		line-height: 2em;
+		line-height: 1.8em;
 		padding-left: 1.48em;
 		margin-right: .5em;
 		position: relative;
@@ -30,14 +31,63 @@
 		&:before {
 			background: #fff;
 			background: rgba(255,255,255,.4);
+			background-size: cover;
 			border-radius: 12%;
 			box-shadow: -1px 1px 3px rgba(0,0,0,.3);
 			content: '';
 			position: absolute;
 			left: 0;
-			top: pem(18,50);
+			top: .25em;
 			width: pem(64,50);
 			height: pem(64,50);
+		}
+		&.foodpanda:before {
+			background: url('../img/icon-foodpanda-64.png') left top no-repeat;
+		}
+		&.double-standards:before {
+			background: url('../img/icon-double-standards-64.png') left top no-repeat;
+		}
+		&.neumeister-bar-am:before {
+			background: url('../img/icon-neumeister-bar-am-64.png') left top no-repeat;
+		}
+		&.zalando:before {
+			background: url('../img/icon-zalando-64.png') left top no-repeat;
+		}
+		&.man-iaa-2010:before {
+			background: url('../img/icon-man-iaa-2010-64.png') left top no-repeat;
+		}
+		&.die-welt-mobil:before {
+			background: url('../img/icon-die-welt-mobil-64.png') left top no-repeat;
+		}
+		&.supreme-new-york:before {
+			background: url('../img/icon-supreme-new-york-64.png') left top no-repeat;
+		}
+		&.kadewe:before {
+			background: url('../img/icon-kadewe-64.png') left top no-repeat;
+		}
+		&.stylebop:before {
+			background: url('../img/icon-stylebop-64.png') left top no-repeat;
+		}
+		&.sankyu:before {
+			background: url('../img/icon-sankyu-64.png') left top no-repeat;
+		}
+		&.raceunion:before {
+			background: url('../img/icon-raceunion-64.png') left top no-repeat;
+		}
+		&.pictrip:before {
+			background: url('../img/icon-pictrip-64.png') left top no-repeat;
+		}
+		&.cool-cities:before {
+			background: url('../img/icon-cool-cities-64.png') left top no-repeat;
+		}
+		&.cool-cities:before {
+			background: url('../img/icon-cool-cities-64.png') left top no-repeat;
+		}
+		&.dmy-berlin:before {
+			background: url('../img/icon-dmy-berlin-64.png') left top no-repeat;
+		}
+		&.simfy:before {
+			background: url('../img/icon-simfy-64.png') left top no-repeat;
 		}
 	}
 }

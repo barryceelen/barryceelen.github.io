@@ -15,18 +15,18 @@
 .project-inner {
 	margin: 0 auto;
 	padding: 0;
-	max-width: pem($content_max_width);
+	// max-width: pem($content_max_width);
 	width: 100%;
 	@include clearfix;
 }
 
 .project-details {
-	margin-bottom: pvw(32,$content_max_width);
+	// margin-bottom: pvw(32,$content_max_width);
 	.entry-title {
 		font-weight: bold;
 		line-height: 1;
 		margin-bottom: 0;
-		text-transform: uppercase;
+		// text-transform: uppercase;
 		@include vw-min-max('font-size',22,42,$content_max_width);
 	}
 	.entry-content {
@@ -38,7 +38,7 @@
 
 @media all and (min-width: pem($content_max_width)) {
 	.project-details {
-		margin-bottom: pem(32);
+		// margin-bottom: pem(32);
 		padding-right: pem(16);
 		.entry-title {
 			font-size: pem(42);
@@ -63,15 +63,28 @@
 
 @media all and (min-width: pem(620)) {
 	.project-split {
+		.project-inner {
+			display: flex;
+		}
 		.project-details {
-			float: left;
-			padding-right: pem(16);
-			width: floor(percentage(312/1100));
+			background-color: red;
+			// flex: 1;
+			width: 300px;
+			// float: left;
+			// padding-right: pem(16);
+			// width: floor(percentage(312/1100));
 		}
 		.project-gallery {
-			float: right;
+			// float: right;
+			// flex: 3;
 			white-space: nowrap;
 			@include clearfix;
+		}
+		.project-details {
+			padding-right: pvw(2*16,$content_max_width);
+		}
+		.entry-title {
+			white-space: nowrap;
 		}
 	}
 }

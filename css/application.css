@@ -2,33 +2,6 @@
 Author: Barry Ceelen
 Author URI: http://barryceelen.com
 */
-/**
- * Convert pixels to ems
- */
-/**
- * Convert pixels to vw
- */
-/*
- * Background image for retina screens
- * via: http://37signals.com/svn/posts/3271-easy-retina-ready-images-using-scss
- */
-/**
- * Cross-browser inline-block
- */
-/**
- * Clearfix
- */
-/**
- * Text image replacement
- */
-/**
- * Kerning
- *
- * Via: http://blog.typekit.com/2014/02/05/kerning-on-the-web/
- */
-/**
- * Try to prevent user selection
- */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -128,9 +101,6 @@ a img {
   src: url("../fonts/boogaloo-regular-webfont.eot");
   src: url("../fonts/boogaloo-regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/boogaloo-regular-webfont.woff2") format("woff2"), url("../fonts/boogaloo-regular-webfont.woff") format("woff"), url("../fonts/boogaloo-regular-webfont.ttf") format("truetype"), url("../fonts/boogaloo-regular-webfont.svg#boogalooregular") format("svg");
 }
-/**
- * TODO Print stylesheet, see: http://www.smashingmagazine.com/2013/03/08/tips-and-tricks-for-print-style-sheets/
- */
 .hidden {
   display: none;
 }
@@ -180,7 +150,6 @@ body {
   color: #222;
   font-family: "boogaloo", sans-serif;
   font-size: 100%;
-  box-shadow: inset 0 200px 200px #fff;
 }
 
 .site-footer {
@@ -221,7 +190,7 @@ body {
   text-decoration: underline;
 }
 .footer-inner .impressum {
-  color: #d4d4d4;
+  color: #d5d5d5;
   float: right;
 }
 .footer-inner .impressum i {
@@ -231,62 +200,62 @@ body {
   color: #FF4136;
 }
 
-.site-branding h1 {
-  margin: 0;
-}
-
 .site-header {
   margin-bottom: 3.75em;
   padding-top: 3.75em;
   text-align: center;
 }
-.site-header .site-branding {
+
+.site-branding {
+  color: #353535;
   display: inline-block;
-  font-size: 5.125em;
+  font-size: 6.5625em;
+  margin: 0;
   position: relative;
-  text-shadow: 0 1px 0 #fff8cc;
+  text-shadow: 0 1px 0 #fefce2;
+  word-spacing: -0.11em;
 }
-.site-header .site-branding:before {
-  background: #FFDC00;
+.site-branding:before {
+  background: #F8E71C;
   content: '';
-  height: 50px;
+  height: 60px;
   position: absolute;
   right: 52px;
-  bottom: 0;
+  bottom: 4px;
   left: 24px;
   -webkit-transform: rotate(-1.6deg);
   -ms-transform: rotate(-1.6deg);
   transform: rotate(-1.6deg);
   z-index: 1;
 }
-.site-header .site-branding b {
+.site-branding b {
   font-weight: inherit;
   display: inline-block;
   position: relative;
   z-index: 2;
 }
-.site-header .site-branding b:first-of-type {
+.site-branding b:first-of-type {
   -webkit-transform: rotate(-3.6deg);
   -ms-transform: rotate(-3.6deg);
   transform: rotate(-3.6deg);
 }
-.site-header .site-branding b:nth-of-type(2) {
+.site-branding b:nth-of-type(2) {
   font-size: 0.93902em;
   -webkit-transform: rotate(-3.3deg);
   -ms-transform: rotate(-3.3deg);
   transform: rotate(-3.3deg);
 }
-.site-header .site-branding b:nth-of-type(3) {
-  -webkit-transform: rotate(0deg);
-  -ms-transform: rotate(0deg);
-  transform: rotate(0deg);
+.site-branding b:nth-of-type(3) {
+  -webkit-transform: translateY(-0.1em);
+  -ms-transform: translateY(-0.1em);
+  transform: translateY(-0.1em);
 }
-.site-header .site-branding b:nth-of-type(4) {
+.site-branding b:nth-of-type(4) {
   -webkit-transform: rotate(-2deg);
   -ms-transform: rotate(-2deg);
   transform: rotate(-2deg);
 }
-.site-header .site-branding b:last-of-type {
+.site-branding b:last-of-type {
   font-size: 1.36585em;
   -webkit-transform: rotate(3deg);
   -ms-transform: rotate(3deg);
@@ -459,12 +428,12 @@ body {
     left: 16px;
   }
 }
-
 @media all and (min-width: 68.75em) {
   .device-web:before {
     box-shadow: 1.5em 0 0 #E6E6E6, 3em 0 0 #E6E6E6;
   }
 }
+
 .featured-projects {
   text-align: center;
   margin: 0 auto;

@@ -61,7 +61,6 @@
 	}
 }
 
-
 .device-web {
 	border-color: $grey_light;
 	border-style: solid;
@@ -114,10 +113,7 @@
 		@include vw-min-max('top',0,16,$content_max_width);
 		@include vw-min-max('left',0,16,$content_max_width);
 	}
-}
-
-@media all and (min-width: pem($content_max_width)) {
-	.device-web {
+	@media all and (min-width: pem($content_max_width)) {
 		&:before { // Traffic Lights
 			box-shadow: pem(24) 0 0 $grey_light, pem(48) 0 0 $grey_light;
 		}

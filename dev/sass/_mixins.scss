@@ -1,13 +1,13 @@
-/**
- * Convert pixels to ems
- */
+//
+// Convert pixels to ems.
+//
 @function pem($px, $context: $base_font_size) {
 	@return #{$px / $context}em;
 }
 
-/**
- * Convert pixels to vw
- */
+//
+// Convert pixels to vw.
+//
 @function pvw($px, $viewport_width) {
 	@return #{($px / $viewport_width) * 100}vw;
 }
@@ -28,10 +28,10 @@
 	}
 }
 
-/*
- * Background image for retina screens
- * via: http://37signals.com/svn/posts/3271-easy-retina-ready-images-using-scss
- */
+//
+// Background image for retina screens
+// via: http://37signals.com/svn/posts/3271-easy-retina-ready-images-using-scss
+//
 @mixin image-2x($image, $width, $height) {
 	@media all and (min--moz-device-pixel-ratio: 1.3),
 				 (-o-min-device-pixel-ratio: 2.6/2),
@@ -61,10 +61,11 @@
   transform: translateY(-50%);
 }
 
-/**
- * Cross-browser inline-block
- */
-@mixin inline-block { // Via: http://blog.mozilla.org/webdev/2009/02/20/cross-browser-inline-block/
+//
+// Cross-browser inline-block.
+// Via: http://blog.mozilla.org/webdev/2009/02/20/cross-browser-inline-block/
+//
+@mixin inline-block {
 	display: -moz-inline-stack;
 	display: inline-block;
 	vertical-align: top;
@@ -73,9 +74,9 @@
 	*display: inline;
 }
 
-/**
- * Clearfix
- */
+//
+// Clearfix.
+//
 @mixin clearfix {
 	&:before, &:after {
 		content: "\0020";
@@ -88,20 +89,19 @@
 	}
 }
 
-/**
- * Text image replacement
- */
+//
+// Text image replacement.
+//
 @mixin ir {
 	font: 0/0 a;
 	text-shadow: none;
 	color: transparent;
 }
 
-/**
- * Kerning
- *
- * Via: http://blog.typekit.com/2014/02/05/kerning-on-the-web/
- */
+//
+// Kerning.
+// Via: http://blog.typekit.com/2014/02/05/kerning-on-the-web/
+//
 @mixin kern {
 	text-rendering: optimizeLegibility;
 	font-feature-settings: "kern";
@@ -110,9 +110,9 @@
 	-moz-font-feature-settings: "kern=1";
 }
 
-/**
- * Try to prevent user selection
- */
+//
+// Try to prevent user selection.
+//
 @mixin userselect {
   -webkit-user-select: none;
   -moz-user-select: none;

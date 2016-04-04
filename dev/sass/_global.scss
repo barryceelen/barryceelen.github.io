@@ -1,6 +1,4 @@
-/**
- * TODO Print stylesheet, see: http://www.smashingmagazine.com/2013/03/08/tips-and-tricks-for-print-style-sheets/
- */
+// TODO Print stylesheet, see: http://www.smashingmagazine.com/2013/03/08/tips-and-tricks-for-print-style-sheets/
 
 .hidden {
 	display: none;
@@ -52,7 +50,6 @@ body {
 	color: $black;
 	font-family: $font_family;
 	font-size: 100%;
-	box-shadow: inset 0 200px 200px #fff;
 }
 
 .site-footer {

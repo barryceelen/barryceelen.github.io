@@ -229,7 +229,7 @@ body {
 .device-iphone-5 .device-screen {
   padding: 29.10053% 6.87831%;
 }
-.device-iphone-5 picture {
+.device-iphone-5 .img-wrap {
   background: #E6E6E6;
   position: absolute;
   left: 0;
@@ -259,7 +259,7 @@ body {
   border-color: #E6E6E6;
   border-style: solid;
   border-width: 3px;
-  border-radius: 999px;
+  border-radius: 50%;
   bottom: 3.05344%;
   left: 50%;
   margin-left: -8.20106%;
@@ -288,6 +288,7 @@ body {
   position: relative;
   margin: 0;
   width: 100%;
+  max-width: 1100px;
   border-width: 1px;
 }
 @media all and (min-width: 366.66667px) {
@@ -310,7 +311,7 @@ body {
   padding: 4.36364% 0 0 0;
   overflow-y: hidden;
 }
-.device-web picture {
+.device-web .img-wrap {
   background-color: #E6E6E6;
   position: absolute;
   left: 0;
@@ -329,7 +330,7 @@ body {
 }
 .device-web:before {
   background-color: #E6E6E6;
-  border-radius: 8px;
+  border-radius: 50%;
   box-shadow: 2.18182vw 0 0 #E6E6E6, 4.36364vw 0 0 #E6E6E6;
   width: 1.45455%;
   height: 3.33333%;
@@ -362,6 +363,10 @@ body {
     box-shadow: 1.5em 0 0 #E6E6E6, 3em 0 0 #E6E6E6;
   }
 }
+.device-web {
+  transform: translateX(200px);
+}
+
 .project {
   border-bottom: 1px solid #E6E6E6;
   margin: 0;

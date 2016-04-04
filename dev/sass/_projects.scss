@@ -1,7 +1,7 @@
 .project {
 	border-bottom: 1px solid $border-color;
 	margin: 0;
-	padding: pvw(2*16,$content_max_width) pvw(16,$content_max_width) 0;
+	padding: pvw(6*16,$content_max_width) pvw(16,$content_max_width) 0;
 	page-break-before: always;
 	overflow-x: hidden;
 	@include kern;
@@ -14,7 +14,6 @@
 }
 
 .project-inner {
-	background-color: green;
 	margin: 0 auto;
 	max-width: 1200px;
 	padding-top: 2em;
@@ -27,7 +26,6 @@
 	padding: 0 pvw(16,$content_max_width) pvw(16,$content_max_width);
 	text-align: center;
 	.project-split & {
-		background-color: grey;
 		display: table-cell;
 		padding: 0 pvw(16,$content_max_width) pvw(16,$content_max_width) 0;
 		text-align: left;
@@ -48,7 +46,7 @@
 
 .project-split-left {
 	.project-details {
-		@include vw-min-max('width',100,200,$content_max_width);
+		@include vw-min-max('width',300,300,$content_max_width);
 	}
 	.project-gallery {
 
@@ -83,6 +81,13 @@
 		text-transform: uppercase;
 		word-spacing: .1em;
 		@include vw-min-max('font-size',12,16,$content_max_width);
+	}
+	a {
+		color: inherit;
+		text-decoration: none;
+		&:hover, &:focus {
+			text-decoration: underline;
+		}
 	}
 }
 

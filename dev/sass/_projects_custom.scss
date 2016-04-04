@@ -1,0 +1,17 @@
+body {
+	background: #ffff01;
+}
+
+.project-muka {
+	background: #ffff01;
+	border-bottom: none;
+	color: #000;
+}
+
+.project-neubar {
+	background: #fafafa url('../img/projects/bg-neubar.jpg') left top no-repeat;
+	background-size: cover;
+	border-bottom: none;
+	color: #575D5B;
+	padding-top: pvw(8*16,$content_max_width);
+}

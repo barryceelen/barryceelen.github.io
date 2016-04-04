@@ -44,9 +44,9 @@ module.exports = function(grunt) {
 			dev: {
 				options: {
 					pretty: true,
-					data: {
-						data: grunt.file.readJSON("dev/json/data.json")
-					}
+					// data: {
+					// 	data: grunt.file.readJSON("dev/json/data.json")
+					// }
 				},
 				files: {
 					"index.html": "dev/jade/index.jade"

@@ -7,34 +7,48 @@
 	@include kern;
 }
 
+.project-split {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+}
+
 .project-inner {
+	background-color: green;
 	margin: 0 auto;
-	max-width: 1800px;
+	max-width: 1200px;
+	padding-top: 2em;
+	.project-split & {
+		display: table-row;
+	}
 }
 
 .project-details {
 	padding: 0 pvw(16,$content_max_width) pvw(16,$content_max_width);
 	text-align: center;
 	.project-split & {
+		background-color: grey;
+		display: table-cell;
 		padding: 0 pvw(16,$content_max_width) pvw(16,$content_max_width) 0;
 		text-align: left;
+		vertical-align: bottom;
 	}
 }
 
 .project-gallery {
 	margin: 0 auto;
+	.project-split & {
+		display: table-cell;
+		vertical-align: bottom;
+	}
 	.device-web {
 		margin: 0 auto;
 	}
 }
 
 .project-split-left {
-	.project-inner {
-		display: flex;
-	}
 	.project-details {
-		flex: 1 0 320px;
-		 align-self: flex-end;
+		@include vw-min-max('width',100,200,$content_max_width);
 	}
 	.project-gallery {
 
@@ -57,6 +71,7 @@
 // }
 
 .project-details {
+	color: inherit;
 	.entry-title {
 		font-weight: bold;
 		line-height: 1;

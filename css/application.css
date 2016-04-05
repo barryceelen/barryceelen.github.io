@@ -97,6 +97,20 @@ a img {
   border: 0;
 }
 
+@font-face {
+  font-family: 'poppins';
+  src: url("poppins-regular-webfont.eot");
+  src: local("Poppins"), local("Poppins-Regular"), url("poppins-regular-webfont.eot?#iefix") format("embedded-opentype"), url("poppins-regular-webfont.woff2") format("woff2"), url("poppins-regular-webfont.woff") format("woff"), url("poppins-regular-webfont.ttf") format("truetype"), url("poppins-regular-webfont.svg#poppinsregular") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'poppins-semibold';
+  src: url("poppins-semibold-webfont.eot");
+  src: local("Poppins SemiBold"), local("Poppins-SemiBold"), url("poppins-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("poppins-semibold-webfont.woff2") format("woff2"), url("poppins-semibold-webfont.woff") format("woff"), url("poppins-semibold-webfont.ttf") format("truetype"), url("poppins-semibold-webfont.svg#poppinssemibold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+}
 /**
  * TODO Print stylesheet, see: http://www.smashingmagazine.com/2013/03/08/tips-and-tricks-for-print-style-sheets/
  */
@@ -147,7 +161,7 @@ html, body {
 body {
   background: #FFF;
   color: #222;
-  font-family: "Roboto Condensed", sans-serif;
+  font-family: "poppins", sans-serif;
   font-size: 100%;
   padding-top: 4em;
 }
@@ -444,7 +458,6 @@ body {
   color: inherit;
 }
 .project-details .entry-title {
-  font-weight: bold;
   line-height: 1;
   margin-bottom: 0;
   font-size: 16px;

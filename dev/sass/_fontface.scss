@@ -1,48 +1,27 @@
-// @font-face{
-// 	font-family: 'Roboto Condensed';
-// 	font-style: normal;
-// 	font-weight: 300;
-// 	src: local('Roboto Condensed Light'),
-// 	local('RobotoCondensed-Light'),
-// 	url('//brick.a.ssl.fastly.net/fonts/robotocondensed/300.woff') format('woff')
-// }
-// @font-face{
-// 	font-family: 'Roboto Condensed';
-// 	font-style: italic;
-// 	font-weight: 300;
-// 	src: local('Roboto Condensed Light Italic'),
-// 	local('RobotoCondensed-LightItalic'),
-// 	url('//brick.a.ssl.fastly.net/fonts/robotocondensed/300i.woff') format('woff')
-// }
-// @font-face{
-// 	font-family: 'Roboto Condensed';
-// 	font-style: normal;
-// 	font-weight: 400;
-// 	src: local('Roboto Condensed Regular'),
-// 	local('RobotoCondensed-Regular'),
-// 	url('//brick.a.ssl.fastly.net/fonts/robotocondensed/400.woff') format('woff')
-// }
-// @font-face{
-// 	font-family: 'Roboto Condensed';
-// 	font-style: normal;
-// 	font-weight: 700;
-// 	src: local('Roboto Condensed Bold'),
-// 	local('RobotoCondensed-Bold'),
-// 	url('//brick.a.ssl.fastly.net/fonts/robotocondensed/700.woff') format('woff')
-// }
-// @font-face{
-// 	font-family: 'Roboto Condensed';
-// 	font-style: italic;
-// 	font-weight: 400;
-// 	src: local('Roboto Condensed Italic'),
-// 	local('RobotoCondensed-Italic'),
-// 	url('//brick.a.ssl.fastly.net/fonts/robotocondensed/400i.woff') format('woff')
-// }
-// @font-face{
-// 	font-family: 'Roboto Condensed';
-// 	font-style: italic;
-// 	font-weight: 700;
-// 	src: local('Roboto Condensed Bold Italic'),
-// 	local('RobotoCondensed-BoldItalic'),
-// 	url('//brick.a.ssl.fastly.net/fonts/robotocondensed/700i.woff') format('woff')
-// }
+@font-face {
+    font-family: 'poppins';
+    src: url('poppins-regular-webfont.eot');
+    src: local('Poppins'),
+         local('Poppins-Regular'),
+         url('poppins-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('poppins-regular-webfont.woff2') format('woff2'),
+         url('poppins-regular-webfont.woff') format('woff'),
+         url('poppins-regular-webfont.ttf') format('truetype'),
+         url('poppins-regular-webfont.svg#poppinsregular') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppins-semibold';
+    src: url('poppins-semibold-webfont.eot');
+    src: local('Poppins SemiBold'),
+         local('Poppins-SemiBold'),
+         url('poppins-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('poppins-semibold-webfont.woff2') format('woff2'),
+         url('poppins-semibold-webfont.woff') format('woff'),
+         url('poppins-semibold-webfont.ttf') format('truetype'),
+         url('poppins-semibold-webfont.svg#poppinssemibold') format('svg');
+    font-weight: 600;
+    font-style: normal;
+}

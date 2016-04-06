@@ -11,6 +11,20 @@ i, b {
 	font-weight: 400;
 }
 
+.nowrap {
+	white-space: nowrap;
+}
+
+small {
+	font-family: 'poppins-semibold', sans-serif; // Todo: Use Poppins medium
+	font-size: 70%;
+}
+
+strong {
+	font-family: 'poppins-semibold', sans-serif;
+	font-weight: 700;
+}
+
 img {
 	display: block;
 }
@@ -52,7 +66,9 @@ body {
 	color: $black;
 	font-family: $font_family;
 	font-size: 100%;
-	padding-top: 4em;
+	overflow-x: hidden;
+
+	padding-top: 12vh;
 }
 
 #content {
@@ -81,7 +97,6 @@ body {
 		text-decoration: none;
 		text-transform: uppercase;
 		&:hover, &:focus {
-			color: $blue;
 			text-decoration: underline;
 		}
 	}
@@ -93,6 +108,6 @@ body {
 		}
 	}
 	.love {
-		color: $red;
+		// color: $red;
 	}
 }

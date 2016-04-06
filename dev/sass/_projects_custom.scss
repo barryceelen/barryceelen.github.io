@@ -1,8 +1,48 @@
+body {
+	background: #ffff01;
+}
+
 .project-muka {
 	background: #ffff02;
+	border-bottom: none;
 	color: #000;
+	.device-web {
+		box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+	}
+}
+
+.project-foodpanda {
+	background: #F8F6F1;
+	background: #fafaf7;
+	border-bottom: none;
+	color: #ef7349;
+	color: #00B377;
+	.device-iphone-5 {
+		// background: $black;
+		box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.05);
+	}
 }
 
 .project-neubar {
+	background: #fafafa url('../img/projects/bg-neubar.jpg') left top no-repeat;
+	background-size: cover;
+	border-bottom: none;
 	color: #575D5B;
+	padding-top: pvw(8*16,$content_max_width);
+	.device-web {
+		box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+	}
+}
+
+.project-supreme {
+	background: $black;
+	border-bottom: none;
+	color: #fff;
+	padding-top: pvw(12*16,$content_max_width);
+	.device-web {
+		box-shadow: none;
+		figure {
+			padding-bottom: 31.818181818%;
+		}
+	}
 }

@@ -123,6 +123,20 @@ i, b {
   font-weight: 400;
 }
 
+.nowrap {
+  white-space: nowrap;
+}
+
+small {
+  font-family: 'poppins-semibold', sans-serif;
+  font-size: 70%;
+}
+
+strong {
+  font-family: 'poppins-semibold', sans-serif;
+  font-weight: 700;
+}
+
 img {
   display: block;
 }
@@ -159,20 +173,21 @@ html, body {
 }
 
 body {
-  background: #FFF;
+  background: #fff;
   color: #222;
   font-family: "poppins", sans-serif;
   font-size: 100%;
-  padding-top: 4em;
+  overflow-x: hidden;
+  padding-top: 12vh;
 }
 
 #content {
-  background: #FFF;
+  background: #fff;
 }
 
 .site-footer {
   margin: 0 auto;
-  max-width: 1100;
+  max-width: 1200;
   padding: 6em 2em 2em;
 }
 
@@ -185,15 +200,15 @@ body {
   margin: 0 auto;
   text-transform: uppercase;
   width: 100%;
-  max-width: 68.75em;
+  max-width: 75em;
   font-size: 12px;
 }
-@media all and (min-width: 825px) {
+@media all and (min-width: 900px) {
   .footer-inner {
-    font-size: 1.45455vw;
+    font-size: 1.33333vw;
   }
 }
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1200px) {
   .footer-inner {
     font-size: 16px;
   }
@@ -204,7 +219,6 @@ body {
   text-transform: uppercase;
 }
 .footer-inner a:hover, .footer-inner a:focus {
-  color: #0074D9;
   text-decoration: underline;
 }
 .footer-inner .impressum {
@@ -213,9 +227,6 @@ body {
 }
 .footer-inner .impressum i {
   display: none;
-}
-.footer-inner .love {
-  color: #FF4136;
 }
 
 .site-branding h1 {
@@ -245,7 +256,7 @@ body {
   padding: 29.10053% 6.87831%;
 }
 .device-iphone-5 .img-wrap {
-  background: #E6E6E6;
+  background: #efefef;
   position: absolute;
   left: 0;
   top: 0;
@@ -262,7 +273,7 @@ body {
   position: absolute;
 }
 .device-iphone-5:before {
-  background: #E6E6E6;
+  background: #efefef;
   border-radius: 999px;
   width: 15.87302%;
   height: 1.01781%;
@@ -271,7 +282,7 @@ body {
   margin-left: -7.93651%;
 }
 .device-iphone-5:after {
-  border-color: #E6E6E6;
+  border-color: #efefef;
   border-style: solid;
   border-width: 3px;
   border-radius: 50%;
@@ -282,12 +293,12 @@ body {
   height: 7.88804%;
   border-width: 1px;
 }
-@media all and (min-width: 366.66667px) {
+@media all and (min-width: 400px) {
   .device-iphone-5:after {
-    border-width: 0.27273vw;
+    border-width: 0.25vw;
   }
 }
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1200px) {
   .device-iphone-5:after {
     border-width: 3px;
   }
@@ -306,22 +317,22 @@ body {
   width: 400px;
   border-width: 1px;
 }
-@media all and (min-width: 400px) {
+@media all and (min-width: 436.36364px) {
   .device-web {
-    width: 100vw;
+    width: 91.66667vw;
   }
 }
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1200px) {
   .device-web {
     width: 1100px;
   }
 }
-@media all and (min-width: 366.66667px) {
+@media all and (min-width: 400px) {
   .device-web {
-    border-width: 0.27273vw;
+    border-width: 0.25vw;
   }
 }
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1200px) {
   .device-web {
     border-width: 3px;
   }
@@ -337,7 +348,7 @@ body {
   overflow-y: hidden;
 }
 .device-web .img-wrap {
-  background-color: #E6E6E6;
+  background-color: #efefef;
   position: absolute;
   left: 0;
   top: 0;
@@ -354,9 +365,9 @@ body {
   position: absolute;
 }
 .device-web:before {
-  background-color: #E6E6E6;
+  background-color: #efefef;
   border-radius: 50%;
-  box-shadow: 2.18182vw 0 0 #E6E6E6, 4.36364vw 0 0 #E6E6E6;
+  box-shadow: 2.18182vw 0 0 #efefef, 4.36364vw 0 0 #efefef;
   width: 1.27273%;
   height: 2.91667%;
   top: 0px;
@@ -364,34 +375,35 @@ body {
 }
 @media all and (min-width: 0px) {
   .device-web:before {
-    top: 1.63636vw;
+    top: 1.5vw;
   }
 }
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1200px) {
   .device-web:before {
     top: 18px;
   }
 }
 @media all and (min-width: 0px) {
   .device-web:before {
-    left: 1.63636vw;
+    left: 1.5vw;
   }
 }
-@media all and (min-width: 1100px) {
+@media all and (min-width: 1200px) {
   .device-web:before {
     left: 18px;
   }
 }
 
-@media all and (min-width: 68.75em) {
+@media all and (min-width: 75em) {
   .device-web:before {
-    box-shadow: 1.5em 0 0 #E6E6E6, 3em 0 0 #E6E6E6;
+    box-shadow: 1.5em 0 0 #efefef, 3em 0 0 #efefef;
   }
 }
 .project {
-  border-bottom: 1px solid #E6E6E6;
+  border-bottom: 1px solid #efefef;
   margin: 0;
-  padding: 2.90909vw 1.45455vw 0;
+  overflow-y: hidden;
+  padding: 8vw 1.33333vw 0;
   page-break-before: always;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
@@ -400,33 +412,68 @@ body {
   -moz-font-feature-settings: "kern";
   -moz-font-feature-settings: "kern=1";
 }
+.project.project-phone {
+  padding-bottom: 8vh;
+}
 
-.project-split {
+.project-split article {
   display: table;
   table-layout: fixed;
-  width: 100%;
-}
-
-.project-inner {
-  background-color: green;
   margin: 0 auto;
   max-width: 1200px;
-  padding-top: 2em;
+  transition: transform ease-in-out .5s;
+  width: 100%;
 }
+@media screen and (min-width: 1560px) {
+  .project-split article {
+    transform: translateX(-9vw);
+  }
+}
+
 .project-split .project-inner {
   display: table-row;
 }
 
 .project-details {
-  padding: 0 1.45455vw 1.45455vw;
+  padding: 0 1.33333vw 1.33333vw;
   text-align: center;
+  color: inherit;
+  letter-spacing: -0.03em;
+  line-height: 1.5;
+  font-size: 12px;
+}
+@media all and (min-width: 800px) {
+  .project-details {
+    font-size: 1.5vw;
+  }
+}
+@media all and (min-width: 1200px) {
+  .project-details {
+    font-size: 18px;
+  }
+}
+.project-details .entry-title {
+  font-family: 'poppins-semibold', sans-serif;
+}
+.project-details .entry-content {
+  text-transform: uppercase;
+  word-spacing: .1em;
+}
+.project-details a {
+  color: inherit;
+  text-decoration: none;
+}
+.project-details a:hover, .project-details a:focus {
+  text-decoration: underline;
 }
 .project-split .project-details {
-  background-color: grey;
   display: table-cell;
-  padding: 0 1.45455vw 1.45455vw 0;
+  padding: 0 1.33333vw 1.33333vw 0;
   text-align: left;
   vertical-align: bottom;
+}
+.project-phone .project-details {
+  vertical-align: middle;
 }
 
 .project-gallery {
@@ -437,64 +484,76 @@ body {
   vertical-align: bottom;
 }
 .project-gallery .device-web {
-  margin: 0 auto;
+  margin: 0 auto -1px 0;
+}
+.project-gallery .device-iphone-5 {
+  display: inline-block;
+  margin-right: 1.3em;
+}
+.project-phone .project-gallery {
+  white-space: nowrap;
 }
 
-.project-split-left .project-details {
+.project-split .project-details {
   width: 100px;
 }
-@media all and (min-width: 550px) {
-  .project-split-left .project-details {
-    width: 18.18182vw;
+@media all and (min-width: 400px) {
+  .project-split .project-details {
+    width: 25vw;
   }
 }
-@media all and (min-width: 1100px) {
-  .project-split-left .project-details {
-    width: 200px;
+@media all and (min-width: 1200px) {
+  .project-split .project-details {
+    width: 300px;
   }
 }
 
-.project-details {
-  color: inherit;
-}
-.project-details .entry-title {
-  line-height: 1;
-  margin-bottom: 0;
-  font-size: 16px;
-}
-@media all and (min-width: 733.33333px) {
-  .project-details .entry-title {
-    font-size: 2.18182vw;
-  }
-}
-@media all and (min-width: 1100px) {
-  .project-details .entry-title {
-    font-size: 24px;
-  }
-}
-.project-details .entry-content {
-  text-transform: uppercase;
-  word-spacing: .1em;
-  font-size: 12px;
-}
-@media all and (min-width: 825px) {
-  .project-details .entry-content {
-    font-size: 1.45455vw;
-  }
-}
-@media all and (min-width: 1100px) {
-  .project-details .entry-content {
-    font-size: 16px;
-  }
+body {
+  background: #ffff01;
 }
 
 .project-muka {
   background: #ffff02;
+  border-bottom: none;
   color: #000;
+}
+.project-muka .device-web {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+}
+
+.project-foodpanda {
+  background: #F8F6F1;
+  background: #fafaf7;
+  border-bottom: none;
+  color: #ef7349;
+  color: #00B377;
+}
+.project-foodpanda .device-iphone-5 {
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.05);
 }
 
 .project-neubar {
+  background: #fafafa url("../img/projects/bg-neubar.jpg") left top no-repeat;
+  background-size: cover;
+  border-bottom: none;
   color: #575D5B;
+  padding-top: 10.66667vw;
+}
+.project-neubar .device-web {
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+}
+
+.project-supreme {
+  background: #222;
+  border-bottom: none;
+  color: #fff;
+  padding-top: 16vw;
+}
+.project-supreme .device-web {
+  box-shadow: none;
+}
+.project-supreme .device-web figure {
+  padding-bottom: 31.818181818%;
 }
 
 /*# sourceMappingURL=application.css.map */

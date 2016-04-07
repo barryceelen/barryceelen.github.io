@@ -1,5 +1,12 @@
+$border-color: #efefef;
+
 body {
 	background: #ffff01;
+}
+
+.project {
+	// background: white !important;
+	// border-bottom: 1px solid $border-color !important;
 }
 
 .project-muka {
@@ -8,6 +15,8 @@ body {
 	color: #000;
 	.device-web {
 		box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+		box-shadow: none;
+		border: 1px solid $border-color;
 	}
 }
 
@@ -15,11 +24,21 @@ body {
 	background: #F8F6F1;
 	background: #fafaf7;
 	border-bottom: none;
+	border-bottom: 1px solid $border-color;
 	color: #ef7349;
 	color: #00B377;
 	.device-iphone-5 {
 		// background: $black;
-		box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.05);
+		// box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.05);
+		box-shadow: none;
+		border: 1px solid $border-color;
+		&:before {
+			background: transparent;
+			border: 2px solid #fafaf7;
+		}
+		&:after {
+			border: 2px solid #fafaf7;
+		}
 	}
 }
 
@@ -31,6 +50,8 @@ body {
 	padding-top: pvw(8*16,$content_max_width);
 	.device-web {
 		box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+		box-shadow: none;
+		border: 1px solid $border-color;
 	}
 }
 
@@ -41,8 +62,21 @@ body {
 	padding-top: pvw(12*16,$content_max_width);
 	.device-web {
 		box-shadow: none;
+		border: 1px solid $border-color;
 		figure {
 			padding-bottom: 31.818181818%;
 		}
+	}
+}
+
+.project-welt {
+	background: #fff url('../img/projects/bg-welt.jpg') left top no-repeat;
+	background-size: 80%;
+	color: #017091;
+	@media screen and (min-width: 1200px) { // Todo: Get variable.
+		background-size: auto;
+	}
+	.project-details {
+		vertical-align: bottom;
 	}
 }

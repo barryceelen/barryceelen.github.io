@@ -277,14 +277,14 @@ body {
   border-radius: 999px;
   width: 15.87302%;
   height: 1.01781%;
-  top: 6.61578%;
+  top: 7.37913%;
   left: 50%;
   margin-left: -7.93651%;
 }
 .device-iphone-5:after {
   border-color: #efefef;
   border-style: solid;
-  border-width: 3px;
+  border-width: 2px;
   border-radius: 50%;
   bottom: 3.05344%;
   left: 50%;
@@ -302,6 +302,15 @@ body {
   .device-iphone-5:after {
     border-width: 3px;
   }
+}
+.project-phone-black .device-iphone-5 {
+  background: #222;
+}
+.project-phone-black .device-iphone-5:before {
+  background: rgba(255, 255, 255, 0.05);
+}
+.project-phone-black .device-iphone-5:after {
+  border-color: rgba(255, 255, 255, 0.05);
 }
 
 .device-web {
@@ -461,7 +470,7 @@ body {
 }
 .project-details a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: underline;
 }
 .project-details a:hover, .project-details a:focus {
   text-decoration: underline;
@@ -519,17 +528,28 @@ body {
 }
 .project-muka .device-web {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: none;
+  border: 1px solid #efefef;
 }
 
 .project-foodpanda {
   background: #F8F6F1;
   background: #fafaf7;
   border-bottom: none;
+  border-bottom: 1px solid #efefef;
   color: #ef7349;
   color: #00B377;
 }
 .project-foodpanda .device-iphone-5 {
-  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: none;
+  border: 1px solid #efefef;
+}
+.project-foodpanda .device-iphone-5:before {
+  background: transparent;
+  border: 2px solid #fafaf7;
+}
+.project-foodpanda .device-iphone-5:after {
+  border: 2px solid #fafaf7;
 }
 
 .project-neubar {
@@ -541,6 +561,8 @@ body {
 }
 .project-neubar .device-web {
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: none;
+  border: 1px solid #efefef;
 }
 
 .project-supreme {
@@ -551,9 +573,24 @@ body {
 }
 .project-supreme .device-web {
   box-shadow: none;
+  border: 1px solid #efefef;
 }
 .project-supreme .device-web figure {
   padding-bottom: 31.818181818%;
+}
+
+.project-welt {
+  background: #fff url("../img/projects/bg-welt.jpg") left top no-repeat;
+  background-size: 80%;
+  color: #017091;
+}
+@media screen and (min-width: 1200px) {
+  .project-welt {
+    background-size: auto;
+  }
+}
+.project-welt .project-details {
+  vertical-align: bottom;
 }
 
 /*# sourceMappingURL=application.css.map */

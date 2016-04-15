@@ -1,34 +1,47 @@
-$width_project_max: 1470px;
+
+$width_project_max: 1460;
+$width_description_max: 360;
 
 .project {
 	margin: 0;
-	overflow-y: hidden;
-	page-break-before: always;
 	overflow-x: hidden;
-	// will-change: transform;
+	overflow-y: hidden;
+	padding-top: pvw( 92,$content_max_width );
+	page-break-before: always;
 	@include kern;
 	article {
 		display: table;
 		table-layout: fixed;
 		margin: 0 auto;
 		width: 100%;
-		max-width: $width_project_max;
+		max-width: $width_project_max * 1px;
+	}
+	&.project-phone {
+		@include vw-min-max( 'padding-top', 22, 120, $content_max_width );
+		@include vw-min-max( 'padding-bottom', 22, 100, $content_max_width );
 	}
 }
 
 .project-inner {
 	display: table-row;
+	transition: transform ease-in-out .3s;
+	@media screen and (min-width: 1600px) {
+		transform: translateX( -3vw );
+	}
+	@media screen and (min-width: 1900px) {
+		transform: translateX( -180px );
+	}
 }
 
 .project-details {
 	color: inherit;
 	display: table-cell;
 	line-height: 1.25;
-	padding: 0 pvw(16,$content_max_width) pvw(16,$content_max_width) 0;
+	padding: 0 pvw( 32, $content_max_width ) pvw( 32, $content_max_width ) pvw( 32, $content_max_width );
 	text-align: left;
 	vertical-align: bottom;
-	@include vw-min-max( 'font-size', 10, 18, $content_max_width );
-	@include vw-min-max( 'width', 130, 320, $content_max_width );
+	@include vw-min-max( 'font-size', 10, 20, $width_project_max );
+	@include vw-min-max( 'width', 138, $width_description_max, $content_max_width );
 	li {
 		margin-bottom: .25em;
 	}
@@ -43,7 +56,10 @@ $width_project_max: 1470px;
 		}
 	}
 	.project-phone & {
-		vertical-align: middle;
+		@include vw-min-max( 'padding-bottom', 20, 20, $content_max_width );
+	}
+	@media screen and (min-width: 1510px) { // Todo: Use variable.
+		padding-left: 0;
 	}
 }
 

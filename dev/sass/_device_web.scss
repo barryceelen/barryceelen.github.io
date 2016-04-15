@@ -42,7 +42,8 @@ $height_device_web_max: 480;
 	&:before { // Traffic Lights
 		background-color: #efefef;
 		border-radius: 50%;
-		box-shadow: pvw( 24, $width_device_web_max ) 0 0 #efefef, pvw( 48, $width_device_web_max ) 0 0 #efefef;
+		color: #efefef;
+		box-shadow: pvw( 24, $width_device_web_max ) 0 0, pvw( 48, $width_device_web_max ) 0 0;
 		width: percentage( 14 / $width_device_web_max );
 		height: percentage( 14 / $height_device_web_max );
 		@include vw-min-max( 'top', 0, 18, $content_max_width );
@@ -53,7 +54,7 @@ $height_device_web_max: 480;
 @media all and (min-width: pem($content_max_width)) {
 	.device-web {
 		&:before { // Traffic Lights
-			box-shadow: pem(24) 0 0 #efefef, pem(48) 0 0 #efefef;
+			box-shadow: pem(24) 0 0, pem(48) 0 0;
 		}
 	}
 }

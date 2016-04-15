@@ -1,1 +1,0 @@
-document.getElementById('main').style.zIndex = "1";

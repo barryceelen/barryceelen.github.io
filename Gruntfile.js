@@ -53,10 +53,7 @@ module.exports = function(grunt) {
 		jade: {
 			dev: {
 				options: {
-					pretty: true,
-					// data: {
-					// 	data: grunt.file.readJSON("dev/json/data.json")
-					// }
+					pretty: true
 				},
 				files: {
 					"index.html": "dev/jade/index.jade"
@@ -84,8 +81,8 @@ module.exports = function(grunt) {
 			}
 		},
 		clean: {
-			main: {
-				src: ['.sass-cache/','**/*.map','img/**/*.{png,jpg,gif}']
+			dev: {
+				src: ['.sass-cache/','**/*.map','img/**/*.{png,jpg,gif}','js/**/*']
 			}
 		},
 		copy: {
@@ -96,6 +93,16 @@ module.exports = function(grunt) {
 					cwd: 'dev/img/',
 					src: ['**'],
 					dest: 'img/',
+					filter: 'isFile'
+				}]
+			},
+			scripts: {
+				files: [
+				{
+					expand: true,
+					cwd: 'dev/js/',
+					src: ['**'],
+					dest: 'js/',
 					filter: 'isFile'
 				}]
 			},
@@ -135,13 +142,6 @@ module.exports = function(grunt) {
 					spawn: false,
 				}
 			},
-			// htmlmin: {
-			// 	files: ['index.html'],
-			// 	tasks: ['htmlmin'],
-			// 	options: {
-			// 		spawn: false,
-			// 	}
-			// },
 			copy_images: {
 				files: ['dev/img/**'],
 				tasks: ['copy:images'],
@@ -153,6 +153,14 @@ module.exports = function(grunt) {
 			copy_icons: {
 				files: ['dev/app-icons/**'],
 				tasks: ['copy:icons'],
+				options: {
+					spawn: false,
+					event: ['added', 'changed'],
+				}
+			},
+			copy_scripts: {
+				files: ['dev/js/**'],
+				tasks: ['copy:scripts'],
 				options: {
 					spawn: false,
 					event: ['added', 'changed'],

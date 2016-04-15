@@ -99,15 +99,15 @@ a img {
 
 @font-face {
   font-family: 'poppins';
-  src: url("poppins-regular-webfont.eot");
-  src: local("Poppins"), local("Poppins-Regular"), url("poppins-regular-webfont.eot?#iefix") format("embedded-opentype"), url("poppins-regular-webfont.woff2") format("woff2"), url("poppins-regular-webfont.woff") format("woff"), url("poppins-regular-webfont.ttf") format("truetype"), url("poppins-regular-webfont.svg#poppinsregular") format("svg");
+  src: url("./poppins-regular-webfont.eot");
+  src: local("Poppins"), local("Poppins-Regular"), url("./poppins-regular-webfont.eot?#iefix") format("embedded-opentype"), url("./poppins-regular-webfont.woff2") format("woff2"), url("./poppins-regular-webfont.woff") format("woff"), url("./poppins-regular-webfont.ttf") format("truetype"), url("./poppins-regular-webfont.svg#poppinsregular") format("svg");
   font-weight: 400;
   font-style: normal;
 }
 @font-face {
   font-family: 'poppins-semibold';
-  src: url("poppins-semibold-webfont.eot");
-  src: local("Poppins SemiBold"), local("Poppins-SemiBold"), url("poppins-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("poppins-semibold-webfont.woff2") format("woff2"), url("poppins-semibold-webfont.woff") format("woff"), url("poppins-semibold-webfont.ttf") format("truetype"), url("poppins-semibold-webfont.svg#poppinssemibold") format("svg");
+  src: url("./poppins-semibold-webfont.eot");
+  src: local("Poppins SemiBold"), local("Poppins-SemiBold"), url("./poppins-semibold-webfont.eot?#iefix") format("embedded-opentype"), url("./poppins-semibold-webfont.woff2") format("woff2"), url("./poppins-semibold-webfont.woff") format("woff"), url("./poppins-semibold-webfont.ttf") format("truetype"), url("./poppins-semibold-webfont.svg#poppinssemibold") format("svg");
   font-weight: 600;
   font-style: normal;
 }
@@ -118,7 +118,7 @@ a img {
   display: none;
 }
 
-i, b {
+i {
   font-style: normal;
   font-weight: 400;
 }
@@ -128,12 +128,10 @@ i, b {
 }
 
 small {
-  font-family: 'poppins-semibold', sans-serif;
   font-size: 70%;
 }
 
 strong {
-  font-family: 'poppins-semibold', sans-serif;
   font-weight: 700;
 }
 
@@ -175,7 +173,7 @@ html, body {
 body {
   background: #fff;
   color: #222;
-  font-family: "poppins", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Helvetica, sans-serif;
   font-size: 100%;
   overflow-x: hidden;
   padding-top: 12vh;
@@ -239,18 +237,18 @@ body {
   border-top-right-radius: 14.55026% 6.99746%;
   border-bottom-left-radius: 14.55026% 6.99746%;
   border-bottom-right-radius: 14.55026% 6.99746%;
-  box-shadow: 0 0 11px 0 rgba(0, 0, 0, 0.11);
   box-sizing: border-box;
   margin: 0;
   position: relative;
   width: 32vw;
-  max-width: 378px;
+  max-width: 372px;
 }
 .device-iphone-5 figure {
   height: 0;
   padding-bottom: 177.5%;
   position: relative;
   width: 100%;
+  max-width: 320px;
 }
 .device-iphone-5 .device-screen {
   padding: 29.10053% 6.87831%;
@@ -266,6 +264,7 @@ body {
 .device-iphone-5 img {
   display: block;
   width: 100%;
+  max-width: 320px;
 }
 .device-iphone-5:before, .device-iphone-5:after {
   content: '';
@@ -315,25 +314,24 @@ body {
 
 .device-web {
   background: #fff;
-  border-top-right-radius: 1.27273% 2.91667%;
+  border-top-right-radius: 1.2069% 2.91667%;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
-  border-top-left-radius: 1.27273% 2.91667%;
-  box-shadow: 0 0 11px 0 rgba(0, 0, 0, 0.11);
+  border-top-left-radius: 1.2069% 2.91667%;
   box-sizing: border-box;
   position: relative;
   margin: 0;
   width: 400px;
   border-width: 1px;
 }
-@media all and (min-width: 436.36364px) {
+@media all and (min-width: 413.7931px) {
   .device-web {
-    width: 91.66667vw;
+    width: 96.66667vw;
   }
 }
 @media all and (min-width: 1200px) {
   .device-web {
-    width: 1100px;
+    width: 1160px;
   }
 }
 @media all and (min-width: 400px) {
@@ -348,12 +346,12 @@ body {
 }
 .device-web figure {
   height: 0;
-  padding-bottom: 39.27273%;
+  padding-bottom: 37.24138%;
   position: relative;
   width: 100%;
 }
 .device-web .device-screen {
-  padding: 4.36364% 0 0 0;
+  padding: 4.13793% 0 0 0;
   overflow-y: hidden;
 }
 .device-web .img-wrap {
@@ -376,8 +374,8 @@ body {
 .device-web:before {
   background-color: #efefef;
   border-radius: 50%;
-  box-shadow: 2.18182vw 0 0 #efefef, 4.36364vw 0 0 #efefef;
-  width: 1.27273%;
+  box-shadow: 2.06897vw 0 0 #efefef, 4.13793vw 0 0 #efefef;
+  width: 1.2069%;
   height: 2.91667%;
   top: 0px;
   left: 0px;
@@ -409,10 +407,8 @@ body {
   }
 }
 .project {
-  border-bottom: 1px solid #efefef;
   margin: 0;
   overflow-y: hidden;
-  padding: 8vw 1.33333vw 0;
   page-break-before: always;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
@@ -421,37 +417,29 @@ body {
   -moz-font-feature-settings: "kern";
   -moz-font-feature-settings: "kern=1";
 }
-.project.project-phone {
-  padding-bottom: 8vh;
-}
-
-.project-split article {
+.project article {
   display: table;
   table-layout: fixed;
   margin: 0 auto;
-  max-width: 1200px;
-  transition: transform ease-in-out .5s;
   width: 100%;
-}
-@media screen and (min-width: 1560px) {
-  .project-split article {
-    transform: translateX(-9vw);
-  }
+  max-width: 1470px;
 }
 
-.project-split .project-inner {
+.project-inner {
   display: table-row;
 }
 
 .project-details {
-  padding: 0 1.33333vw 1.33333vw;
-  text-align: center;
   color: inherit;
-  letter-spacing: -0.03em;
-  line-height: 1.5;
-  font-size: 12px;
+  display: table-cell;
+  line-height: 1.25;
+  padding: 0 1.33333vw 1.33333vw 0;
+  text-align: left;
+  vertical-align: bottom;
+  font-size: 10px;
+  width: 130px;
 }
-@media all and (min-width: 800px) {
+@media all and (min-width: 666.66667px) {
   .project-details {
     font-size: 1.5vw;
   }
@@ -461,60 +449,69 @@ body {
     font-size: 18px;
   }
 }
-.project-details .entry-title {
-  font-family: 'poppins-semibold', sans-serif;
+@media all and (min-width: 487.5px) {
+  .project-details {
+    width: 26.66667vw;
+  }
 }
-.project-details .entry-content {
-  text-transform: uppercase;
-  word-spacing: .1em;
+@media all and (min-width: 1200px) {
+  .project-details {
+    width: 320px;
+  }
+}
+.project-details li {
+  margin-bottom: .25em;
+}
+.project-details .entry-title {
+  font-weight: 700;
 }
 .project-details a {
   color: inherit;
-  text-decoration: underline;
+  text-decoration: none;
 }
 .project-details a:hover, .project-details a:focus {
   text-decoration: underline;
-}
-.project-split .project-details {
-  display: table-cell;
-  padding: 0 1.33333vw 1.33333vw 0;
-  text-align: left;
-  vertical-align: bottom;
 }
 .project-phone .project-details {
   vertical-align: middle;
 }
 
 .project-gallery {
-  margin: 0 auto;
-}
-.project-split .project-gallery {
   display: table-cell;
+  margin: 0 auto;
   vertical-align: bottom;
+}
+.project-gallery:before, .project-gallery:after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+.project-gallery:after {
+  clear: both;
 }
 .project-gallery .device-web {
   margin: 0 auto -1px 0;
 }
 .project-gallery .device-iphone-5 {
   display: inline-block;
-  margin-right: 1.3em;
+  margin-left: 2px;
 }
-.project-phone .project-gallery {
-  white-space: nowrap;
-}
-
-.project-split .project-details {
-  width: 100px;
-}
-@media all and (min-width: 400px) {
-  .project-split .project-details {
-    width: 25vw;
+@media all and (min-width: 109.09091px) {
+  .project-gallery .device-iphone-5 {
+    margin-left: 1.83333vw;
   }
 }
 @media all and (min-width: 1200px) {
-  .project-split .project-details {
-    width: 300px;
+  .project-gallery .device-iphone-5 {
+    margin-left: 22px;
   }
+}
+.project-gallery .device-iphone-5:first-child {
+  margin-left: 0;
+}
+.project-phone .project-gallery {
+  white-space: nowrap;
 }
 
 body {
@@ -523,60 +520,45 @@ body {
 
 .project-muka {
   background: #ffff02;
-  border-bottom: none;
   color: #000;
 }
 .project-muka .device-web {
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
-  box-shadow: none;
-  border: 1px solid #efefef;
+  border-top-right-radius: 1.2069% 2.78884%;
+  border-top-left-radius: 1.2069% 2.78884%;
+}
+.project-muka .device-web figure {
+  padding-bottom: 43.27586%;
+}
+.project-muka .device-web:before {
+  height: 2.54545%;
 }
 
 .project-foodpanda {
-  background: #F8F6F1;
-  background: #fafaf7;
-  border-bottom: none;
-  border-bottom: 1px solid #efefef;
-  color: #ef7349;
-  color: #00B377;
-}
-.project-foodpanda .device-iphone-5 {
-  box-shadow: none;
-  border: 1px solid #efefef;
-}
-.project-foodpanda .device-iphone-5:before {
-  background: transparent;
-  border: 2px solid #fafaf7;
-}
-.project-foodpanda .device-iphone-5:after {
-  border: 2px solid #fafaf7;
+  background: #ea5b31;
+  color: white;
 }
 
 .project-neubar {
   background: #fafafa url("../img/projects/bg-neubar.jpg") left top no-repeat;
   background-size: cover;
-  border-bottom: none;
   color: #575D5B;
   padding-top: 10.66667vw;
-}
-.project-neubar .device-web {
-  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.05);
-  box-shadow: none;
-  border: 1px solid #efefef;
 }
 
 .project-supreme {
   background: #222;
   border-bottom: none;
   color: #fff;
-  padding-top: 16vw;
 }
 .project-supreme .device-web {
-  box-shadow: none;
-  border: 1px solid #efefef;
+  border-top-right-radius: 1.2069% 4%;
+  border-top-left-radius: 1.2069% 4%;
 }
 .project-supreme .device-web figure {
-  padding-bottom: 31.818181818%;
+  padding-bottom: 30.17241%;
+}
+.project-supreme .device-web:before {
+  height: 3.51759%;
 }
 
 .project-welt {

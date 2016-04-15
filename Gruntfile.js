@@ -29,6 +29,17 @@ module.exports = function(grunt) {
 				}
 			}
 		},
+		htmlmin: {
+			dist: {
+				options: {
+					removeComments: true,
+					collapseWhitespace: true
+				},
+				files: {
+					'index.html': 'index.html'
+			  	}
+			}
+		},
 		autoprefixer: {
 			main: {
 				options: {
@@ -119,11 +130,18 @@ module.exports = function(grunt) {
 			},
 			jade: {
 				files: ['dev/jade/**/*.jade'],
-				tasks: ['jade:dev'],
+				tasks: ['jade:dev', 'htmlmin'],
 				options: {
 					spawn: false,
 				}
 			},
+			// htmlmin: {
+			// 	files: ['index.html'],
+			// 	tasks: ['htmlmin'],
+			// 	options: {
+			// 		spawn: false,
+			// 	}
+			// },
 			copy_images: {
 				files: ['dev/img/**'],
 				tasks: ['copy:images'],
@@ -160,7 +178,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-notify');
 	grunt.loadNpmTasks('grunt-contrib-connect');
+	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
-	grunt.registerTask('default', ['sass:dist','autoprefixer','jade','clean','copy','imagemin']);
+	grunt.registerTask('default', ['sass:dist','autoprefixer','jade','htmlmin','clean','copy','imagemin']);
 	grunt.registerTask('serve', ['connect:server','watch','notify:server']);
 };

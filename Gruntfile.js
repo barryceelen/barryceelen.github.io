@@ -22,7 +22,8 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				options: {
-					style: 'compressed'
+					style: 'compressed',
+					sourcemap: 'none'
 				},
 				files: {
 					'css/application.css':'dev/sass/application.scss'
@@ -51,13 +52,13 @@ module.exports = function(grunt) {
 				}
 			}
 		},
-		jade: {
+		pug: {
 			dev: {
 				options: {
 					pretty: true
 				},
 				files: {
-					"index.html": "dev/jade/index.jade"
+					"index.html": "dev/pug/index.jade"
 				}
 			},
 			dist: {
@@ -67,7 +68,7 @@ module.exports = function(grunt) {
 					}
 				},
 				files: {
-					"index.html": "dev/jade/index.jade"
+					"index.html": "dev/pug/index.jade"
 				}
 			}
 		},
@@ -136,9 +137,9 @@ module.exports = function(grunt) {
 					spawn: false,
 				}
 			},
-			jade: {
-				files: ['dev/jade/**/*.jade'],
-				tasks: ['jade:dev', 'htmlmin'],
+			pug: {
+				files: ['dev/pug/**/*.pug'],
+				tasks: ['pug:dev', 'htmlmin'],
 				options: {
 					spawn: false,
 				}
@@ -180,7 +181,7 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-autoprefixer');
-	grunt.loadNpmTasks('grunt-contrib-jade');
+	grunt.loadNpmTasks('grunt-contrib-pug');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
@@ -189,6 +190,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
-	grunt.registerTask('default', ['sass:dist','autoprefixer','jade','htmlmin','clean','copy','imagemin']);
-	grunt.registerTask('serve', ['connect:server','watch','notify:server']);
+	grunt.registerTask('default', ['connect:server','watch','notify:server']);
+	grunt.registerTask('dist', ['sass:dist','autoprefixer','pug','htmlmin','clean','copy','imagemin']);
 };

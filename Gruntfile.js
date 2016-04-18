@@ -33,7 +33,8 @@ module.exports = function(grunt) {
 			dist: {
 				options: {
 					removeComments: true,
-					collapseWhitespace: true
+					collapseWhitespace: true,
+					collapseInlineTagWhitespace: true
 				},
 				files: {
 					'index.html': 'index.html'
@@ -82,7 +83,7 @@ module.exports = function(grunt) {
 		},
 		clean: {
 			dev: {
-				src: ['.sass-cache/','**/*.map','img/**/*.{png,jpg,gif}','js/**/*']
+				src: ['.sass-cache/','**/*.map','img/**/*.{png,jpg,gif}','js/**/*','*.orig']
 			}
 		},
 		copy: {

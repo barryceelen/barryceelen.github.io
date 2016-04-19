@@ -55,3 +55,32 @@ body {
 	color: #8B8B8B;
 	@include device-web-custom( 760 );
 }
+
+.project-ralfschmitz {
+	background: lighten(#8B8B8B, 40%);
+	color: #222;
+	@include device-web-custom( 714 );
+}
+
+.project-simfy {
+	background: #009FE5;
+	color: #fff;
+}
+
+.project-zalando {
+	color: #E67F13;
+}
+
+.project-kadewe {
+	background: #F7F7F7;
+	color: #00021B;
+	.device-iphone-5 {
+		background: #000;
+		&:before {
+			background: lighten(#000,12);
+		}
+		&:after {
+			border-color: lighten(#000,12);
+		}
+	}
+}

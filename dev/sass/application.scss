@@ -12,14 +12,16 @@ $black: #222;
 $background_color_content: #fff;
 $background_color_footer: #fff;
 
+$width_project_max: 1460;
+$width_description_max: 360;
+
 // Layout
 $content_max_width: 1200;
 
 @import 'mixins';
 @import 'reset';
-@import 'fontface';
 @import 'global';
-@import 'header';
+@import 'masthead';
 @import 'device_iphone_5';
 @import 'device_web';
 @import 'projects';

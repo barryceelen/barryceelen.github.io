@@ -138,7 +138,7 @@ module.exports = function(grunt) {
 				}
 			},
 			pug: {
-				files: ['dev/pug/**/*.pug'],
+				files: ['dev/pug/**/*.jade'],
 				tasks: ['pug:dev', 'htmlmin'],
 				options: {
 					spawn: false,

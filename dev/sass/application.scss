@@ -4,22 +4,20 @@ Author URI: http://barryceelen.com
 */
 
 $base_font_size: 16; // Set font size to 100% on body
-// $font_family: "poppins", sans-serif;
-$font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,sans-serif;
+$font_family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,sans-serif;
+$font_family_icon: 'bc';
 
 $black: #222;
-
-$background_color_content: #fff;
-$background_color_footer: #fff;
 
 $width_project_max: 1460;
 $width_description_max: 360;
 
-// Layout
+// Layout, Todo: Fix this.
 $content_max_width: 1200;
 
 @import 'mixins';
 @import 'reset';
+@import 'fonts';
 @import 'global';
 @import 'masthead';
 @import 'device_iphone_5';

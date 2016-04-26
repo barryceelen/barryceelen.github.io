@@ -4,19 +4,18 @@ body {
 	background: #ffff01;
 }
 
-.project-muka {
+#muenchnerkammerspiele {
 	background: #ffff02;
 	color: #000;
 	@include device-web-custom( 502 );
 }
 
-.project-foodpanda {
+#foodpanda {
 	background: #ea5b31;
-	// background: #BEDECB;
-	color: white;
+	color: #fff;
 }
 
-.project-neubar {
+#neumeisterbaram {
 	background: #fafafa url('../img/projects/bg-neubar.jpg') left top no-repeat;
 	background-size: cover;
 	color: #575D5B;
@@ -29,14 +28,14 @@ body {
 	}
 }
 
-.project-supreme {
+#supreme {
 	background: $black;
 	border-bottom: none;
 	color: #fff;
 	@include device-web-custom( 350 );
 }
 
-.project-welt {
+#welt {
 	background: #fff url('../img/projects/bg-welt.jpg') left top no-repeat;
 	color: #017091;
 	color: #fff;
@@ -45,33 +44,33 @@ body {
 	}
 }
 
-.project-mno {
+#mno {
 	background: #f7f7f7;
 	@include device-web-custom( 500 );
 }
 
-.project-ds {
+#doublestandards {
 	background: lighten(#8B8B8B, 40%);
 	color: #8B8B8B;
 	@include device-web-custom( 760 );
 }
 
-.project-ralfschmitz {
+#ralfschmitz {
 	background: lighten(#8B8B8B, 40%);
 	color: #222;
 	@include device-web-custom( 714 );
 }
 
-.project-simfy {
+#simfy {
 	background: #009FE5;
 	color: #fff;
 }
 
-.project-zalando {
+#zalando {
 	color: #E67F13;
 }
 
-.project-kadewe {
+#kadewe {
 	background: #F7F7F7;
 	color: #00021B;
 	.device-iphone-5 {
@@ -84,3 +83,85 @@ body {
 		}
 	}
 }
+
+#stylebop {
+	background-image: -webkit-linear-gradient(#FBFBFB 0%, #DCDCDC 98%);
+	background-image: -o-linear-gradient(#FBFBFB 0%, #DCDCDC 98%);
+	background-image: linear-gradient(#FBFBFB 0%, #DCDCDC 98%);
+	color: #222;
+	.device-iphone-5 {
+		background: #000;
+		&:before {
+			background: lighten(#000,12);
+		}
+		&:after {
+			border-color: lighten(#000,12);
+		}
+	}
+	.app-of-the-week {
+		background: #A4927D;
+		border-radius: 50%;
+		color: #fff;
+		display: inline-block;
+		font-weight: 700;
+		text-align: center;
+		transform: rotate(-12deg);
+		@include vw-min-max( 'height', 60, 120, $width_project_max );
+		@include vw-min-max( 'margin-bottom', 12, 40, $width_project_max );
+		@include vw-min-max( 'margin-left', -4, -16, $width_project_max );
+		@include vw-min-max( 'width', 60, 120, $width_project_max );
+		@include vw-min-max( 'padding-top', 16, 34, $width_project_max );
+	}
+}
+
+#stephiebecker {
+	background: #dcdcdc;
+	color: #ff5037;
+	@include device-web-custom( 804 );
+}
+
+#berlinpoland {
+	background: #272727;
+	color: #d9d9d9;
+	@include device-web-custom( 756 );
+	.device-web {
+		background: #F2F2F2;
+		&:before {
+			background: #d9d9d9;
+			color: #d9d9d9;
+		}
+	}
+}
+
+#ipanema {
+	background: #efefef;
+	color: #393939;
+	@include device-web-custom( 714 );
+	.device-web {
+		background: #ccc;
+		&:before {
+			background: darken(#efefef,30);
+			color: darken(#efefef,30);
+		}
+	}
+}
+
+#berinson {
+	background: #F2C034;
+	color: #000;
+	@include device-web-custom( 639 );
+}
+
+#teichmann {
+	background: #101012;
+	color: #CBCCCC;
+	@include device-web-custom( 1000 );
+	.device-web {
+		background: #27262E;
+		&:before {
+			background: darken(#27262E,20);
+			color: darken(#27262E,20);
+		}
+	}
+}
+

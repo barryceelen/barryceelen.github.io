@@ -13,7 +13,7 @@
 }
 
 //
-// Size in vw locking to min and max values.
+// Size of property in vw locking to min and max pixel values.
 //
 @mixin vw-min-max( $property, $value_min, $value_max, $viewport_width_max ) {
 

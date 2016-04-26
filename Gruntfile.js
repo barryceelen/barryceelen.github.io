@@ -117,6 +117,16 @@ module.exports = function(grunt) {
 					dest: '',
 					filter: 'isFile'
 				}]
+			},
+			fonts: {
+				files: [
+				{
+					expand: true,
+					cwd: 'dev/fonts/',
+					src: ['**'],
+					dest: 'fonts/',
+					filter: 'isFile'
+				}]
 			}
 		},
 		watch: {

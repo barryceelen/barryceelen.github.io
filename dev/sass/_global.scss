@@ -2,17 +2,10 @@
  * TODO Print stylesheet, see: http://www.smashingmagazine.com/2013/03/08/tips-and-tricks-for-print-style-sheets/
  */
 
-.hidden {
-	display: none;
-}
-
-i {
-	font-style: normal;
-	font-weight: 400;
-}
-
-.nowrap {
-	white-space: nowrap;
+html {
+	color: $black;
+	font-family: $font_family;
+	font-size: 100%;
 }
 
 small {
@@ -27,11 +20,6 @@ img {
 	display: block;
 }
 
-figure {
-	margin: 0;
-	padding: 0;
-}
-
 @media all {
 	.page-break	{ display: none; }
 }
@@ -40,70 +28,5 @@ figure {
 	// .page-break	{ display: block; page-break-before: always; }
 	.projects article {
 		page-break-before: always;
-	}
-}
-
-picture {
-	display: block;
-	margin: 0;
-	padding: 0;
-}
-
-h1, p {
-	margin: 0;
-	padding: 0;
-}
-
-html, body {
-	margin: 0;
-	padding: 0;
-}
-
-body {
-	background: $background_color_footer;
-	color: $black;
-	font-family: $font_family;
-	font-size: 100%;
-	overflow-x: hidden;
-}
-
-#content {
-	background: $background_color_content;
-}
-
-.site-footer {
-	margin: 0 auto;
-	max-width: $content_max_width;
-	padding: 6em 2em 2em;
-}
-
-#colophon {
-	padding: pem(132) pem(16) pem(16);
-}
-
-.footer-inner {
-	font-weight: 400;
-	margin: 0 auto;
-	text-transform: uppercase;
-	width: 100%;
-	max-width: pem($content_max_width);
-	@include vw-min-max('font-size',12,16,$content_max_width);
-	a {
-		color: $black;
-		text-decoration: none;
-		text-transform: uppercase;
-		&:hover, &:focus {
-			text-decoration: underline;
-		}
-	}
-	.impressum {
-		color: lighten($black,70);
-		float: right;
-		i {
-			display: none;
-		}
-	}
-	.love {
-		// color: $red;
 	}
 }

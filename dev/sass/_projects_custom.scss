@@ -165,3 +165,60 @@ body {
 	}
 }
 
+#usabilitypark {
+	background: #efefef;
+	color: #221E1F;
+	@include device-web-custom( 742 );
+	.device-web {
+		background: #221E1F;
+		&:before {
+			background: lighten(#221E1F,10);
+			color: lighten(#221E1F,10);
+		}
+	}
+}
+
+#raceunion {
+	background: #222;
+	color: #A7A7A7;
+	.device-iphone-4 {
+		background: #000;
+		border-color: lighten(#222,10);
+		border-style: solid;
+		@include vw-min-max( 'border-width', 2, 6, $content_max_width );
+		&:before {
+			background: lighten(#000,12);
+		}
+		&:after {
+			border-color: lighten(#000,12);
+		}
+	}
+}
+
+#pictrip {
+	color: #fff;
+	background: #505050 url('../img/projects/bg-pictrip.png') left top;
+	.device-iphone-4 {
+		background: #000;
+		&:before {
+			background: lighten(#000,12);
+		}
+		&:after {
+			border-color: lighten(#000,12);
+		}
+	}
+}
+
+#man-iaa {
+	color: #303C4A;
+	background: #EAEBED;
+	.device-iphone-4 {
+		background: #000;
+		&:before {
+			background: lighten(#000,12);
+		}
+		&:after {
+			border-color: lighten(#000,12);
+		}
+	}
+}

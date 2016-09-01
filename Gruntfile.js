@@ -131,6 +131,7 @@ module.exports = function(grunt) {
 		},
 		watch: {
 			options: {
+				atBegin: true,
 				livereload: true,
 			},
 			sass: {

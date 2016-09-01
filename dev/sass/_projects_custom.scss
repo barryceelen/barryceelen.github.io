@@ -36,7 +36,8 @@ body {
 }
 
 #welt {
-	background: #fff url('../img/projects/bg-welt.jpg') left top no-repeat;
+	background: #00648B url('../img/projects/bg-welt.jpg') left top no-repeat;
+	// background: #00648B;
 	color: #017091;
 	color: #fff;
 	@media screen and (min-width: 1200px) { // Todo: Get variable.
@@ -198,6 +199,7 @@ body {
 #pictrip {
 	color: #fff;
 	background: #505050 url('../img/projects/bg-pictrip.png') left top;
+	text-shadow: 0 0px 6px rgba(0,0,0,0.6);
 	.device-iphone-4 {
 		background: #000;
 		&:before {

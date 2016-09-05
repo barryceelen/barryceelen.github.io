@@ -14,8 +14,7 @@ module.exports = function(grunt) {
 		sass: {
 			dev: {
 				options: {
-					style: 'expanded',
-					sourcemap: true
+					style: 'expanded'
 				},
 				files: {
 					'css/application.css':'dev/sass/application.scss'
@@ -23,32 +22,43 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				options: {
-					style: 'compressed'
+					style: 'compressed',
+					sourcemap: 'none'
 				},
 				files: {
 					'css/application.css':'dev/sass/application.scss'
 				}
 			}
 		},
-		autoprefixer: {
+		htmlmin: {
 			dist: {
 				options: {
-				  browsers: ['last 2 versions', 'ie 9', 'BlackBerry 10', 'Android 4'],
-				},
-				src: 'css/application.css',
-				dest: 'css/application.css'
-			}
-		},
-		jade: {
-			dev: {
-				options: {
-					pretty: true,
-					data: {
-						data: grunt.file.readJSON("dev/json/data.json")
-					}
+					removeComments: true,
+					collapseWhitespace: true,
+					collapseInlineTagWhitespace: false
 				},
 				files: {
-					"index.html": "dev/jade/index.jade"
+					'index.html': 'index.html'
+			  	}
+			}
+		},
+		autoprefixer: {
+			main: {
+				options: {
+				  browsers: ['last 2 version', 'ie 9', 'BlackBerry 10', 'Android 4']
+				},
+				no_dest: {
+					src: 'css/application.css'
+				}
+			}
+		},
+		pug: {
+			dev: {
+				options: {
+					pretty: true
+				},
+				files: {
+					"index.html": "dev/pug/index.jade"
 				}
 			},
 			dist: {
@@ -58,7 +68,7 @@ module.exports = function(grunt) {
 					}
 				},
 				files: {
-					"index.html": "dev/jade/index.jade"
+					"index.html": "dev/pug/index.jade"
 				}
 			}
 		},
@@ -73,8 +83,8 @@ module.exports = function(grunt) {
 			}
 		},
 		clean: {
-			main: {
-				src: ['.sass-cache/','**/*.map','img/**/*.{png,jpg,gif}']
+			dev: {
+				src: ['.sass-cache/','**/*.map','img/**/*.{png,jpg,gif}','js/**/*','*.orig']
 			}
 		},
 		copy: {
@@ -88,6 +98,16 @@ module.exports = function(grunt) {
 					filter: 'isFile'
 				}]
 			},
+			scripts: {
+				files: [
+				{
+					expand: true,
+					cwd: 'dev/js/',
+					src: ['**'],
+					dest: 'js/',
+					filter: 'isFile'
+				}]
+			},
 			icons: {
 				files: [
 				{
@@ -97,10 +117,21 @@ module.exports = function(grunt) {
 					dest: '',
 					filter: 'isFile'
 				}]
+			},
+			fonts: {
+				files: [
+				{
+					expand: true,
+					cwd: 'dev/fonts/',
+					src: ['**'],
+					dest: 'fonts/',
+					filter: 'isFile'
+				}]
 			}
 		},
 		watch: {
 			options: {
+				atBegin: true,
 				livereload: true,
 			},
 			sass: {
@@ -117,9 +148,9 @@ module.exports = function(grunt) {
 					spawn: false,
 				}
 			},
-			jade: {
-				files: ['dev/jade/**/*.jade'],
-				tasks: ['jade:dev'],
+			pug: {
+				files: ['dev/pug/**/*.jade'],
+				tasks: ['pug:dev'],
 				options: {
 					spawn: false,
 				}
@@ -140,6 +171,14 @@ module.exports = function(grunt) {
 					event: ['added', 'changed'],
 				}
 			},
+			copy_scripts: {
+				files: ['dev/js/**'],
+				tasks: ['copy:scripts'],
+				options: {
+					spawn: false,
+					event: ['added', 'changed'],
+				}
+			},
 			remove_images: {
 				files: ['dev/img/**'],
 				tasks: ['clean:dev','copy:images'],
@@ -153,14 +192,16 @@ module.exports = function(grunt) {
 
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-autoprefixer');
-	grunt.loadNpmTasks('grunt-contrib-jade');
+	grunt.loadNpmTasks('grunt-contrib-pug');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-imagemin');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-notify');
 	grunt.loadNpmTasks('grunt-contrib-connect');
+	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
-	grunt.registerTask('default', ['sass:dist','autoprefixer','jade','clean','copy','imagemin']);
-	grunt.registerTask('serve', ['connect:server','watch','notify:server']);
+	grunt.registerTask('default', ['connect:server','watch','notify:server']);
+	// grunt.registerTask('dist', ['sass:dist','autoprefixer','pug','clean','copy','imagemin']);
+	grunt.registerTask('dist', ['sass:dist','autoprefixer','pug','clean','copy']);
 };

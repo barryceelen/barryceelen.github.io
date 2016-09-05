@@ -1,0 +1,99 @@
+.project {
+	background: #fff;
+	margin: 0;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	padding-top: pvw( 92, $content_max_width );
+	page-break-before: always;
+	@include kern;
+	article {
+		display: table;
+		table-layout: fixed;
+		margin: 0 auto;
+		width: 100%;
+		max-width: $width_project_max * 1px;
+	}
+	&.project-phone {
+		@include vw-min-max( 'padding-top', 22, 120, $content_max_width );
+		@include vw-min-max( 'padding-bottom', 22, 100, $content_max_width );
+	}
+}
+
+.project-inner {
+	display: table-row;
+	transition: transform ease-in-out .3s;
+	@media screen and (min-width: 1600px) {
+		transform: translateX( -3vw );
+	}
+	@media screen and (min-width: 1900px) {
+		transform: translateX( -180px );
+	}
+}
+.project-details {
+	color: inherit;
+	display: table-cell;
+	line-height: 1.25;
+	padding: 0 pvw( 32, $content_max_width ) pvw( 32, $content_max_width ) pvw( 32, $content_max_width );
+	text-align: left;
+	vertical-align: bottom;
+	@include vw-min-max( 'font-size', 12, 20, $width_project_max );
+	@include vw-min-max( 'width', 138, $width_description_max, $width_project_max );
+	li {
+		margin-bottom: .25em;
+	}
+	.entry-title {
+		font-weight: 700;
+	}
+	a {
+		color: inherit;
+		text-decoration: none;
+		&:hover, &:focus {
+			text-decoration: underline;
+		}
+	}
+	.wp & {
+		&:before {
+			content: "\e000";
+			display: block;
+			font-family: $font_family_icon !important;
+			font-style: normal !important;
+			font-weight: normal !important;
+			font-variant: normal !important;
+			text-transform: none !important;
+			margin-left: 2px;
+			speak: none;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+			@include vw-min-max( 'font-size', 12, 28, $content_max_width );
+			@include vw-min-max( 'margin-bottom', 12, 28, $content_max_width );
+		}
+	}
+	.project-phone & {
+		@include vw-min-max( 'padding-bottom', 20, 20, $content_max_width );
+	}
+	@media screen and (min-width: 1510px) { // Todo: Use variable.
+		padding-left: 0;
+	}
+}
+
+.project-gallery {
+	display: table-cell;
+	margin: 0 auto;
+	vertical-align: bottom;
+	@include clearfix;
+	.device-web {
+		margin: 0 auto -1px 0;
+	}
+	.device-iphone-4,
+	.device-iphone-5 {
+		display: inline-block;
+		@include vw-min-max( 'margin-left', 2, 22, $content_max_width );
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+	.project-phone & {
+		white-space: nowrap;
+	}
+}

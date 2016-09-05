@@ -3,48 +3,26 @@ Author: Barry Ceelen
 Author URI: http://barryceelen.com
 */
 
-// Typography
 $base_font_size: 16; // Set font size to 100% on body
-$font_family: "boogaloo", sans-serif;
+// $font_family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,sans-serif;
+$font_family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen-Sans", "Ubuntu", "Cantarell", "Helvetica Neue", sans-serif;
+$font_family_icon: 'bc';
 
-// Colors
-$grey_light: #E6E6E6;
 $black: #222;
-// Colors II
-// https://github.com/mrmrs/colors
-// Cool
-$aqua:  #7FDBFF;
-$blue:  #0074D9;
-$navy:  #001F3F;
-$teal:  #39CCCC;
-$green: #2ECC40;
-$olive: #3D9970;
-$lime:  #01FF70;
-// Warm
-$yellow:  #FFDC00;
-$orange:  #FF851B;
-$red:     #FF4136;
-$fuchsia: #F012BE;
-$purple:  #B10DC9;
-$maroon:  #85144B;
-// Gray Scale
-$white:  #fff;
-$silver: #ddd;
-$gray:   #aaa;
-$grey:   #aaa;
-$black:  #222;
 
-$background_color_content: #FFF;
-$background_color_footer: #FFF;
-$border_color: $grey_light;
+$width_project_max: 1460;
+$width_description_max: 360;
 
-// Layout
-$content_max_width: 1100;
+// Layout, Todo: Fix this.
+$content_max_width: 1200;
 
 @import 'mixins';
 @import 'reset';
-@import 'fontface';
+@import 'fonts';
 @import 'global';
-@import 'header';
-@import 'devices';
-@import 'featured_projects';
+@import 'masthead';
+@import 'about';
+@import 'device_iphone_5';
+@import 'device_web';
+@import 'projects';
+@import 'projects_custom';

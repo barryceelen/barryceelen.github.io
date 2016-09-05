@@ -1,0 +1,73 @@
+$width_device_web_max: 1160;
+$height_device_web_max: 480;
+
+.device-web {
+	background: #fff;
+	border-top-right-radius: percentage( 14 / $width_device_web_max) percentage( 14 / $height_device_web_max );
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	border-top-left-radius: percentage( 14 / $width_device_web_max) percentage( 14 / $height_device_web_max );
+	box-sizing: border-box;
+	position: relative;
+	margin: 0;
+	@include vw-min-max( 'width', 400, $width_device_web_max, $content_max_width );
+	@include vw-min-max( 'border-width', 1, 3, $content_max_width );
+	figure {
+		height: 0;
+		padding-bottom: percentage( ( $height_device_web_max - 48 ) / $width_device_web_max);
+		position: relative;
+		width: 100%;
+	}
+	.device-screen {
+		padding: percentage( 48 / $width_device_web_max ) 0 0 0;
+		overflow-y: hidden;
+	}
+	.img-wrap {
+		background-color: #efefef;
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+	}
+	img {
+		display: block;
+		width: 100%;
+	}
+	&:before, &:after {
+		content: '';
+		display: block;
+		position: absolute;
+	}
+	&:before { // Traffic Lights
+		background-color: #efefef;
+		border-radius: 50%;
+		color: #efefef;
+		box-shadow: pvw( 24, $width_device_web_max ) 0 0, pvw( 48, $width_device_web_max ) 0 0;
+		width: percentage( 14 / $width_device_web_max );
+		height: percentage( 14 / $height_device_web_max );
+		@include vw-min-max( 'top', 0, 18, $content_max_width );
+		@include vw-min-max( 'left', 0, 18, $content_max_width );
+	}
+}
+
+@media all and (min-width: pem($content_max_width)) {
+	.device-web {
+		&:before { // Traffic Lights
+			box-shadow: pem(24) 0 0, pem(48) 0 0;
+		}
+	}
+}
+
+@mixin device-web-custom( $image_height ) {
+	.device-web {
+		border-top-right-radius: percentage( 14 / $width_device_web_max) percentage( 14 / $image_height );
+		border-top-left-radius: percentage( 14 / $width_device_web_max) percentage( 14 / $image_height );
+		figure {
+			padding-bottom: percentage( $image_height / $width_device_web_max);
+		}
+		&:before { // Traffic Lights
+			height: percentage( 14 / ( $image_height + 48 ) );
+		}
+	}
+}

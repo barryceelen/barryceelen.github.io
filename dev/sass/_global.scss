@@ -1,21 +1,27 @@
-// TODO Print stylesheet, see: http://www.smashingmagazine.com/2013/03/08/tips-and-tricks-for-print-style-sheets/
+/**
+ * TODO Print stylesheet, see: http://www.smashingmagazine.com/2013/03/08/tips-and-tricks-for-print-style-sheets/
+ */
 
-.hidden {
-	display: none;
+html {
+	color: $black;
+	font-family: $font_family;
+	font-size: 100%;
 }
 
-i, b {
-	font-style: normal;
-	font-weight: 400;
+small {
+	font-size: 80%;
+}
+
+strong {
+	font-weight: 700;
 }
 
 img {
 	display: block;
 }
 
-figure {
-	margin: 0;
-	padding: 0;
+.no-js img.lazyload {
+	display: none;
 }
 
 @media all {
@@ -29,63 +35,40 @@ figure {
 	}
 }
 
-picture {
-	display: block;
-	margin: 0;
-	padding: 0;
+.load-more {
+	background: #fff;
+	padding: 12em 1em 12em;
+	text-align: center;
 }
 
-h1, p {
-	margin: 0;
-	padding: 0;
+button {
+	background: transparent;
+	border: none;
+	cursor: pointer;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	outline: none;
 }
 
-html, body {
-	margin: 0;
-	padding: 0;
-}
-
-body {
-	background: url('../img/bg-grid-balsamiq.png') center top;
+.button-load-more {
+	background: #ffff02;
+	background: $black;
+	// box-shadow: 0 1px 4px rgba(0,0,0,.1);
+	border: 3px solid $black;
+	border-radius: 999px;
 	color: $black;
-	font-family: $font_family;
-	font-size: 100%;
-}
-
-.site-footer {
-	margin: 0 auto;
-	max-width: $content_max_width;
-	padding: 6em 2em 2em;
-}
-
-#colophon {
-	padding: pem(132) pem(16) pem(16);
-}
-
-.footer-inner {
-	font-weight: 400;
-	margin: 0 auto;
+	color: #ffff02;
+	color: #fff;
+	font-size: 1.2em;
+	font-weight: 700;
+	line-height: 2;
+	padding: 1em 3em;
+	white-space: nowrap;
 	text-transform: uppercase;
-	width: 100%;
-	max-width: pem($content_max_width);
-	@include vw-min-max('font-size',12,16,$content_max_width);
-	a {
-		color: $black;
-		text-decoration: none;
-		text-transform: uppercase;
-		&:hover, &:focus {
-			color: $blue;
-			text-decoration: underline;
-		}
-	}
-	.impressum {
-		color: lighten($black,70);
-		float: right;
-		i {
-			display: none;
-		}
-	}
-	.love {
-		color: $red;
+	transition: all linear .2s;
+	&:hover, &:focus {
+		// background: #fff;
+		// border: 3px solid #fff;
+		color: #ffff02;
 	}
 }

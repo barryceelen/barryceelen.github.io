@@ -35,7 +35,7 @@ module.exports = function(grunt) {
 				options: {
 					removeComments: true,
 					collapseWhitespace: true,
-					collapseInlineTagWhitespace: true
+					collapseInlineTagWhitespace: false
 				},
 				files: {
 					'index.html': 'index.html'
@@ -150,7 +150,7 @@ module.exports = function(grunt) {
 			},
 			pug: {
 				files: ['dev/pug/**/*.jade'],
-				tasks: ['pug:dev', 'htmlmin'],
+				tasks: ['pug:dev'],
 				options: {
 					spawn: false,
 				}
@@ -202,5 +202,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 
 	grunt.registerTask('default', ['connect:server','watch','notify:server']);
-	grunt.registerTask('dist', ['sass:dist','autoprefixer','pug','htmlmin','clean','copy','imagemin']);
+	// grunt.registerTask('dist', ['sass:dist','autoprefixer','pug','clean','copy','imagemin']);
+	grunt.registerTask('dist', ['sass:dist','autoprefixer','pug','clean','copy']);
 };

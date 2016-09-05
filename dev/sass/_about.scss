@@ -1,0 +1,15 @@
+#hello-world {
+
+	font-size: 1.775em;
+    margin: 0 auto;
+    max-width: 34.5em;
+    padding: 5em 2.66667vw 3em;
+    text-align: center;
+    line-height: 1.4;
+    font-weight: 500;
+    @include vw-min-max( 'font-size', 16, 30, 2000 );
+
+	p {
+		margin-bottom: 1em;
+	}
+}

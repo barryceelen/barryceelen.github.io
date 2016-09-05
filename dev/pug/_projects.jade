@@ -46,17 +46,23 @@ section.projects
 						.device-screen
 							figure
 								img-wrap
-									img(src='img/projects/foodpanda-01.png', alt='')
+									img(data-src='img/projects/foodpanda-01.png', alt='', class='lazyload')
+									noscript
+										img(src='img/projects/foodpanda-01.png', alt='')
 					.device.device-iphone-5
 						.device-screen
 							figure
 								img-wrap
-									img(src='img/projects/foodpanda-03.png', alt='')
+									img(data-src='img/projects/foodpanda-03.png', alt='', class='lazyload')
+									noscript
+										img(src='img/projects/foodpanda-03.png', alt='')
 					.device.device-iphone-5
 						.device-screen
 							figure
 								img-wrap
-									img(src='img/projects/foodpanda-02.png', alt='')
+									img(data-src='img/projects/foodpanda-02.png', alt='', class='lazyload')
+									noscript
+										img(src='img/projects/foodpanda-02.png', alt='')
 
 	.row.project.wp#ralfschmitz
 		article.hentry
@@ -83,7 +89,107 @@ section.projects
 						.device-screen
 							figure
 								img-wrap
-									img(src='img/projects/ralfschmitz-01.png', alt='')
+									img(data-src='img/projects/ralfschmitz-01.png', alt='', class='lazyload')
+									noscript
+										img(src='img/projects/ralfschmitz-01.png', alt='')
+
+	.row.project.project-phone.project-phone-black#welt
+		article.hentry
+			.project-inner
+				.project-details
+					ul
+						li
+							|Client:
+							h1.entry-title Axel Springer
+							strong
+								a(href="https://itunes.apple.com/de/app/welt-news-aktuelle-nachrichten/id340021100?mt=8") Die Welt Mobil
+						li
+							|Role:
+							br
+							strong Product Design
+							br
+							strong iPhone, Android, Blackberry
+				.project-gallery
+					.device.device-iphone-5
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/welt-01.jpg', alt='', class='lazyload')
+									noscript
+										img(src='img/projects/welt-01.jpg', alt='')
+					.device.device-iphone-5
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/welt-02.jpg', alt='', class='lazyload')
+									noscript
+										img(src='img/projects/welt-02.jpg', alt='')
+					.device.device-iphone-5
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/welt-03.png', alt='', class='lazyload')
+									noscript
+										img(src='img/projects/welt-03.png', alt='')
+
+	.row.project#supreme
+		article.hentry
+			.project-inner
+				.project-details
+					ul
+						li
+							|Client:
+							h1.entry-title
+								a(href='http://supremenewyork.com') Supreme New York
+						li
+							|Role:
+							br
+							strong Front End Development
+				.project-gallery
+					.device.device-web
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/supreme-01.jpg', alt='', class='lazyload')
+									noscript
+										img(src='img/projects/supreme-01.jpg', alt='')
+
+	.row.project.project-phone.project-phone-black#zalando
+		article.hentry
+			.project-inner
+				.project-details
+					ul
+						li
+							|Client:
+							h1.entry-title Zalando
+						li
+							|Role:
+							br
+							strong Product Design
+							br
+							strong iPhone, Android
+				.project-gallery
+					.device.device-iphone-5
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/zalando-01.jpg', alt='', class='lazyload')
+									noscript
+										img(src='img/projects/zalando-01.jpg', alt='')
+					.device.device-iphone-5
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/zalando-02.jpg', alt='', class='lazyload')
+									noscript
+										img(src='img/projects/zalando-02.jpg', alt='')
+					.device.device-iphone-5
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/zalando-03.jpg', alt='', class='lazyload')
+									noscript
+										img(src='img/projects/zalando-03.jpg', alt='')
 
 	.row.project.wp#neumeisterbaram
 		article.hentry
@@ -105,9 +211,11 @@ section.projects
 						.device-screen
 							figure
 								img-wrap
-									img(src='img/projects/neumeisterbaram-01.png', alt='')
+									img(data-src='img/projects/neumeisterbaram-01.png', alt='', class='lazyload')
+									noscript
+										img(src='img/projects/neumeisterbaram-01.png', alt='')
 
-	.row.project#supreme
+	.row.project.wp#mno
 		article.hentry
 			.project-inner
 				.project-details
@@ -115,480 +223,442 @@ section.projects
 						li
 							|Client:
 							h1.entry-title
-								a(href='http://supremenewyork.com') Supreme New York
+								a(href='http://markusnikolai.com') Markus Nikolai Optic
+						li
+							|Design:
+							br
+							strong
+								a(href='http://doublestandards.net') Double Standards
 						li
 							|Role:
 							br
-							strong Front End Development
+							strong WordPress
+							br
+							strong Development
+
 				.project-gallery
 					.device.device-web
 						.device-screen
 							figure
 								img-wrap
-									img(src='img/projects/supreme-01.png', alt='')
+									img(data-src='img/projects/mno-01.jpg', alt='', class='lazyload')
+									noscript
+										img(src='img/projects/mno-01.jpg', alt='')
 
+	.row.project#doublestandards
+		article.hentry
+			.project-inner
+				.project-details
+					ul
+						li
+							|Client:
+							h1.entry-title
+								a(href='http://doublestandards.net') Double Standards
+						li
+							|Role:
+							br
+							strong Front End Development
 
-	script(type="text/html", class="load-more-container")
+				.project-gallery
+					.device.device-web
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/ds-01.jpg', alt='', class='lazyload')
+									noscript
+										img(src='img/projects/ds-01.jpg', alt='')
 
-		.row.project.project-phone.project-phone-black#welt
-			article.hentry
-				.project-inner
-					.project-details
-						ul
-							li
-								|Client:
-								h1.entry-title Axel Springer
-								strong
-									a(href="https://itunes.apple.com/de/app/welt-news-aktuelle-nachrichten/id340021100?mt=8") Die Welt Mobil
-							li
-								|Role:
-								br
-								strong Product Design
-								br
-								strong iPhone, Android, Blackberry
-					.project-gallery
-						.device.device-iphone-5
-							.device-screen
-								figure
-									img-wrap
-										img(src='img/projects/welt-01.png', alt='')
-						.device.device-iphone-5
-							.device-screen
-								figure
-									img-wrap
-										img(src='img/projects/welt-02.png', alt='')
-						.device.device-iphone-5
-							.device-screen
-								figure
-									img-wrap
-										img(src='img/projects/welt-03.png', alt='')
-
-		.row.project.wp#mno
-			article.hentry
-				.project-inner
-					.project-details
-						ul
-							li
-								|Client:
-								h1.entry-title
-									a(href='http://markusnikolai.com') Markus Nikolai Optic
-							li
-								|Design:
-								br
-								strong
-									a(href='http://doublestandards.net') Double Standards
-							li
-								|Role:
-								br
-								strong WordPress
-								br
-								strong Development
-
-					.project-gallery
-						.device.device-web
-							.device-screen
-								figure
-									img-wrap
-										img(src='img/projects/mno-01.png', alt='')
-
-		.row.project#doublestandards
-			article.hentry
-				.project-inner
-					.project-details
-						ul
-							li
-								|Client:
-								h1.entry-title
-									a(href='http://doublestandards.net') Double Standards
-							li
-								|Role:
-								br
-								strong Front End Development
-
-					.project-gallery
-						.device.device-web
-							.device-screen
-								figure
-									img-wrap
-										img(src='img/projects/ds-01.png', alt='')
-
-		.row.project.project-phone#simfy
-			article.hentry
-				.project-inner
-					.project-details
-						ul
-							li
-								|Client:
-								h1.entry-title Simfy
-							li
-								|Role:
-								br
-								strong Product Design
-								br
-								strong iPhone
-								br
-								small with Travis Todd
-					.project-gallery
-						.device.device-iphone-5
-							.device-screen
-								figure
-									img-wrap
-										img(src='img/projects/simfy-01.png', alt='')
-						.device.device-iphone-5
-							.device-screen
-								figure
-									img-wrap
+	.row.project.project-phone#simfy
+		article.hentry
+			.project-inner
+				.project-details
+					ul
+						li
+							|Client:
+							h1.entry-title Simfy
+						li
+							|Role:
+							br
+							strong Product Design
+							br
+							strong iPhone
+							br
+							small with Travis Todd
+				.project-gallery
+					.device.device-iphone-5
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/simfy-01.jpg', alt='', class='lazyload')
+									noscript
+										img(src='img/projects/simfy-01.jpg', alt='')
+					.device.device-iphone-5
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/simfy-02.png', alt='', class='lazyload')
+									noscript
 										img(src='img/projects/simfy-02.png', alt='')
-						.device.device-iphone-5
-							.device-screen
-								figure
-									img-wrap
+					.device.device-iphone-5
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/simfy-03.png', alt='', class='lazyload')
+									noscript
 										img(src='img/projects/simfy-03.png', alt='')
 
-		.row.project.project-phone.project-phone-black#zalando
-			article.hentry
-				.project-inner
-					.project-details
-						ul
-							li
-								|Client:
-								h1.entry-title Zalando
-							li
-								|Role:
-								br
-								strong Product Design
-								br
-								strong iPhone, Android
-					.project-gallery
-						.device.device-iphone-5
-							.device-screen
-								figure
-									img-wrap
-										img(src='img/projects/zalando-01.png', alt='')
-						.device.device-iphone-5
-							.device-screen
-								figure
-									img-wrap
-										img(src='img/projects/zalando-02.png', alt='')
-						.device.device-iphone-5
-							.device-screen
-								figure
-									img-wrap
-										img(src='img/projects/zalando-03.png', alt='')
-
-		.row.project.project-phone.project-phone-black#kadewe
-			article.hentry
-				.project-inner
-					.project-details
-						ul
-							li
-								|Client:
-								h1.entry-title KaDeWe Berlin
-							li
-								|Role:
-								br
-								strong Product Design
-								br
-								strong iPhone
-					.project-gallery
-						.device.device-iphone-5
-							.device-screen
-								figure
-									img-wrap
+	.row.project.project-phone.project-phone-black#kadewe
+		article.hentry
+			.project-inner
+				.project-details
+					ul
+						li
+							|Client:
+							h1.entry-title KaDeWe Berlin
+						li
+							|Role:
+							br
+							strong Product Design
+							br
+							strong iPhone
+				.project-gallery
+					.device.device-iphone-5
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/kadewe-01.png', alt='', class='lazyload')
+									noscript
 										img(src='img/projects/kadewe-01.png', alt='')
-						.device.device-iphone-5
-							.device-screen
-								figure
-									img-wrap
+					.device.device-iphone-5
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/kadewe-02.png', alt='', class='lazyload')
+									noscript
 										img(src='img/projects/kadewe-02.png', alt='')
-						.device.device-iphone-5
-							.device-screen
-								figure
-									img-wrap
+					.device.device-iphone-5
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/kadewe-03.png', alt='', class='lazyload')
+									noscript
 										img(src='img/projects/kadewe-03.png', alt='')
 
-		.row.project.project-phone.project-phone-black#stylebop
-			article.hentry
-				.project-inner
-					.project-details
-						ul
-							li.app-of-the-week
-								|App of
-								br
-								|the Week
-							li
-								|Client:
-								h1.entry-title
-									a(href="https://itunes.apple.com/de/app/stylebop-shopping-app/id432512739?mt=8") Stylebop
-							li
-								|Role:
-								br
-								strong Product Design
-								br
-								strong iPhone
-					.project-gallery
-						.device.device-iphone-5
-							.device-screen
-								figure
-									img-wrap
-										img(src='img/projects/stylebop-01.png', alt='')
-						.device.device-iphone-5
-							.device-screen
-								figure
-									img-wrap
-										img(src='img/projects/stylebop-02.png', alt='')
-						.device.device-iphone-5
-							.device-screen
-								figure
-									img-wrap
-										img(src='img/projects/stylebop-03.png', alt='')
+	.row.project.project-phone.project-phone-black#stylebop
+		article.hentry
+			.project-inner
+				.project-details
+					ul
+						li.app-of-the-week
+							|App of
+							br
+							|the Week
+						li
+							|Client:
+							h1.entry-title
+								a(href="https://itunes.apple.com/de/app/stylebop-shopping-app/id432512739?mt=8") Stylebop
+						li
+							|Role:
+							br
+							strong Product Design
+							br
+							strong iPhone
+				.project-gallery
+					.device.device-iphone-5
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/stylebop-01.jpg', alt='', class='lazyload')
+									noscript
+										img(src='img/projects/stylebop-01.jpg', alt='')
+					.device.device-iphone-5
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/stylebop-02.jpg', alt='', class='lazyload')
+									noscript
+										img(src='img/projects/stylebop-02.jpg', alt='')
+					.device.device-iphone-5
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/stylebop-03.jpg', alt='', class='lazyload')
+									noscript
+										img(src='img/projects/stylebop-03.jpg', alt='')
 
-		.row.project.wp#stephiebecker
-			article.hentry
-				.project-inner
-					.project-details
-						ul
-							li
-								|Client:
-								h1.entry-title
-									a(href='http://stephiebecker.com') Stephie Becker
-							li
-								|Role:
-								br
-								strong WordPress
-								br
-								strong Development
+	.row.project.wp#stephiebecker
+		article.hentry
+			.project-inner
+				.project-details
+					ul
+						li
+							|Client:
+							h1.entry-title
+								a(href='http://stephiebecker.com') Stephie Becker
+						li
+							|Role:
+							br
+							strong WordPress
+							br
+							strong Development
 
-					.project-gallery
-						.device.device-web
-							.device-screen
-								figure
-									img-wrap
-										img(src='img/projects/stephiebecker-01.png', alt='')
+				.project-gallery
+					.device.device-web
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/stephiebecker-01.jpg', alt='', class='lazyload')
+									noscript
+										img(src='img/projects/stephiebecker-01.jpg', alt='')
 
-		.row.project.wp#berlinpoland
-			article.hentry
-				.project-inner
-					.project-details
-						ul
-							li
-								|Client:
-								h1.entry-title
-									a(href='http://idz.de') IDZ Berlin
-								strong
-									a(href='http://berlinpoland.eu') Berlin/Poland
-							li
-								|Role:
-								br
-								strong Interface Design
-								br
-								strong WordPress
-								br
-								strong Development
+	.row.project.wp#berlinpoland
+		article.hentry
+			.project-inner
+				.project-details
+					ul
+						li
+							|Client:
+							h1.entry-title
+								a(href='http://idz.de') IDZ Berlin
+							strong
+								a(href='http://berlinpoland.eu') Berlin/Poland
+						li
+							|Role:
+							br
+							strong Interface Design
+							br
+							strong WordPress
+							br
+							strong Development
 
-					.project-gallery
-						.device.device-web
-							.device-screen
-								figure
-									img-wrap
+				.project-gallery
+					.device.device-web
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/berlinpoland-01.png', alt='', class='lazyload')
+									noscript
 										img(src='img/projects/berlinpoland-01.png', alt='')
 
-		.row.project.wp#ipanema
-			article.hentry
-				.project-inner
-					.project-details
-						ul
-							li
-								|Client:
-								h1.entry-title
-									a(href='http://ipanema.nl') Caf&eacute; Ipanema Maastricht
-							li
-								|Role:
-								br
-								strong Interface Design
-								br
-								strong WordPress
-								br
-								strong Development
+	.row.project.wp#ipanema
+		article.hentry
+			.project-inner
+				.project-details
+					ul
+						li
+							|Client:
+							h1.entry-title
+								a(href='http://ipanema.nl') Caf&eacute; Ipanema Maastricht
+						li
+							|Role:
+							br
+							strong Interface Design
+							br
+							strong WordPress
+							br
+							strong Development
 
-					.project-gallery
-						.device.device-web
-							.device-screen
-								figure
-									img-wrap
-										img(src='img/projects/ipanema-01.png', alt='')
+				.project-gallery
+					.device.device-web
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/ipanema-01.jpg', alt='', class='lazyload')
+									noscript
+										img(src='img/projects/ipanema-01.jpg', alt='')
 
-		.row.project.wp#berinson
-			article.hentry
-				.project-inner
-					.project-details
-						ul
-							li
-								|Client:
-								h1.entry-title
-									a(href='http://berinson.de') Galerie Berison Berlin
-							li
-								|Role:
-								br
-								strong WordPress
-								br
-								strong Development
+	.row.project.wp#berinson
+		article.hentry
+			.project-inner
+				.project-details
+					ul
+						li
+							|Client:
+							h1.entry-title
+								a(href='http://berinson.de') Galerie Berison Berlin
+						li
+							|Role:
+							br
+							strong WordPress
+							br
+							strong Development
 
-					.project-gallery
-						.device.device-web
-							.device-screen
-								figure
-									img-wrap
+				.project-gallery
+					.device.device-web
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/berinson-01.png', alt='', class='lazyload')
+									noscript
 										img(src='img/projects/berinson-01.png', alt='')
 
-		.row.project.wp#usabilitypark
-			article.hentry
-				.project-inner
-					.project-details
-						ul
-							li
-								|Client:
-								h1.entry-title
-									a(href='http://idz.de') IDZ Berlin
-								strong
-									a(href='http://ux-design-awards.com') Usability Park
-							li
-								|Role:
-								br
-								strong Interface Design
-								br
-								strong WordPress
-								br
-								strong Development
+	.row.project.wp#usabilitypark
+		article.hentry
+			.project-inner
+				.project-details
+					ul
+						li
+							|Client:
+							h1.entry-title
+								a(href='http://idz.de') IDZ Berlin
+							strong
+								a(href='http://ux-design-awards.com') Usability Park
+						li
+							|Role:
+							br
+							strong Interface Design
+							br
+							strong WordPress
+							br
+							strong Development
 
-					.project-gallery
-						.device.device-web
-							.device-screen
-								figure
-									img-wrap
+				.project-gallery
+					.device.device-web
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/usabilitypark-01.png', alt='', class='lazyload')
+									noscript
 										img(src='img/projects/usabilitypark-01.png', alt='')
 
-		.row.project.project-phone.project-phone-black#raceunion
-			article.hentry
-				.project-inner
-					.project-details
-						ul
-							li
-								|Client:
-								h1.entry-title
-									a(href="http://app.raceunion.com") Raceunion
-							li
-								|Role:
-								br
-								strong Interface Design
-								br
-								strong iPhone
-					.project-gallery
-						.device.device-iphone-4
-							.device-screen
-								figure
-									img-wrap
+	.row.project.project-phone.project-phone-black#raceunion
+		article.hentry
+			.project-inner
+				.project-details
+					ul
+						li
+							|Client:
+							h1.entry-title
+								a(href="http://app.raceunion.com") Raceunion
+						li
+							|Role:
+							br
+							strong Interface Design
+							br
+							strong iPhone
+				.project-gallery
+					.device.device-iphone-4
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/raceunion-01.png', alt='', class='lazyload')
+									noscript
 										img(src='img/projects/raceunion-01.png', alt='')
-						.device.device-iphone-4
-							.device-screen
-								figure
-									img-wrap
+					.device.device-iphone-4
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/raceunion-02.png', alt='', class='lazyload')
+									noscript
 										img(src='img/projects/raceunion-02.png', alt='')
-						.device.device-iphone-4
-							.device-screen
-								figure
-									img-wrap
+					.device.device-iphone-4
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/raceunion-03.png', alt='', class='lazyload')
+									noscript
 										img(src='img/projects/raceunion-03.png', alt='')
 
-		.row.project.wp#teichmann
-			article.hentry
-				.project-inner
-					.project-details
-						ul
-							li
-								|Client:
-								h1.entry-title Teichmann Racing
-							li
-								|Role:
-								br
-								strong Interface Design
-								br
-								strong WordPress
-								br
-								strong Development
+	.row.project.wp#teichmann
+		article.hentry
+			.project-inner
+				.project-details
+					ul
+						li
+							|Client:
+							h1.entry-title Teichmann Racing
+						li
+							|Role:
+							br
+							strong Interface Design
+							br
+							strong WordPress
+							br
+							strong Development
 
-					.project-gallery
-						.device.device-web
-							.device-screen
-								figure
-									img-wrap
-										img(src='img/projects/teichmann-01-100.jpg', alt='')
+				.project-gallery
+					.device.device-web
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/teichmann-01.jpg', alt='', class='lazyload')
+									noscript
+										img(src='img/projects/teichmann-01.jpg', alt='')
 
-		.row.project.wp.project-phone.project-phone-black#pictrip
-			article.hentry
-				.project-inner
-					.project-details
-						ul
-							li
-								h1.entry-title Pictrip
-							li
-								|Role:
-								br
-								strong Interface Design
-								br
-								strong iPhone, Web
-								br
-								strong WordPress Development
-					.project-gallery
-						.device.device-iphone-4
-							.device-screen
-								figure
-									img-wrap
-										img(src='img/projects/pictrip-01.png', alt='')
-						.device.device-iphone-4
-							.device-screen
-								figure
-									img-wrap
-										img(src='img/projects/pictrip-02.png', alt='')
-						.device.device-iphone-4
-							.device-screen
-								figure
-									img-wrap
-										img(src='img/projects/pictrip-03.png', alt='')
+	.row.project.wp.project-phone.project-phone-black#pictrip
+		article.hentry
+			.project-inner
+				.project-details
+					ul
+						li
+							h1.entry-title Pictrip
+						li
+							|Role:
+							br
+							strong Interface Design
+							br
+							strong iPhone, Web
+							br
+							strong WordPress Development
+				.project-gallery
+					.device.device-iphone-4
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/pictrip-01.jpg', alt='', class='lazyload')
+									noscript
+										img(src='img/projects/pictrip-01.jpg', alt='')
+					.device.device-iphone-4
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/pictrip-02.jpg', alt='', class='lazyload')
+									noscript
+										img(src='img/projects/pictrip-02.jpg', alt='')
+					.device.device-iphone-4
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/pictrip-03.jpg', alt='', class='lazyload')
+									noscript
+										img(src='img/projects/pictrip-03.jpg', alt='')
 
-		.row.project.project-phone.project-phone-black#man-iaa
-			article.hentry
-				.project-inner
-					.project-details
-						ul
-							li
-								|Client:
-								h1.entry-title
-									a(href='http://www.man.eu/') MAN Truck &amp; Bus
-								strong IAA 2010 Visitor Guide
+	.row.project.project-phone.project-phone-black#man-iaa
+		article.hentry
+			.project-inner
+				.project-details
+					ul
+						li
+							|Client:
+							h1.entry-title
+								a(href='http://www.man.eu/') MAN Truck &amp; Bus
+							strong IAA 2010 Visitor Guide
 
-							li
-								|Role:
-								br
-								strong Product Design
-								br
-								strong iPhone
-					.project-gallery
-						.device.device-iphone-4
-							.device-screen
-								figure
-									img-wrap
+						li
+							|Role:
+							br
+							strong Product Design
+							br
+							strong iPhone
+				.project-gallery
+					.device.device-iphone-4
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/man-iaa-01.png', alt='', class='lazyload')
+									noscript
 										img(src='img/projects/man-iaa-01.png', alt='')
-						.device.device-iphone-4
-							.device-screen
-								figure
-									img-wrap
+					.device.device-iphone-4
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/man-iaa-02.png', alt='', class='lazyload')
+									noscript
 										img(src='img/projects/man-iaa-02.png', alt='')
-						.device.device-iphone-4
-							.device-screen
-								figure
-									img-wrap
+					.device.device-iphone-4
+						.device-screen
+							figure
+								img-wrap
+									img(data-src='img/projects/man-iaa-03.png', alt='', class='lazyload')
+									noscript
 										img(src='img/projects/man-iaa-03.png', alt='')
-
-	.row.load-more
-		button.button-load-more.js-load-more + More Projects

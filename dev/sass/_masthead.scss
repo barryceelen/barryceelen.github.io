@@ -9,7 +9,7 @@
 	a {
 		color: inherit;
 		text-decoration: none;
-		@include vw-min-max( 'font-size', 10, 20, $width_project_max );
+		@include vw-min-max( 'font-size', 16, 20, $width_project_max );
 		&:hover,
 		&:focus {
 			text-decoration: underline;
@@ -23,7 +23,7 @@
 	a {
 		color: inherit;
 		text-decoration: none;
-		@include vw-min-max( 'font-size', 10, 20, $width_project_max );
+		@include vw-min-max( 'font-size', 16, 20, $width_project_max );
 		&:hover,
 		&:focus {
 			text-decoration: underline;

@@ -20,6 +20,10 @@ img {
 	display: block;
 }
 
+.no-js img.lazyload {
+	display: none;
+}
+
 @media all {
 	.page-break	{ display: none; }
 }
@@ -33,7 +37,6 @@ img {
 
 .load-more {
 	background: #fff;
-	background: #ffff02;
 	padding: 12em 1em 12em;
 	text-align: center;
 }

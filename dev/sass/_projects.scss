@@ -37,7 +37,7 @@
 	padding: 0 pvw( 32, $content_max_width ) pvw( 32, $content_max_width ) pvw( 32, $content_max_width );
 	text-align: left;
 	vertical-align: bottom;
-	@include vw-min-max( 'font-size', 10, 20, $width_project_max );
+	@include vw-min-max( 'font-size', 12, 20, $width_project_max );
 	@include vw-min-max( 'width', 138, $width_description_max, $width_project_max );
 	li {
 		margin-bottom: .25em;

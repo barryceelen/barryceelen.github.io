@@ -68,7 +68,8 @@ body {
 }
 
 #zalando {
-	color: #E67F13;
+	background: #E67F13;
+	color: #fff;
 }
 
 #kadewe {
@@ -198,7 +199,7 @@ body {
 
 #pictrip {
 	color: #fff;
-	background: #505050 url('../img/projects/bg-pictrip.png') left top;
+	background: #505050;
 	text-shadow: 0 0px 6px rgba(0,0,0,0.6);
 	.device-iphone-4 {
 		background: #000;
@@ -223,4 +224,52 @@ body {
 			border-color: lighten(#000,12);
 		}
 	}
+}
+
+#dmy {
+	color: #fff;
+	background: #4b4b4b;
+	@include device-web-custom( 537 );
+}
+
+#viessmann {
+	background: #efefef;
+	color: #222;
+	.device-iphone-4 {
+		background: #000;
+		// border-color: lighten(#222,10);
+		// border-style: solid;
+		// @include vw-min-max( 'border-width', 2, 6, $content_max_width );
+		&:before {
+			background: lighten(#000,12);
+		}
+		&:after {
+			border-color: lighten(#000,12);
+		}
+	}
+}
+
+#vw-up {
+	background: #070708 url('../img/projects/bg-vw-up.jpg') left top no-repeat;
+	background-size: cover;
+	color: #efefef;
+	.device-iphone-4 {
+		background: #000;
+		border-color: lighten(#222,10);
+		border-style: solid;
+		@include vw-min-max( 'border-width', 2, 6, $content_max_width );
+		&:before {
+			background: lighten(#000,12);
+		}
+		&:after {
+			border-color: lighten(#000,12);
+		}
+	}
+}
+
+#multipop {
+	background: #0071dc;
+	border-bottom: none;
+	color: #ffde00;
+	@include device-web-custom( 500 );
 }

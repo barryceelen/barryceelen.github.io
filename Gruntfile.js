@@ -39,7 +39,7 @@ module.exports = function(grunt) {
 				},
 				files: {
 					'index.html': 'index.html'
-			  	}
+				}
 			}
 		},
 		autoprefixer: {
@@ -181,7 +181,7 @@ module.exports = function(grunt) {
 			},
 			remove_images: {
 				files: ['dev/img/**'],
-				tasks: ['clean:dev','copy:images'],
+				tasks: ['copy:images'],
 				options: {
 					event: ['deleted'],
 					spawn: false,

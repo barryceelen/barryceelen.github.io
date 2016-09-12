@@ -8,6 +8,10 @@ body {
 	background: #ffff02;
 	color: #000;
 	@include device-web-custom( 502 );
+
+	.img-wrap:before {
+		color: #ffff02;
+	}
 }
 
 #foodpanda {
@@ -25,6 +29,9 @@ body {
 			background: darken(#AAABA7,8);
 			color: darken(#AAABA7,8);
 		}
+	}
+	.img-wrap:before {
+		color: #fff500;
 	}
 }
 
@@ -65,6 +72,9 @@ body {
 #simfy {
 	background: #009FE5;
 	color: #fff;
+	.img-wrap:before {
+		color: #009FE5;
+	}
 }
 
 #zalando {
@@ -120,6 +130,9 @@ body {
 	background: #dcdcdc;
 	color: #ff5037;
 	@include device-web-custom( 804 );
+	.img-wrap:before {
+		color: #ff5037;
+	}
 }
 
 #berlinpoland {
@@ -272,4 +285,7 @@ body {
 	border-bottom: none;
 	color: #ffde00;
 	@include device-web-custom( 500 );
+	.img-wrap:before {
+		color: #ffde00;
+	}
 }

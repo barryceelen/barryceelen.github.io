@@ -32,6 +32,8 @@ $height_device_web_max: 480;
 	img {
 		display: block;
 		width: 100%;
+		position: relative;
+		z-index: 0;
 	}
 	&:before, &:after {
 		content: '';

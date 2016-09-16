@@ -1,4 +1,6 @@
 // See: http://24ways.org/2013/grunt-is-not-weird-and-hard/
+var path = require('path');
+
 module.exports = function(grunt) {
 
 	grunt.initConfig({
@@ -55,6 +57,7 @@ module.exports = function(grunt) {
 		pug: {
 			dev: {
 				options: {
+					basedir: path.resolve(),
 					pretty: true
 				},
 				files: {
@@ -63,6 +66,7 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				options: {
+					basedir: path.resolve(),
 					data: {
 						debug: false
 					}
@@ -87,6 +91,21 @@ module.exports = function(grunt) {
 				src: ['.sass-cache/','**/*.map','img/**/*.{png,jpg,gif}','js/**/*','*.orig']
 			}
 		},
+		concat: {
+			options: {
+				separator: ';',
+			},
+			dist: {
+				src: [
+					'dev/js/vendor/jquery-3.1.0.slim.min.js',
+					'dev/js/vendor/viewport-units-buggyfill.js',
+					'dev/js/vendor/lazysizes.min.js',
+					'dev/js/vendor/fingerprint2.min.js',
+					'dev/js/app.js',
+				],
+				dest: 'js/app.js',
+			},
+		},
 		copy: {
 			images: {
 				files: [
@@ -95,16 +114,6 @@ module.exports = function(grunt) {
 					cwd: 'dev/img/',
 					src: ['**'],
 					dest: 'img/',
-					filter: 'isFile'
-				}]
-			},
-			scripts: {
-				files: [
-				{
-					expand: true,
-					cwd: 'dev/js/',
-					src: ['**'],
-					dest: 'js/',
 					filter: 'isFile'
 				}]
 			},
@@ -171,6 +180,14 @@ module.exports = function(grunt) {
 					event: ['added', 'changed'],
 				}
 			},
+			concat: {
+				files: ['dev/js/**'],
+				tasks: ['concat'],
+				options: {
+					spawn: false,
+					event: ['added', 'changed'],
+				}
+			},
 			copy_scripts: {
 				files: ['dev/js/**'],
 				tasks: ['copy:scripts'],
@@ -200,8 +217,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-notify');
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
+	grunt.loadNpmTasks('grunt-contrib-concat');
 
 	grunt.registerTask('default', ['connect:server','watch','notify:server']);
-	// grunt.registerTask('dist', ['sass:dist','autoprefixer','pug','clean','copy','imagemin']);
-	grunt.registerTask('dist', ['sass:dist','autoprefixer','pug','clean','copy']);
+	grunt.registerTask('dist', ['sass:dist','clean','autoprefixer','concat','pug','copy']);
 };

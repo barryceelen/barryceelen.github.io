@@ -86,8 +86,7 @@
 	.device-web {
 		margin: 0 auto -1px 0;
 	}
-	.device-iphone-4,
-	.device-iphone-5 {
+	.device-iphone {
 		display: inline-block;
 		@include vw-min-max( 'margin-left', 2, 22, $content_max_width );
 		&:first-child {

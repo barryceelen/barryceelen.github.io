@@ -22,7 +22,9 @@ section.projects
 						.device-screen
 							figure
 								.img-wrap
-									img(src='img/projects/muenchnerkammerspiele-01.png', alt='', class='lazyloaded')
+									img(data-src='img/projects/muenchnerkammerspiele-01.png', alt='', class='lazyload')
+									noscript
+										img(src='img/projects/muenchnerkammerspiele-01.png', alt='')
 
 	.row.project.project-phone.project-phone-black#foodpanda
 		article.hentry
@@ -42,21 +44,21 @@ section.projects
 							br
 							small with Patrick Funk
 				.project-gallery
-					.device.device-iphone-5
+					.device.device-iphone.iphone-5
 						.device-screen
 							figure
 								.img-wrap
 									img(data-src='img/projects/foodpanda-01.png', alt='', class='lazyload')
 									noscript
 										img(src='img/projects/foodpanda-01.png', alt='')
-					.device.device-iphone-5
+					.device.device-iphone.iphone-5
 						.device-screen
 							figure
 								.img-wrap
 									img(data-src='img/projects/foodpanda-03.png', alt='', class='lazyload')
 									noscript
 										img(src='img/projects/foodpanda-03.png', alt='')
-					.device.device-iphone-5
+					.device.device-iphone.iphone-5
 						.device-screen
 							figure
 								.img-wrap
@@ -110,21 +112,21 @@ section.projects
 							br
 							strong iPhone, Android, Blackberry
 				.project-gallery
-					.device.device-iphone-5
+					.device.device-iphone.iphone-5
 						.device-screen
 							figure
 								.img-wrap
 									img(data-src='img/projects/welt-01.jpg', alt='', class='lazyload')
 									noscript
 										img(src='img/projects/welt-01.jpg', alt='')
-					.device.device-iphone-5
+					.device.device-iphone.iphone-5
 						.device-screen
 							figure
 								.img-wrap
 									img(data-src='img/projects/welt-02.jpg', alt='', class='lazyload')
 									noscript
 										img(src='img/projects/welt-02.jpg', alt='')
-					.device.device-iphone-5
+					.device.device-iphone.iphone-5
 						.device-screen
 							figure
 								.img-wrap
@@ -169,21 +171,21 @@ section.projects
 							br
 							strong iPhone, Android
 				.project-gallery
-					.device.device-iphone-5
+					.device.device-iphone.iphone-5
 						.device-screen
 							figure
 								.img-wrap
 									img(data-src='img/projects/zalando-01.jpg', alt='', class='lazyload')
 									noscript
 										img(src='img/projects/zalando-01.jpg', alt='')
-					.device.device-iphone-5
+					.device.device-iphone.iphone-5
 						.device-screen
 							figure
 								.img-wrap
 									img(data-src='img/projects/zalando-02.jpg', alt='', class='lazyload')
 									noscript
 										img(src='img/projects/zalando-02.jpg', alt='')
-					.device.device-iphone-5
+					.device.device-iphone.iphone-5
 						.device-screen
 							figure
 								.img-wrap
@@ -285,21 +287,21 @@ section.projects
 							br
 							small with Travis Todd
 				.project-gallery
-					.device.device-iphone-5
+					.device.device-iphone.iphone-5
 						.device-screen
 							figure
 								.img-wrap
 									img(data-src='img/projects/simfy-01.jpg', alt='', class='lazyload')
 									noscript
 										img(src='img/projects/simfy-01.jpg', alt='')
-					.device.device-iphone-5
+					.device.device-iphone.iphone-5
 						.device-screen
 							figure
 								.img-wrap
 									img(data-src='img/projects/simfy-02.png', alt='', class='lazyload')
 									noscript
 										img(src='img/projects/simfy-02.png', alt='')
-					.device.device-iphone-5
+					.device.device-iphone.iphone-5
 						.device-screen
 							figure
 								.img-wrap
@@ -322,21 +324,21 @@ section.projects
 							br
 							strong iPhone
 				.project-gallery
-					.device.device-iphone-5
+					.device.device-iphone.iphone-5
 						.device-screen
 							figure
 								.img-wrap
 									img(data-src='img/projects/kadewe-01.png', alt='', class='lazyload')
 									noscript
 										img(src='img/projects/kadewe-01.png', alt='')
-					.device.device-iphone-5
+					.device.device-iphone.iphone-5
 						.device-screen
 							figure
 								.img-wrap
 									img(data-src='img/projects/kadewe-02.png', alt='', class='lazyload')
 									noscript
 										img(src='img/projects/kadewe-02.png', alt='')
-					.device.device-iphone-5
+					.device.device-iphone.iphone-5
 						.device-screen
 							figure
 								.img-wrap
@@ -364,21 +366,21 @@ section.projects
 							br
 							strong iPhone
 				.project-gallery
-					.device.device-iphone-5
+					.device.device-iphone.iphone-5
 						.device-screen
 							figure
 								.img-wrap
 									img(data-src='img/projects/stylebop-01.jpg', alt='', class='lazyload')
 									noscript
 										img(src='img/projects/stylebop-01.jpg', alt='')
-					.device.device-iphone-5
+					.device.device-iphone.iphone-5
 						.device-screen
 							figure
 								.img-wrap
 									img(data-src='img/projects/stylebop-02.jpg', alt='', class='lazyload')
 									noscript
 										img(src='img/projects/stylebop-02.jpg', alt='')
-					.device.device-iphone-5
+					.device.device-iphone.iphone-5
 						.device-screen
 							figure
 								.img-wrap
@@ -418,10 +420,9 @@ section.projects
 					ul
 						li
 							|Client:
-							h1.entry-title
-								a(href='http://idz.de') IDZ Berlin
-							strong
-								a(href='http://berlinpoland.eu') Berlin/Poland
+							a(href='http://berlinpoland.eu')
+								h1.entry-title IDZ Berlin
+								strong Berlin/Poland
 						li
 							|Role:
 							br
@@ -499,10 +500,9 @@ section.projects
 					ul
 						li
 							|Client:
-							h1.entry-title
-								a(href='http://idz.de') IDZ Berlin
-							strong
-								a(href='http://ux-design-awards.com') Usability Park
+							a(href='http://ux-design-awards.com')
+								h1.entry-title IDZ Berlin
+								strong Usability Park
 						li
 							|Role:
 							br
@@ -537,21 +537,21 @@ section.projects
 							br
 							strong iPhone
 				.project-gallery
-					.device.device-iphone-4
+					.device.device-iphone.iphone-4
 						.device-screen
 							figure
 								.img-wrap
 									img(data-src='img/projects/raceunion-01.png', alt='', class='lazyload')
 									noscript
 										img(src='img/projects/raceunion-01.png', alt='')
-					.device.device-iphone-4
+					.device.device-iphone.iphone-4
 						.device-screen
 							figure
 								.img-wrap
 									img(data-src='img/projects/raceunion-02.png', alt='', class='lazyload')
 									noscript
 										img(src='img/projects/raceunion-02.png', alt='')
-					.device.device-iphone-4
+					.device.device-iphone.iphone-4
 						.device-screen
 							figure
 								.img-wrap
@@ -601,21 +601,21 @@ section.projects
 							br
 							strong WordPress Development
 				.project-gallery
-					.device.device-iphone-4
+					.device.device-iphone.iphone-4
 						.device-screen
 							figure
 								.img-wrap
 									img(data-src='img/projects/pictrip-01.jpg', alt='', class='lazyload')
 									noscript
 										img(src='img/projects/pictrip-01.jpg', alt='')
-					.device.device-iphone-4
+					.device.device-iphone.iphone-4
 						.device-screen
 							figure
 								.img-wrap
 									img(data-src='img/projects/pictrip-02.jpg', alt='', class='lazyload')
 									noscript
 										img(src='img/projects/pictrip-02.jpg', alt='')
-					.device.device-iphone-4
+					.device.device-iphone.iphone-4
 						.device-screen
 							figure
 								.img-wrap
@@ -641,21 +641,21 @@ section.projects
 							br
 							strong iPhone
 				.project-gallery
-					.device.device-iphone-4
+					.device.device-iphone.iphone-4
 						.device-screen
 							figure
 								.img-wrap
 									img(data-src='img/projects/man-iaa-01.png', alt='', class='lazyload')
 									noscript
 										img(src='img/projects/man-iaa-01.png', alt='')
-					.device.device-iphone-4
+					.device.device-iphone.iphone-4
 						.device-screen
 							figure
 								.img-wrap
 									img(data-src='img/projects/man-iaa-02.png', alt='', class='lazyload')
 									noscript
 										img(src='img/projects/man-iaa-02.png', alt='')
-					.device.device-iphone-4
+					.device.device-iphone.iphone-4
 						.device-screen
 							figure
 								.img-wrap
@@ -703,21 +703,21 @@ section.projects
 							br
 							strong Front End Development
 				.project-gallery
-					.device.device-iphone-4
+					.device.device-iphone.iphone-4
 						.device-screen
 							figure
 								.img-wrap
 									img(data-src='img/projects/viessmann-01.jpg', alt='', class='lazyload')
 									noscript
 										img(src='img/projects/viessmann-01.jpg', alt='')
-					.device.device-iphone-4
+					.device.device-iphone.iphone-4
 						.device-screen
 							figure
 								.img-wrap
 									img(data-src='img/projects/viessmann-02.png', alt='', class='lazyload')
 									noscript
 										img(src='img/projects/viessmann-02.png', alt='')
-					.device.device-iphone-4
+					.device.device-iphone.iphone-4
 						.device-screen
 							figure
 								.img-wrap
@@ -739,21 +739,21 @@ section.projects
 							br
 							strong Interface Design
 				.project-gallery
-					.device.device-iphone-4
+					.device.device-iphone.iphone-4
 						.device-screen
 							figure
 								.img-wrap
 									img(data-src='img/projects/vw-up-02.png', alt='', class='lazyload')
 									noscript
 										img(src='img/projects/vw-up-02.png', alt='')
-					.device.device-iphone-4
+					.device.device-iphone.iphone-4
 						.device-screen
 							figure
 								.img-wrap
 									img(data-src='img/projects/vw-up-01.png', alt='', class='lazyload')
 									noscript
 										img(src='img/projects/vw-up-01.png', alt='')
-					.device.device-iphone-4
+					.device.device-iphone.iphone-4
 						.device-screen
 							figure
 								.img-wrap

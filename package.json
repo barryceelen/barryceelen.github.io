@@ -5,7 +5,7 @@
     "grunt": "*",
     "grunt-autoprefixer": "*",
     "grunt-contrib-clean": "*",
-    "grunt-contrib-concat": "*",
+    "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-connect": "*",
     "grunt-contrib-copy": "*",
     "grunt-contrib-htmlmin": "*",

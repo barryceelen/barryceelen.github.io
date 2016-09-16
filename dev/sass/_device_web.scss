@@ -65,7 +65,7 @@ $height_device_web_max: 480;
 		border-top-right-radius: percentage( 14 / $width_device_web_max) percentage( 14 / $image_height );
 		border-top-left-radius: percentage( 14 / $width_device_web_max) percentage( 14 / $image_height );
 		figure {
-			padding-bottom: percentage( $image_height / $width_device_web_max);
+			padding-bottom: percentage( $image_height / $width_device_web_max );
 		}
 		&:before { // Traffic Lights
 			height: percentage( 14 / ( $image_height + 48 ) );

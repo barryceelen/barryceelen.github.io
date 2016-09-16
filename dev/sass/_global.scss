@@ -8,6 +8,10 @@ html {
 	font-size: 100%;
 }
 
+body {
+	background: #ffff01;
+}
+
 small {
 	font-size: 80%;
 }
@@ -24,51 +28,13 @@ img {
 	display: none;
 }
 
-@media all {
-	.page-break	{ display: none; }
-}
+// @media all {
+// 	.page-break	{ display: none; }
+// }
 
-@media print {
-	// .page-break	{ display: block; page-break-before: always; }
-	.projects article {
-		page-break-before: always;
-	}
-}
-
-.load-more {
-	background: #fff;
-	padding: 12em 1em 12em;
-	text-align: center;
-}
-
-button {
-	background: transparent;
-	border: none;
-	cursor: pointer;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	outline: none;
-}
-
-.button-load-more {
-	background: #ffff02;
-	background: $black;
-	// box-shadow: 0 1px 4px rgba(0,0,0,.1);
-	border: 3px solid $black;
-	border-radius: 999px;
-	color: $black;
-	color: #ffff02;
-	color: #fff;
-	font-size: 1.2em;
-	font-weight: 700;
-	line-height: 2;
-	padding: 1em 3em;
-	white-space: nowrap;
-	text-transform: uppercase;
-	transition: all linear .2s;
-	&:hover, &:focus {
-		// background: #fff;
-		// border: 3px solid #fff;
-		color: #ffff02;
-	}
-}
+// @media print {
+// 	.page-break	{ display: block; page-break-before: always; }
+// 	.projects article {
+// 		page-break-before: always;
+// 	}
+// }

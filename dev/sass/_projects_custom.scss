@@ -1,14 +1,7 @@
-$border-color: #efefef;
-
-body {
-	background: #ffff01;
-}
-
 #muenchnerkammerspiele {
 	background: #ffff02;
 	color: #000;
 	@include device-web-custom( 502 );
-
 	.img-wrap:before {
 		color: #ffff02;
 	}
@@ -44,7 +37,6 @@ body {
 
 #welt {
 	background: #00648B url('../img/projects/bg-welt.jpg') left top no-repeat;
-	// background: #00648B;
 	color: #017091;
 	color: #fff;
 	@media screen and (min-width: 1200px) { // Todo: Get variable.
@@ -85,7 +77,7 @@ body {
 #kadewe {
 	background: #F7F7F7;
 	color: #00021B;
-	.device-iphone-5 {
+	.device-iphone {
 		background: #000;
 		&:before {
 			background: lighten(#000,12);
@@ -101,7 +93,7 @@ body {
 	background-image: -o-linear-gradient(#FBFBFB 0%, #DCDCDC 98%);
 	background-image: linear-gradient(#FBFBFB 0%, #DCDCDC 98%);
 	color: #222;
-	.device-iphone-5 {
+	.device-iphone {
 		background: #000;
 		&:before {
 			background: lighten(#000,12);
@@ -196,7 +188,7 @@ body {
 #raceunion {
 	background: #222;
 	color: #A7A7A7;
-	.device-iphone-4 {
+	.device-iphone {
 		background: #000;
 		border-color: lighten(#222,10);
 		border-style: solid;
@@ -214,7 +206,7 @@ body {
 	color: #fff;
 	background: #505050;
 	text-shadow: 0 0px 6px rgba(0,0,0,0.6);
-	.device-iphone-4 {
+	.device-iphone {
 		background: #000;
 		&:before {
 			background: lighten(#000,12);
@@ -228,7 +220,7 @@ body {
 #man-iaa {
 	color: #303C4A;
 	background: #EAEBED;
-	.device-iphone-4 {
+	.device-iphone {
 		background: #000;
 		&:before {
 			background: lighten(#000,12);
@@ -248,11 +240,8 @@ body {
 #viessmann {
 	background: #efefef;
 	color: #222;
-	.device-iphone-4 {
+	.device-iphone {
 		background: #000;
-		// border-color: lighten(#222,10);
-		// border-style: solid;
-		// @include vw-min-max( 'border-width', 2, 6, $content_max_width );
 		&:before {
 			background: lighten(#000,12);
 		}
@@ -266,7 +255,7 @@ body {
 	background: #070708 url('../img/projects/bg-vw-up.jpg') left top no-repeat;
 	background-size: cover;
 	color: #efefef;
-	.device-iphone-4 {
+	.device-iphone {
 		background: #000;
 		border-color: lighten(#222,10);
 		border-style: solid;

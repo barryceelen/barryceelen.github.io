@@ -61,6 +61,37 @@
 	@include device-web-custom( 714 );
 }
 
+#ocana {
+	background: #171E24;
+	border-bottom: none;
+	color: #efefef;
+	@include device-web-custom( 449 );
+	.device-web {
+		background: darken(#171E24, 3);
+		&:before {
+			background: #fff;
+			color: #fff;
+		}
+	}
+
+	.device-screen {
+		padding-top: 0;
+	}
+
+	.img-wrap {
+
+		img {
+			border-top-right-radius: percentage( 14 / $width_device_web_max) percentage( 14 / $height_device_web_max );
+			border-top-left-radius: percentage( 14 / $width_device_web_max) percentage( 14 / $height_device_web_max );
+			overflow: hidden;
+		}
+
+		&:before {
+			color: #FFB400;
+		}
+	}
+}
+
 #simfy {
 	background: #009FE5;
 	color: #fff;

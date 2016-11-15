@@ -61,7 +61,7 @@ module.exports = function(grunt) {
 					pretty: true
 				},
 				files: {
-					"index.html": "dev/pug/index.jade"
+					"index.html": "dev/pug/index.pug"
 				}
 			},
 			dist: {
@@ -72,7 +72,7 @@ module.exports = function(grunt) {
 					}
 				},
 				files: {
-					"index.html": "dev/pug/index.jade"
+					"index.html": "dev/pug/index.pug"
 				}
 			}
 		},
@@ -136,7 +136,17 @@ module.exports = function(grunt) {
 					dest: 'fonts/',
 					filter: 'isFile'
 				}]
-			}
+			},
+			scripts: {
+				files: [
+				{
+					expand: true,
+					cwd: 'dev/js/',
+					src: ['app.js'],
+					dest: 'js/',
+					filter: 'isFile'
+				}]
+			},
 		},
 		watch: {
 			options: {
@@ -158,7 +168,7 @@ module.exports = function(grunt) {
 				}
 			},
 			pug: {
-				files: ['dev/pug/**/*.jade'],
+				files: ['dev/pug/**/*.pug'],
 				tasks: ['pug:dev'],
 				options: {
 					spawn: false,
@@ -182,7 +192,7 @@ module.exports = function(grunt) {
 			},
 			concat: {
 				files: ['dev/js/**'],
-				tasks: ['concat'],
+				tasks: ['concat:dist'],
 				options: {
 					spawn: false,
 					event: ['added', 'changed'],
@@ -220,5 +230,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 
 	grunt.registerTask('default', ['connect:server','watch','notify:server']);
-	grunt.registerTask('dist', ['sass:dist','clean','autoprefixer','concat','pug','copy']);
+	grunt.registerTask('dist', ['sass:dist','clean','autoprefixer','concat:dist','pug','copy']);
 };

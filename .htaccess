@@ -1,4 +1,54 @@
+<IfModule mod_expires.c>
+ExpiresActive on
+ExpiresDefault "access plus 1 year"
+ExpiresByType image/x-icon "access plus 1 year"
+ExpiresByType image/jpg "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/gif "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType text/html "access plus 4 hours"
+ExpiresByType text/htm "access plus 4 hours"
+ExpiresByType text/javascript "access plus 2 days"
+ExpiresByType text/css "access plus 2 days"
+ExpiresByType text/xml "access plus 2 days"
+ExpiresByType application/xml "access plus 0 seconds"
+ExpiresByType application/json "access plus 0 seconds"
+ExpiresByType text/cache-manifest "access plus 0 seconds"
+</IfModule>
+
+# Deflate Compression by FileType
+# Duplicates the previous block, really..
+<IfModule mod_deflate.c>
+ SetOutputFilter DEFLATE
+ AddOutputFilterByType DEFLATE text/plain
+ AddOutputFilterByType DEFLATE text/html
+ AddOutputFilterByType DEFLATE text/xml
+ AddOutputFilterByType DEFLATE text/css
+ AddOutputFilterByType DEFLATE text/javascript
+ AddOutputFilterByType DEFLATE application/xml
+ AddOutputFilterByType DEFLATE application/xhtml+xml
+ AddOutputFilterByType DEFLATE application/rss+xml
+ AddOutputFilterByType DEFLATE application/atom_xml
+ AddOutputFilterByType DEFLATE application/javascript
+ AddOutputFilterByType DEFLATE application/x-javascript
+ AddOutputFilterByType DEFLATE application/x-shockwave-flash
+</IfModule>
+
+# protect the dandelion revision file
+<files .revision>
+order allow,deny
+deny from all
+</files>
+
+# protect the htaccess file (chmod 640/644)
+<files .htaccess>
+order allow,deny
+deny from all
+</files>
+
+<IfModule mod_rewrite.c>
 RewriteEngine On
 RewriteBase /
 RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
 RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
+</IfModule>

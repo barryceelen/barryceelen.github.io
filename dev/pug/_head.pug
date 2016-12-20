@@ -9,13 +9,8 @@ html.no-js(lang='en-US')
 		meta(name='description', content='Hello World! I am a product designer and developer by day, aspiring singer by night, and this is my website.')
 		link(rel='shortcut icon', href='favicon.ico')
 		title Barry Ceelen
-		script.
-			document.documentElement.className = document.documentElement.className.replace('no-js','js');
 		style
 			include /css/application.css
-		//- script(src='js/vendor/jquery-3.1.0.slim.min.js')
-		//- script(src='js/vendor/viewport-units-buggyfill.js')
-		//- script(src="js/vendor/lazysizes.min.js" async="")
-		//- script(src="js/vendor/fingerprint2.min.js")
+		script.
+			document.documentElement.className = document.documentElement.className.replace('no-js','js');
 		script(type="text/javascript" src='js/app.js' async="")
-		//- link(rel='stylesheet', media='all', href='css/application.css')

@@ -106,6 +106,13 @@ module.exports = function(grunt) {
 				dest: 'js/app.js',
 			},
 		},
+		uglify: {
+			dist: {
+				files: {
+					'js/app.js': ['js/app.js']
+				}
+			}
+		},
 		copy: {
 			images: {
 				files: [
@@ -136,17 +143,17 @@ module.exports = function(grunt) {
 					dest: 'fonts/',
 					filter: 'isFile'
 				}]
-			},
-			scripts: {
-				files: [
-				{
-					expand: true,
-					cwd: 'dev/js/',
-					src: ['app.js'],
-					dest: 'js/',
-					filter: 'isFile'
-				}]
-			},
+			}
+			// scripts: {
+			// 	files: [
+			// 	{
+			// 		expand: true,
+			// 		cwd: 'dev/js/',
+			// 		src: ['app.js'],
+			// 		dest: 'js/',
+			// 		filter: 'isFile'
+			// 	}]
+			// },
 		},
 		watch: {
 			options: {
@@ -228,7 +235,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-connect');
 	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	grunt.registerTask('default', ['connect:server','watch','notify:server']);
-	grunt.registerTask('dist', ['sass:dist','clean','autoprefixer','concat:dist','pug','copy']);
+	grunt.registerTask('dist', ['sass:dist','clean','autoprefixer','concat:dist','uglify:dist','pug','copy']);
 };

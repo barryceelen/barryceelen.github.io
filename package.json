@@ -12,6 +12,7 @@
     "grunt-contrib-imagemin": "*",
     "grunt-contrib-pug": "*",
     "grunt-contrib-sass": "*",
+    "grunt-contrib-uglify": "^2.0.0",
     "grunt-contrib-watch": "*",
     "grunt-notify": "*"
   }

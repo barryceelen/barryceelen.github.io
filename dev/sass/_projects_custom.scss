@@ -28,6 +28,15 @@
 	}
 }
 
+#okal {
+	background: lighten( #9B978F, 35 );
+	color: #9B978F;
+	.img-wrap:before {
+		color: #ff3100;
+	}
+	@include device-web-custom( 534 );
+}
+
 #supreme {
 	background: $black;
 	border-bottom: none;

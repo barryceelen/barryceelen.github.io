@@ -31,6 +31,10 @@
 #okal {
 	background: lighten( #9B978F, 35 );
 	color: #9B978F;
+	.device-web:before {
+		background: #ff3100;
+		color: #ff3100;
+	}
 	.img-wrap:before {
 		color: #ff3100;
 	}

@@ -144,16 +144,6 @@ module.exports = function(grunt) {
 					filter: 'isFile'
 				}]
 			}
-			// scripts: {
-			// 	files: [
-			// 	{
-			// 		expand: true,
-			// 		cwd: 'dev/js/',
-			// 		src: ['app.js'],
-			// 		dest: 'js/',
-			// 		filter: 'isFile'
-			// 	}]
-			// },
 		},
 		watch: {
 			options: {
@@ -205,14 +195,6 @@ module.exports = function(grunt) {
 					event: ['added', 'changed'],
 				}
 			},
-			copy_scripts: {
-				files: ['dev/js/**'],
-				tasks: ['copy:scripts'],
-				options: {
-					spawn: false,
-					event: ['added', 'changed'],
-				}
-			},
 			remove_images: {
 				files: ['dev/img/**'],
 				tasks: ['copy:images'],
@@ -233,10 +215,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-notify');
 	grunt.loadNpmTasks('grunt-contrib-connect');
-	grunt.loadNpmTasks('grunt-contrib-htmlmin');
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	grunt.registerTask('default', ['connect:server','watch','notify:server']);
-	grunt.registerTask('dist', ['sass:dist','clean','autoprefixer','concat:dist','uglify:dist','pug','copy']);
+	grunt.registerTask('dist', ['clean','sass:dist','autoprefixer','concat:dist','uglify:dist','pug','copy']);
 };

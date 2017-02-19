@@ -100,6 +100,7 @@ module.exports = function(grunt) {
 					'dev/js/vendor/jquery-3.1.0.slim.min.js',
 					'dev/js/vendor/viewport-units-buggyfill.js',
 					'dev/js/vendor/lazysizes.min.js',
+					'dev/js/vendor/ls.unveilhooks.js',
 					'dev/js/vendor/fingerprint2.min.js',
 					'dev/js/app.js',
 				],

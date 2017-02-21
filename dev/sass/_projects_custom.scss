@@ -53,12 +53,14 @@
 
 #welt {
 	background: #00648B;
+	background-position: left top;
+	background-repeat: no-repeat;
 	color: #017091;
 	color: #fff;
 	&.lazyloaded {
-		background: #00648B url('../img/projects/bg-welt.jpg') left top no-repeat;
+		background-image: url('../img/projects/bg-welt.jpg');
 	}
-	@media screen and (min-width: 1200px) { // Todo: Get variable.
+	@media screen and (min-width: 1000px) { // Todo: Get variable.
 		background-size: cover;
 	}
 }

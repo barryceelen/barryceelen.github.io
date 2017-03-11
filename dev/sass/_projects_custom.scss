@@ -18,6 +18,7 @@
 	color: #575D5B;
 	&.lazyloaded {
 		background: #fafafa url('../img/projects/bg-neubar.jpg') left top no-repeat;
+		background-size: cover;
 	}
 	.device-web {
 		background: #AAABA7;

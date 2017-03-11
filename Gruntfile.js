@@ -205,14 +205,14 @@ module.exports = function(grunt) {
 					event: ['added', 'changed'],
 				}
 			},
-			copy_scripts: {
-				files: ['dev/js/**'],
-				tasks: ['copy:scripts'],
-				options: {
-					spawn: false,
-					event: ['added', 'changed'],
-				}
-			},
+			// copy_scripts: {
+			// 	files: ['dev/js/**'],
+			// 	tasks: ['copy:scripts'],
+			// 	options: {
+			// 		spawn: false,
+			// 		event: ['added', 'changed'],
+			// 	}
+			// },
 			remove_images: {
 				files: ['dev/img/**'],
 				tasks: ['copy:images'],

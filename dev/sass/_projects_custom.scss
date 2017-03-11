@@ -13,9 +13,12 @@
 }
 
 #neumeisterbaram {
-	background: #fafafa url('../img/projects/bg-neubar.jpg') left top no-repeat;
+	background: #fafafa;
 	background-size: cover;
 	color: #575D5B;
+	&.lazyloaded {
+		background: #fafafa url('../img/projects/bg-neubar.jpg') left top no-repeat;
+	}
 	.device-web {
 		background: #AAABA7;
 		&:before {
@@ -49,9 +52,12 @@
 }
 
 #welt {
-	background: #00648B url('../img/projects/bg-welt.jpg') left top no-repeat;
+	background: #00648B;
 	color: #017091;
 	color: #fff;
+	&.lazyloaded {
+		background: #00648B url('../img/projects/bg-welt.jpg') left top no-repeat;
+	}
 	@media screen and (min-width: 1200px) { // Todo: Get variable.
 		background-size: cover;
 	}
@@ -296,9 +302,12 @@
 }
 
 #vw-up {
-	background: #070708 url('../img/projects/bg-vw-up.jpg') left top no-repeat;
+	background: #070708;
 	background-size: cover;
 	color: #efefef;
+	&.lazyloaded {
+		background: #070708 url('../img/projects/bg-vw-up.jpg') left top no-repeat;
+	}
 	.device-iphone {
 		background: #000;
 		border-color: lighten(#222,10);

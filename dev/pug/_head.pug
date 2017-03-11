@@ -13,4 +13,8 @@ html.no-js(lang='en-US')
 			include /css/application.css
 		script.
 			document.documentElement.className = document.documentElement.className.replace('no-js','js');
-		script(type="text/javascript" src='js/app.js' async="")
+			window.lazySizesConfig = window.lazySizesConfig || {};
+			lazySizesConfig.loadMode = 1;
+		//- script(type="text/javascript" src='js/app.js' async="")
+		script(type="text/javascript")
+			include /js/app.js

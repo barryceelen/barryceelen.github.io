@@ -58,9 +58,9 @@
 	color: #fff;
 	&.lazyloaded {
 		background: #00648B url('../img/projects/bg-welt.jpg') left top no-repeat;
-	}
-	@media screen and (min-width: 1200px) { // Todo: Get variable.
-		background-size: cover;
+		@media screen and (min-width: 1200px) { // Todo: Get variable.
+			background-size: cover;
+		}
 	}
 }
 
@@ -308,6 +308,7 @@
 	color: #efefef;
 	&.lazyloaded {
 		background: #070708 url('../img/projects/bg-vw-up.jpg') left top no-repeat;
+		background-size: cover;
 	}
 	.device-iphone {
 		background: #000;

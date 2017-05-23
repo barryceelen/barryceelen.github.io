@@ -20,6 +20,7 @@
 		background-size: cover;
 	}
 	color: #000;
+	@include device-web-custom( 642 );
 }
 
 #neumeisterbaram {

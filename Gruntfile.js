@@ -220,5 +220,5 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	grunt.registerTask('default', ['connect:server','watch','notify:server']);
-	grunt.registerTask('dist', ['clean','sass:dist','autoprefixer','concat:dist','uglify:dist','pug','copy']);
+	grunt.registerTask('dist', ['clean','sass:dist','autoprefixer','concat:dist','uglify:dist','pug','copy', 'imagemin']);
 };

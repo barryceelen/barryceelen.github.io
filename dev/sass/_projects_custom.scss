@@ -12,12 +12,23 @@
 	color: #fff;
 }
 
+#livingstandards {
+	background: #b1324C;
+	background-size: cover;
+	&.lazyloaded {
+		background: #b1324C url('../img/projects/bg-livingstandards.jpg') left top no-repeat;
+		background-size: cover;
+	}
+	color: #000;
+}
+
 #neumeisterbaram {
 	background: #fafafa;
 	background-size: cover;
 	color: #575D5B;
 	&.lazyloaded {
 		background: #fafafa url('../img/projects/bg-neubar.jpg') left top no-repeat;
+		background-size: cover;
 	}
 	.device-web {
 		background: #AAABA7;
@@ -309,6 +320,7 @@
 	color: #efefef;
 	&.lazyloaded {
 		background: #070708 url('../img/projects/bg-vw-up.jpg') left top no-repeat;
+		background-size: cover;
 	}
 	.device-iphone {
 		background: #000;
@@ -332,4 +344,17 @@
 	.img-wrap:before {
 		color: #ffde00;
 	}
+}
+
+#wedelart {
+	background: lighten( #b3b3b3, 25 );
+	color: #b3b3b3;
+	.device-web:before {
+		background: lighten( #b3b3b3, 25 );
+		color: lighten( #b3b3b3, 25 );
+	}
+	.img-wrap:before {
+		color: lighten( #b3b3b3, 25 );
+	}
+	@include device-web-custom( 586 );
 }

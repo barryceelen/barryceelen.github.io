@@ -24,6 +24,16 @@ img {
 	display: block;
 }
 
+.nowrap {
+	white-space: nowrap;
+}
+
+.hide-on-small {
+	@media screen and (max-width: 500px) {
+		display: none;
+	}
+}
+
 // @media all {
 // 	.page-break	{ display: none; }
 // }

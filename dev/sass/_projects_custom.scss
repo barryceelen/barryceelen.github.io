@@ -359,3 +359,8 @@
 	}
 	@include device-web-custom( 586 );
 }
+
+#andco {
+	background: #ff0000;
+	@include device-web-custom( 675 );
+}

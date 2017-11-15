@@ -7,7 +7,7 @@
     text-align: center;
     line-height: 1.4;
     font-weight: 500;
-    @include vw-min-max( 'font-size', 16, 30, 2000 );
+    @include vw-min-max( 'font-size', 16, 30, 1600 );
 
 	p {
 		margin-bottom: 1em;

@@ -1,0 +1,21 @@
+#colophon {
+	background: #fff;
+	color: inherit;
+	font-weight: 700;
+	padding: pvw( 32, $content_max_width );
+	padding-top: 8em;
+	@include vw-min-max( 'font-size', 16, 20, $width_project_max );
+
+	a {
+		color: inherit;
+		text-decoration: none;
+		&:focus, &:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
+.footer-inner {
+	text-align: center;
+	width: 100%;
+}

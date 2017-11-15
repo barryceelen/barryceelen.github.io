@@ -1,4 +1,6 @@
 // See: http://24ways.org/2013/grunt-is-not-weird-and-hard/
+var path = require('path');
+
 module.exports = function(grunt) {
 
 	grunt.initConfig({
@@ -39,7 +41,7 @@ module.exports = function(grunt) {
 				},
 				files: {
 					'index.html': 'index.html'
-			  	}
+				}
 			}
 		},
 		autoprefixer: {
@@ -55,20 +57,22 @@ module.exports = function(grunt) {
 		pug: {
 			dev: {
 				options: {
+					basedir: path.resolve(),
 					pretty: true
 				},
 				files: {
-					"index.html": "dev/pug/index.jade"
+					"index.html": "dev/pug/index.pug"
 				}
 			},
 			dist: {
 				options: {
+					basedir: path.resolve(),
 					data: {
 						debug: false
 					}
 				},
 				files: {
-					"index.html": "dev/pug/index.jade"
+					"index.html": "dev/pug/index.pug"
 				}
 			}
 		},
@@ -87,6 +91,29 @@ module.exports = function(grunt) {
 				src: ['.sass-cache/','**/*.map','img/**/*.{png,jpg,gif}','js/**/*','*.orig']
 			}
 		},
+		concat: {
+			options: {
+				separator: ';',
+			},
+			dist: {
+				src: [
+					'dev/js/vendor/jquery-3.1.0.slim.min.js',
+					'dev/js/vendor/viewport-units-buggyfill.js',
+					'dev/js/vendor/lazysizes.min.js',
+					'dev/js/vendor/ls.unveilhooks.js',
+					'dev/js/vendor/fingerprint2.min.js',
+					'dev/js/app.js',
+				],
+				dest: 'js/app.js',
+			},
+		},
+		uglify: {
+			dist: {
+				files: {
+					'js/app.js': ['js/app.js']
+				}
+			}
+		},
 		copy: {
 			images: {
 				files: [
@@ -95,16 +122,6 @@ module.exports = function(grunt) {
 					cwd: 'dev/img/',
 					src: ['**'],
 					dest: 'img/',
-					filter: 'isFile'
-				}]
-			},
-			scripts: {
-				files: [
-				{
-					expand: true,
-					cwd: 'dev/js/',
-					src: ['**'],
-					dest: 'js/',
 					filter: 'isFile'
 				}]
 			},
@@ -149,7 +166,7 @@ module.exports = function(grunt) {
 				}
 			},
 			pug: {
-				files: ['dev/pug/**/*.jade'],
+				files: ['dev/pug/**/*.pug'],
 				tasks: ['pug:dev'],
 				options: {
 					spawn: false,
@@ -171,9 +188,9 @@ module.exports = function(grunt) {
 					event: ['added', 'changed'],
 				}
 			},
-			copy_scripts: {
+			concat: {
 				files: ['dev/js/**'],
-				tasks: ['copy:scripts'],
+				tasks: ['concat:dist'],
 				options: {
 					spawn: false,
 					event: ['added', 'changed'],
@@ -181,7 +198,7 @@ module.exports = function(grunt) {
 			},
 			remove_images: {
 				files: ['dev/img/**'],
-				tasks: ['clean:dev','copy:images'],
+				tasks: ['copy:images'],
 				options: {
 					event: ['deleted'],
 					spawn: false,
@@ -199,9 +216,9 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-notify');
 	grunt.loadNpmTasks('grunt-contrib-connect');
-	grunt.loadNpmTasks('grunt-contrib-htmlmin');
+	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 
 	grunt.registerTask('default', ['connect:server','watch','notify:server']);
-	// grunt.registerTask('dist', ['sass:dist','autoprefixer','pug','clean','copy','imagemin']);
-	grunt.registerTask('dist', ['sass:dist','autoprefixer','pug','clean','copy']);
+	grunt.registerTask('dist', ['clean','sass:dist','autoprefixer','concat:dist','uglify:dist','pug','copy', 'imagemin']);
 };

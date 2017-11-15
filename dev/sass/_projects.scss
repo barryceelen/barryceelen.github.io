@@ -65,7 +65,7 @@
 			line-height: 1;
 			-webkit-font-smoothing: antialiased;
 			-moz-osx-font-smoothing: grayscale;
-			@include vw-min-max( 'font-size', 12, 28, $content_max_width );
+			@include vw-min-max( 'font-size', 32, 36, $content_max_width );
 			@include vw-min-max( 'margin-bottom', 12, 28, $content_max_width );
 		}
 	}
@@ -85,8 +85,7 @@
 	.device-web {
 		margin: 0 auto -1px 0;
 	}
-	.device-iphone-4,
-	.device-iphone-5 {
+	.device-iphone {
 		display: inline-block;
 		@include vw-min-max( 'margin-left', 2, 22, $content_max_width );
 		&:first-child {
@@ -95,5 +94,22 @@
 	}
 	.project-phone & {
 		white-space: nowrap;
+	}
+}
+
+img.lazyload {
+	display: none;
+}
+
+.js {
+	img.lazyload {
+		display: block;
+	}
+	.img-wrap img {
+		opacity: 0;
+		transition: opacity linear .3s;
+		&.lazyloaded {
+			opacity: 1;
+		}
 	}
 }

@@ -1,15 +1,17 @@
+@use "sass:math";
+
 //
 // Convert pixels to ems.
 //
 @function pem( $px, $context: $base_font_size ) {
-	@return #{$px / $context}em;
+	@return #{math.div($px, $context)}em;
 }
 
 //
 // Convert pixels to vw.
 //
 @function pvw( $px, $viewport_width ) {
-	@return #{($px / $viewport_width) * 100}vw;
+	@return #{(math.div($px, $viewport_width)) * 100}vw;
 }
 
 //
@@ -17,8 +19,8 @@
 //
 @mixin vw-min-max( $property, $value_min, $value_max, $viewport_width_max ) {
 
-	$vw: ( $value_max / $viewport_width_max ) * 100;
-	$min_width: ( $value_min / $vw ) * 100;
+	$vw: (math.div($value_max, $viewport_width_max)) * 100;
+	$min_width: (math.div($value_min, $vw)) * 100;
 	$mq_min: #{$min_width}px;
 	$mq_max: #{$viewport_width_max}px;
 

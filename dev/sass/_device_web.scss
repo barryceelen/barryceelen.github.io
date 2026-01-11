@@ -1,12 +1,14 @@
+@use "sass:math";
+
 $width_device_web_max: 1160;
 $height_device_web_max: 480;
 
 .device-web {
 	background: #fff;
-	border-top-right-radius: percentage( 14 / $width_device_web_max) percentage( 14 / $height_device_web_max );
+	border-top-right-radius: math.percentage(math.div(14, $width_device_web_max)) math.percentage(math.div(14, $height_device_web_max));
 	border-bottom-right-radius: 0;
 	border-bottom-left-radius: 0;
-	border-top-left-radius: percentage( 14 / $width_device_web_max) percentage( 14 / $height_device_web_max );
+	border-top-left-radius: math.percentage(math.div(14, $width_device_web_max)) math.percentage(math.div(14, $height_device_web_max));
 	box-sizing: border-box;
 	overflow: hidden;
 	position: relative;
@@ -15,12 +17,12 @@ $height_device_web_max: 480;
 	@include vw-min-max( 'border-width', 1, 3, $content_max_width );
 	figure {
 		height: 0;
-		padding-bottom: percentage( ( $height_device_web_max - 48 ) / $width_device_web_max);
+		padding-bottom: math.percentage(math.div(($height_device_web_max - 48), $width_device_web_max));
 		position: relative;
 		width: 100%;
 	}
 	.device-screen {
-		padding: percentage( 48 / $width_device_web_max ) 0 0 0;
+		padding: math.percentage(math.div(48, $width_device_web_max)) 0 0 0;
 		overflow-y: hidden;
 	}
 	.img-wrap {
@@ -46,8 +48,8 @@ $height_device_web_max: 480;
 		border-radius: 50%;
 		color: #efefef;
 		box-shadow: pvw( 24, $width_device_web_max ) 0 0, pvw( 48, $width_device_web_max ) 0 0;
-		width: percentage( 14 / $width_device_web_max );
-		height: percentage( 14 / $height_device_web_max );
+		width: math.percentage(math.div(14, $width_device_web_max));
+		height: math.percentage(math.div(14, $height_device_web_max));
 		z-index: 999;
 		@include vw-min-max( 'top', 0, 18, $content_max_width );
 		@include vw-min-max( 'left', 0, 18, $content_max_width );
@@ -64,13 +66,13 @@ $height_device_web_max: 480;
 
 @mixin device-web-custom( $image_height ) {
 	.device-web {
-		border-top-right-radius: percentage( 14 / $width_device_web_max) percentage( 14 / $image_height );
-		border-top-left-radius: percentage( 14 / $width_device_web_max) percentage( 14 / $image_height );
+		border-top-right-radius: math.percentage(math.div(14, $width_device_web_max)) math.percentage(math.div(14, $image_height));
+		border-top-left-radius: math.percentage(math.div(14, $width_device_web_max)) math.percentage(math.div(14, $image_height));
 		figure {
-			padding-bottom: percentage( $image_height / $width_device_web_max );
+			padding-bottom: math.percentage(math.div($image_height, $width_device_web_max));
 		}
 		&:before { // Traffic Lights
-			height: percentage( 14 / ( $image_height + 48 ) );
+			height: math.percentage(math.div(14, ($image_height + 48)));
 		}
 	}
 }

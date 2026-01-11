@@ -14,9 +14,15 @@ module.exports = function(grunt) {
 			}
 		},
 		sass: {
+			options: {
+				implementation: require('sass'),
+				sourceMap: false,
+				quietDeps: true,
+				silenceDeprecations: ['legacy-js-api', 'import']
+			},
 			dev: {
 				options: {
-					style: 'expanded'
+					outputStyle: 'expanded'
 				},
 				files: {
 					'css/application.css':'dev/sass/application.scss'
@@ -24,8 +30,8 @@ module.exports = function(grunt) {
 			},
 			dist: {
 				options: {
-					style: 'compressed',
-					sourcemap: 'none'
+					outputStyle: 'compressed',
+					sourceMap: false
 				},
 				files: {
 					'css/application.css':'dev/sass/application.scss'
@@ -207,7 +213,7 @@ module.exports = function(grunt) {
 		}
 	});
 
-	grunt.loadNpmTasks('grunt-contrib-sass');
+	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-autoprefixer');
 	grunt.loadNpmTasks('grunt-contrib-pug');
 	grunt.loadNpmTasks('grunt-contrib-clean');

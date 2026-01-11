@@ -1,3 +1,5 @@
+@use "sass:math";
+
 $width_device_iphone_5_max: 378;
 $height_device_iphone_5_max: 786;
 
@@ -18,51 +20,51 @@ $height_device_iphone_4_max: 698;
 		max-width: 320px;
 	}
 	&.iphone-4 {
-		border-top-left-radius: percentage( 55 / $width_device_iphone_4_max ) percentage( 55 / $height_device_iphone_4_max );
-		border-top-right-radius: percentage( 55 / $width_device_iphone_4_max ) percentage( 55 / $height_device_iphone_4_max );
-		border-bottom-left-radius: percentage( 55 / $width_device_iphone_4_max ) percentage( 55 / $height_device_iphone_4_max );
-		border-bottom-right-radius: percentage( 55 / $width_device_iphone_4_max ) percentage( 55 / $height_device_iphone_4_max );
+		border-top-left-radius: math.percentage(math.div(55, $width_device_iphone_4_max)) math.percentage(math.div(55, $height_device_iphone_4_max));
+		border-top-right-radius: math.percentage(math.div(55, $width_device_iphone_4_max)) math.percentage(math.div(55, $height_device_iphone_4_max));
+		border-bottom-left-radius: math.percentage(math.div(55, $width_device_iphone_4_max)) math.percentage(math.div(55, $height_device_iphone_4_max));
+		border-bottom-right-radius: math.percentage(math.div(55, $width_device_iphone_4_max)) math.percentage(math.div(55, $height_device_iphone_4_max));
 		figure {
-			padding-bottom: percentage( 480 / 320 );
+			padding-bottom: math.percentage(math.div(480, 320));
 		}
 		.device-screen {
-			padding: percentage( 110 / $width_device_iphone_5_max ) percentage( 26 / $width_device_iphone_5_max );
+			padding: math.percentage(math.div(110, $width_device_iphone_5_max)) math.percentage(math.div(26, $width_device_iphone_5_max));
 		}
 		&:before { // Speaker
-			width: percentage( 60 / $width_device_iphone_4_max );
-			height: percentage( 8 / $height_device_iphone_4_max );
-			top: percentage( 58 / $height_device_iphone_4_max );
-			margin-left: percentage( -30 / $width_device_iphone_4_max );
+			width: math.percentage(math.div(60, $width_device_iphone_4_max));
+			height: math.percentage(math.div(8, $height_device_iphone_4_max));
+			top: math.percentage(math.div(58, $height_device_iphone_4_max));
+			margin-left: math.percentage(math.div(-30, $width_device_iphone_4_max));
 		}
 		&:after { // Home button
-			bottom: percentage( 24 / $height_device_iphone_4_max );
-			margin-left: percentage( -31 / $width_device_iphone_4_max );
-			width: percentage( 62 / $width_device_iphone_4_max );
-			height: percentage( 62 / $height_device_iphone_4_max );
+			bottom: math.percentage(math.div(24, $height_device_iphone_4_max));
+			margin-left: math.percentage(math.div(-31, $width_device_iphone_4_max));
+			width: math.percentage(math.div(62, $width_device_iphone_4_max));
+			height: math.percentage(math.div(62, $height_device_iphone_4_max));
 		}
 	}
 	&.iphone-5 {
-		border-top-left-radius: percentage( 55 / $width_device_iphone_5_max ) percentage( 55 / $height_device_iphone_5_max );
-		border-top-right-radius: percentage( 55 / $width_device_iphone_5_max ) percentage( 55 / $height_device_iphone_5_max );
-		border-bottom-left-radius: percentage( 55 / $width_device_iphone_5_max ) percentage( 55 / $height_device_iphone_5_max );
-		border-bottom-right-radius: percentage( 55 / $width_device_iphone_5_max ) percentage( 55 / $height_device_iphone_5_max );
+		border-top-left-radius: math.percentage(math.div(55, $width_device_iphone_5_max)) math.percentage(math.div(55, $height_device_iphone_5_max));
+		border-top-right-radius: math.percentage(math.div(55, $width_device_iphone_5_max)) math.percentage(math.div(55, $height_device_iphone_5_max));
+		border-bottom-left-radius: math.percentage(math.div(55, $width_device_iphone_5_max)) math.percentage(math.div(55, $height_device_iphone_5_max));
+		border-bottom-right-radius: math.percentage(math.div(55, $width_device_iphone_5_max)) math.percentage(math.div(55, $height_device_iphone_5_max));
 		figure {
-			padding-bottom: percentage( 568 / 320 );
+			padding-bottom: math.percentage(math.div(568, 320));
 		}
 		.device-screen {
-			padding: percentage( 110 / $width_device_iphone_4_max ) percentage( 26 / $width_device_iphone_4_max );
+			padding: math.percentage(math.div(110, $width_device_iphone_4_max)) math.percentage(math.div(26, $width_device_iphone_4_max));
 		}
 		&:before { // Speaker
-			width: percentage( 60 / $width_device_iphone_5_max );
-			height: percentage( 8 / $height_device_iphone_5_max );
-			top: percentage( 58 / $height_device_iphone_5_max );
-			margin-left: percentage( -30 / $width_device_iphone_5_max );
+			width: math.percentage(math.div(60, $width_device_iphone_5_max));
+			height: math.percentage(math.div(8, $height_device_iphone_5_max));
+			top: math.percentage(math.div(58, $height_device_iphone_5_max));
+			margin-left: math.percentage(math.div(-30, $width_device_iphone_5_max));
 		}
 		&:after { // Home button
-			bottom: percentage( 24 / $height_device_iphone_5_max );
-			margin-left: percentage( -31 / $width_device_iphone_5_max );
-			width: percentage( 62 / $width_device_iphone_5_max );
-			height: percentage( 62 / $height_device_iphone_5_max );
+			bottom: math.percentage(math.div(24, $height_device_iphone_5_max));
+			margin-left: math.percentage(math.div(-31, $width_device_iphone_5_max));
+			width: math.percentage(math.div(62, $width_device_iphone_5_max));
+			height: math.percentage(math.div(62, $height_device_iphone_5_max));
 		}
 	}
 	.img-wrap {

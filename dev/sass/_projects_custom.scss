@@ -1,3 +1,6 @@
+@use "sass:color";
+@use "sass:math";
+
 #muenchnerkammerspiele {
 	background: #ffff02;
 	color: #000;
@@ -34,8 +37,8 @@
 	.device-web {
 		background: #AAABA7;
 		&:before {
-			background: darken(#AAABA7,8);
-			color: darken(#AAABA7,8);
+			background: color.adjust(#AAABA7, $lightness: -8%);
+			color: color.adjust(#AAABA7, $lightness: -8%);
 		}
 	}
 	.img-wrap:before {
@@ -44,7 +47,7 @@
 }
 
 #okal {
-	background: lighten( #9B978F, 35 );
+	background: color.adjust(#9B978F, $lightness: 35%);
 	color: #9B978F;
 	.device-web:before {
 		background: #ff3100;
@@ -83,13 +86,13 @@
 }
 
 #doublestandards {
-	background: lighten(#8B8B8B, 40%);
+	background: color.adjust(#8B8B8B, $lightness: 40%);
 	color: #8B8B8B;
 	@include device-web-custom( 760 );
 }
 
 #ralfschmitz {
-	background: lighten(#8B8B8B, 40%);
+	background: color.adjust(#8B8B8B, $lightness: 40%);
 	color: #222;
 	@include device-web-custom( 714 );
 }
@@ -100,7 +103,7 @@
 	color: #efefef;
 	@include device-web-custom( 449 );
 	.device-web {
-		background: darken(#171E24, 3);
+		background: color.adjust(#171E24, $lightness: -3%);
 		&:before {
 			background: #fff;
 			color: #fff;
@@ -114,8 +117,8 @@
 	.img-wrap {
 
 		img {
-			border-top-right-radius: percentage( 14 / $width_device_web_max) percentage( 14 / $height_device_web_max );
-			border-top-left-radius: percentage( 14 / $width_device_web_max) percentage( 14 / $height_device_web_max );
+			border-top-right-radius: math.percentage(math.div(14, $width_device_web_max)) math.percentage(math.div(14, $height_device_web_max));
+			border-top-left-radius: math.percentage(math.div(14, $width_device_web_max)) math.percentage(math.div(14, $height_device_web_max));
 			overflow: hidden;
 		}
 
@@ -144,10 +147,10 @@
 	.device-iphone {
 		background: #000;
 		&:before {
-			background: lighten(#000,12);
+			background: color.adjust(#000, $lightness: 12%);
 		}
 		&:after {
-			border-color: lighten(#000,12);
+			border-color: color.adjust(#000, $lightness: 12%);
 		}
 	}
 }
@@ -160,10 +163,10 @@
 	.device-iphone {
 		background: #000;
 		&:before {
-			background: lighten(#000,12);
+			background: color.adjust(#000, $lightness: 12%);
 		}
 		&:after {
-			border-color: lighten(#000,12);
+			border-color: color.adjust(#000, $lightness: 12%);
 		}
 	}
 	.app-of-the-week {
@@ -211,8 +214,8 @@
 	.device-web {
 		background: #ccc;
 		&:before {
-			background: darken(#efefef,30);
-			color: darken(#efefef,30);
+			background: color.adjust(#efefef, $lightness: -30%);
+			color: color.adjust(#efefef, $lightness: -30%);
 		}
 	}
 }
@@ -230,8 +233,8 @@
 	.device-web {
 		background: #27262E;
 		&:before {
-			background: darken(#27262E,20);
-			color: darken(#27262E,20);
+			background: color.adjust(#27262E, $lightness: -20%);
+			color: color.adjust(#27262E, $lightness: -20%);
 		}
 	}
 }
@@ -243,8 +246,8 @@
 	.device-web {
 		background: #221E1F;
 		&:before {
-			background: lighten(#221E1F,10);
-			color: lighten(#221E1F,10);
+			background: color.adjust(#221E1F, $lightness: 10%);
+			color: color.adjust(#221E1F, $lightness: 10%);
 		}
 	}
 }
@@ -254,14 +257,14 @@
 	color: #A7A7A7;
 	.device-iphone {
 		background: #000;
-		border-color: lighten(#222,10);
+		border-color: color.adjust(#222, $lightness: 10%);
 		border-style: solid;
 		@include vw-min-max( 'border-width', 2, 6, $content_max_width );
 		&:before {
-			background: lighten(#000,12);
+			background: color.adjust(#000, $lightness: 12%);
 		}
 		&:after {
-			border-color: lighten(#000,12);
+			border-color: color.adjust(#000, $lightness: 12%);
 		}
 	}
 }
@@ -273,10 +276,10 @@
 	.device-iphone {
 		background: #000;
 		&:before {
-			background: lighten(#000,12);
+			background: color.adjust(#000, $lightness: 12%);
 		}
 		&:after {
-			border-color: lighten(#000,12);
+			border-color: color.adjust(#000, $lightness: 12%);
 		}
 	}
 }
@@ -287,10 +290,10 @@
 	.device-iphone {
 		background: #000;
 		&:before {
-			background: lighten(#000,12);
+			background: color.adjust(#000, $lightness: 12%);
 		}
 		&:after {
-			border-color: lighten(#000,12);
+			border-color: color.adjust(#000, $lightness: 12%);
 		}
 	}
 }
@@ -307,10 +310,10 @@
 	.device-iphone {
 		background: #000;
 		&:before {
-			background: lighten(#000,12);
+			background: color.adjust(#000, $lightness: 12%);
 		}
 		&:after {
-			border-color: lighten(#000,12);
+			border-color: color.adjust(#000, $lightness: 12%);
 		}
 	}
 }
@@ -325,14 +328,14 @@
 	}
 	.device-iphone {
 		background: #000;
-		border-color: lighten(#222,10);
+		border-color: color.adjust(#222, $lightness: 10%);
 		border-style: solid;
 		@include vw-min-max( 'border-width', 2, 6, $content_max_width );
 		&:before {
-			background: lighten(#000,12);
+			background: color.adjust(#000, $lightness: 12%);
 		}
 		&:after {
-			border-color: lighten(#000,12);
+			border-color: color.adjust(#000, $lightness: 12%);
 		}
 	}
 }
@@ -348,14 +351,14 @@
 }
 
 #wedelart {
-	background: lighten( #b3b3b3, 25 );
+	background: color.adjust(#b3b3b3, $lightness: 25%);
 	color: #b3b3b3;
 	.device-web:before {
-		background: lighten( #b3b3b3, 25 );
-		color: lighten( #b3b3b3, 25 );
+		background: color.adjust(#b3b3b3, $lightness: 25%);
+		color: color.adjust(#b3b3b3, $lightness: 25%);
 	}
 	.img-wrap:before {
-		color: lighten( #b3b3b3, 25 );
+		color: color.adjust(#b3b3b3, $lightness: 25%);
 	}
 	@include device-web-custom( 586 );
 }

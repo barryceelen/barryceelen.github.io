@@ -10,7 +10,8 @@
     "grunt-contrib-copy": "*",
     "grunt-contrib-imagemin": "*",
     "grunt-contrib-pug": "*",
-    "grunt-contrib-sass": "*",
+    "grunt-sass": "^3.1.0",
+    "sass": "^1.77.0",
     "grunt-contrib-uglify": "*",
     "grunt-contrib-watch": "*",
     "grunt-notify": "*"

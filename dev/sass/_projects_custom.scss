@@ -343,10 +343,10 @@
 #multipop {
 	background: #0071dc;
 	border-bottom: none;
-	color: #ffde00;
+	color: #ffff01;
 	@include device-web-custom( 500 );
 	.img-wrap:before {
-		color: #ffde00;
+		color: #ffff01;
 	}
 }
 

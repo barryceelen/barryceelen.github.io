@@ -27,20 +27,3 @@ img {
 .nowrap {
 	white-space: nowrap;
 }
-
-.hide-on-small {
-	@media screen and (max-width: 500px) {
-		display: none;
-	}
-}
-
-// @media all {
-// 	.page-break	{ display: none; }
-// }
-
-// @media print {
-// 	.page-break	{ display: block; page-break-before: always; }
-// 	.projects article {
-// 		page-break-before: always;
-// 	}
-// }

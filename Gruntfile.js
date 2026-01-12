@@ -104,7 +104,6 @@ module.exports = function(grunt) {
 			dist: {
 				src: [
 					'dev/js/vendor/jquery-3.1.0.slim.min.js',
-					'dev/js/vendor/viewport-units-buggyfill.js',
 					'dev/js/vendor/lazysizes.min.js',
 					'dev/js/vendor/ls.unveilhooks.js',
 					'dev/js/app.js',

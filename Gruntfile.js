@@ -105,7 +105,6 @@ module.exports = function(grunt) {
 				src: [
 					'dev/js/vendor/lazysizes.min.js',
 					'dev/js/vendor/ls.unveilhooks.js',
-					'dev/js/app.js',
 				],
 				dest: 'js/app.js',
 			},
